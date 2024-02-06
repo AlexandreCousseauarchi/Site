@@ -27,6 +27,7 @@ body {
   white-space: no-wrap;
   text-transform: uppercase;
   cursor: pointer;
+  z-index: 7;
   .text,
   .decoration {
     display: inline-block;
