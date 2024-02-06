@@ -2876,6 +2876,7 @@ img {
   white-space: no-wrap;
   text-transform: uppercase;
   cursor: pointer;
+  border-radius: 10px;
   .text,
   .decoration {
     display: inline-block;
