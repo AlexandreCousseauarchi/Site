@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST["field-2"];
     
     // Adresse e-mail où vous souhaitez recevoir les informations soumises
-    $destinataire = "alexandrecousseau.archi@gmail.com";
+    $destinataire = "alexandrecousseau.architecte@gmail.com";
     $sujet = "Nouveau message de formulaire";
     $contenu = "Nom: $nom\n";
     $contenu .= "Email: $email\n";
