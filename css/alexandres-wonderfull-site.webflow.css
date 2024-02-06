@@ -2870,7 +2870,7 @@ img {
 [class*="btn-glitch-"] {
   display: inline-block;
   font-family: "Roboto, sans-serif", monospace;
-  border: 2px solid black;
+  border: 1px solid black;
   color: black;
   background-color: rgba(255, 255, 255, 0.2);
   padding: 12px 20px;
@@ -2893,7 +2893,7 @@ img {
     animation-duration: 0.2s;
     background-color: rgba(255, 255, 255, 0.2);
     color:black;
-    border: 2px solid black;
+    border: 1px solid black;
     .text-decoration {
       animation-name: blink;
       animation-duration: 0.1s;
@@ -2907,7 +2907,7 @@ img {
     :before {
       content: " ";
       width: 15px;
-      border: 2px solid black;
+      border: 1px solid black;
       position: absolute;
       right: 25%;
       bottom: 3px;
@@ -2920,7 +2920,7 @@ img {
       animation-fill-mode : forwards;
       content: " ";
       width: 75%;
-      border: 2px solid black;
+      border: 1px solid black;
       position: absolute;
       left: 0;
       bottom: 5px;
