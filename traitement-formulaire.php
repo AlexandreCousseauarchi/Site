@@ -15,9 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // Envoi de l'e-mail
     mail($destinataire, $sujet, $contenu);
-    
-    // Redirection après l'envoi du formulaire (facultatif)
-    header("Location: confirmation.html");
+
     exit;
 }
 ?>
