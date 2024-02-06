@@ -122,41 +122,6 @@
               <textarea id="field-2" name="field-2" maxlength="5000" data-name="Field 2" placeholder="Quel est votre projet ?" required="" class="textarea-2 w-input"></textarea>
               <input type="submit" data-wait="" style="opacity:0" class="submit-button w-button" value="        ">
               <div class="div-block-59"></div>
-            <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var form = document.getElementById("contact-form");
-        var successMessage = document.getElementById("success-message");
-        var errorMessage = document.getElementById("error-message");
-
-        form.addEventListener("submit", function(event) {
-            event.preventDefault(); // Empêche le comportement par défaut du formulaire
-
-            var formData = new FormData(form);
-
-            fetch(form.getAttribute("action"), {
-                method: "POST",
-                body: formData,
-                headers: {
-                    Accept: "application/json"
-                }
-            })
-            .then(function(response) {
-                if (response.ok) {
-                    successMessage.style.display = "block"; // Afficher le message de succès
-                    errorMessage.style.display = "none"; // Cacher le message d'erreur
-                    form.reset(); // Réinitialiser le formulaire
-                } else {
-                    errorMessage.style.display = "block"; // Afficher le message d'erreur
-                    successMessage.style.display = "none"; // Cacher le message de succès
-                }
-            })
-            .catch(function(error) {
-                errorMessage.style.display = "block"; // Afficher le message d'erreur
-                successMessage.style.display = "none"; // Cacher le message de succès
-            });
-        });
-    });
-</script>
           </form>
           <div class="success-message w-form-done">
             <div class="text-block-27">Merci, Votre message est envoyé<br></div>
