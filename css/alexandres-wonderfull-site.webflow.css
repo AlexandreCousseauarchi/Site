@@ -2862,13 +2862,13 @@ img {
   left: 50%;
   top: 50%;
   transform: translate(-50%);
-   font-size: 30px;
+   font-size: 20px;
 }
 
 [class*="btn-glitch-"] {
   display: inline-block;
   font-family: "Roboto, sans-serif", monospace;
-  border: 2px solid black;
+  border: 1px solid black;
   color: black;
   padding: 12px 20px;
   min-width: 175px;
@@ -2889,7 +2889,7 @@ img {
     animation-duration: 0.2s;
     background-color: white 20;
     color:black;
-    border: 2px solid black;
+    border: 1px solid black;
     .text-decoration {
       animation-name: blink;
       animation-duration: 0.1s;
@@ -2903,7 +2903,7 @@ img {
     :before {
       content: " ";
       width: 15px;
-      border: 2px solid black;
+      border: 1px solid black;
       position: absolute;
       right: 25%;
       bottom: 3px;
@@ -2916,7 +2916,7 @@ img {
       animation-fill-mode : forwards;
       content: " ";
       width: 75%;
-      border: 2px solid black;
+      border: 1px solid black;
       position: absolute;
       left: 0;
       bottom: 5px;
@@ -2972,7 +2972,6 @@ img {
     width: 10%;
   }
 }
-
 .haut-de-page {
   display: flex;
 }
