@@ -123,33 +123,6 @@
               <input type="submit" data-wait="" style="opacity:0" class="submit-button w-button" value="        ">
               <div class="div-block-59"></div>
           </form>
-         <script>
-  var form = document.getElementById("my-form");
-
-async function handleSubmit(event) {
-    event.preventDefault();
-    var data = new FormData(event.target);
-    fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(response => {
-        if (response.ok) {
-            window.location.href = "https://votresite.com"; // Redirection vers votre site
-        } else {
-            document.querySelector(".error-message").style.display = "block";
-            document.querySelector(".success-message").style.display = "none";
-        }
-    }).catch(error => {
-        document.querySelector(".error-message").style.display = "block";
-        document.querySelector(".success-message").style.display = "none";
-    });
-}
-
-form.addEventListener("submit", handleSubmit);
-</script>
           <div class="success-message w-form-done">
             <div class="text-block-27">Merci, Votre message est envoyé<br></div>
           </div>
@@ -157,6 +130,42 @@ form.addEventListener("submit", handleSubmit);
             <div class="text-block-28">Erreur d&#x27;envoi de votre message</div>
           </div>
         </div>
+        
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var form = document.getElementById("contact-form");
+        var successMessage = document.getElementById("success-message");
+        var errorMessage = document.getElementById("error-message");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche le comportement par défaut du formulaire
+
+            var formData = new FormData(form);
+
+            fetch(form.getAttribute("action"), {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json"
+                }
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    successMessage.style.display = "block"; // Afficher le message de succès
+                    errorMessage.style.display = "none"; // Cacher le message d'erreur
+                    form.reset(); // Réinitialiser le formulaire
+                } else {
+                    errorMessage.style.display = "block"; // Afficher le message d'erreur
+                    successMessage.style.display = "none"; // Cacher le message de succès
+                }
+            })
+            .catch(function(error) {
+                errorMessage.style.display = "block"; // Afficher le message d'erreur
+                successMessage.style.display = "none"; // Cacher le message de succès
+            });
+        });
+    });
+</script>
       </div>
     </div>
   </address>
