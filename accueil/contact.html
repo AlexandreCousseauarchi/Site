@@ -129,6 +129,38 @@
           <div class="error-message w-form-fail">
             <div class="text-block-28">Erreur d&#x27;envoi de votre message</div>
           </div>
+          <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var form = document.getElementById("contact-form");
+        var successMessage = document.querySelector(".success-message");
+        var errorMessage = document.querySelector(".error-message");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche la soumission du formulaire normalement
+
+            var formData = new FormData(form);
+
+            fetch(form.getAttribute("action"), {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json"
+                }
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    successMessage.style.display = "block"; // Afficher le message de succès
+                    form.reset(); // Réinitialiser le formulaire
+                } else {
+                    errorMessage.style.display = "block"; // Afficher le message d'erreur
+                }
+            })
+            .catch(function(error) {
+                errorMessage.style.display = "block"; // Afficher le message d'erreur
+            });
+        });
+    });
+</script>
         </div>
       </div>
     </div>
