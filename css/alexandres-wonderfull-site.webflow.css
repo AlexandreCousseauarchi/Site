@@ -2862,18 +2862,8 @@ img {
   text-decoration: underline;
 }
 
-Code HMTL bouton (a copier dans l'index) :
-
-
-<button class="space-btn">MONTRE MOI</button>
-
-
-Code CSS bouton (a copier dans CSS/alexandres-wonderfull-site.webflow.css ) :
-
-
-
 .space-btn {
-position: relative;
+position: absolute;
 	 display: flex; 
   align-items: center; 
   justify-content: center; 
