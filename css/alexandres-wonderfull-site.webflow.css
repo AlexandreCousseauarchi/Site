@@ -2864,9 +2864,10 @@ img {
 
 .space-btn {
 position: fixed;
-	 display: flex; 
+  display: flex; 
   align-items: center; 
   justify-content: center; 
+  text-align: center;
   z-index: 7;
   left: 50%;
   top: 50%;
