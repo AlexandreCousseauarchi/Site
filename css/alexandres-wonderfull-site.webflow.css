@@ -2870,7 +2870,7 @@ body {
 
 .space-btn {
 	position: absolute;
-	z-index: 6;
+	z-index: 15;
 	font-family: 'roboto';
 	font-size: 1em;
 	text-transform: uppercase;
