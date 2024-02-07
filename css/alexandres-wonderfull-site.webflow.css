@@ -2862,6 +2862,126 @@ img {
   text-decoration: underline;
 }
 
+.space-btn {
+position: absolute;
+  z-index: 7;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+  font-weight: bold;
+	font-family: 'roboto';
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 0.125em;
+	line-height: 1;
+	color: black;
+	margin: 0;
+	padding: 1em;
+	background: none;
+	border: none;
+	cursor: pointer;
+
+	&:hover {
+		color: lighten(white, 20%);
+	}
+	&:focus {
+		color: lighten(white, 10%);
+		outline: none;
+	}
+	&:active {
+		color: white;
+	}
+
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 1px;
+	}
+
+	&:before {
+		top: 0;
+		left: 0;
+		box-shadow: inset 1px 1px 0 0 black;
+	}
+	&:after {
+		right: 0;
+		bottom: 0;
+		box-shadow: inset -1px -1px 0 0 black;
+	}
+	
+}
+
+.space-btn:hover {
+	&:before {
+		animation: hoverShadowBefore 1s forwards;
+	}
+	&:after {
+		animation: hoverShadowAfter 1s forwards;
+	}
+}
+
+@keyframes hoverShadowBefore {
+  	0% {
+    	width: 100%;
+		height: 1px;
+		
+		top: 0;
+		left: 0;
+  	}
+  	33% {
+   	width: 1px;
+		height: 100%;
+		
+		top: 0;
+		left: 0;
+  	}
+	66% {
+		width: 1px;
+		height: 1px;
+		
+		top: calc(100% - 1px);
+		left: 0;
+	}
+	100% {
+   	width: 100%;
+		height: 1px;
+		
+		top: calc(100% - 1px); 
+		left: 0;
+  	}	
+}
+
+@keyframes hoverShadowAfter {
+  	0% {
+    	width: 100%;
+		height: 1px;
+  	}
+  	33% {
+   	width: 1px;
+		height: 100%;
+		
+		bottom: 0;
+		right: 0;
+  	}
+	66% {
+		width: 1px;
+		height: 1px;
+		
+		bottom: calc(100% - 1px);
+		right: 0;
+	}
+	100% {
+   	width: 100%;
+		height: 1px;
+		
+		bottom: calc(100% - 1px);
+		right: 0;
+  	}
+}
+
 .haut-de-page {
   display: flex;
 }
