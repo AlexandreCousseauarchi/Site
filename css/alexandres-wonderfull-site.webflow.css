@@ -2858,10 +2858,12 @@ img {
 
 .space-btn {
 	position: absolute;
-  z-index: 15;
+  z-index: 7;
   left: 50%;
   top: 50%;
   transform: translate(-50%);
+  font-weight: bold;
+  font-size: 15px;
 	font-family: 'roboto';
 	font-size: 1em;
 	text-transform: uppercase;
