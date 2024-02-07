@@ -2856,21 +2856,12 @@ img {
   text-decoration: underline;
 }
 
-* {
-	box-sizing: border-box;
-}
-
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background-color:none;
-}
-
 .space-btn {
 	position: absolute;
-	z-index: 15;
+  z-index: 15;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
 	font-family: 'roboto';
 	font-size: 1em;
 	text-transform: uppercase;
