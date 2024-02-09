@@ -104,51 +104,8 @@
       <div data-w-id="a18f3209-f80a-c9c3-211a-7f2a81413492" data-wf-id="[a18f3209-f80a-c9c3-211a-7f2a81413492"]" class="div-block-12">
 <div data-w-id="5b7e70c9-161a-6b3a-9277-f2d2938c9f5a" data-wf-id="["5b7e70c9-161a-6b3a-9277-f2d2938c9f5a"]" class="div-block-61"></div>
 <div data-w-id="9933c52f-c2d9-acb9-e5c5-0784ef8470e6" data-wf-id="["9933c52f-c2d9-acb9-e5c5-0784ef8470e6"]" class="div-block-63">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Feed Instagram</title>
-    <style>
-        /* Ajoutez ici votre style CSS pour personnaliser l'apparence de votre feed */
-    </style>
-</head>
-<body>
-
-    <div id="instagram-feed">
-        <!-- Le contenu de votre feed Instagram sera affiché ici -->
-    </div>
-
-    <!-- Script pour récupérer et afficher le contenu du feed Instagram -->
-    <script>
-        const accessToken = 'IGQWRQM0xSMEpYSEk1TVA0SllROXg3VXRxUW9Dc2xkT2VWOTFWTzd2eFFvbUFhbDVfMVVucndJcXhuNnpiV21XaHdnNTdSVE1EUmJ1QlpwckVsdTQyUlNPcnkwWC16ZA25MUjhqaG56TU1seWlSelAxZAHB3X0ZAQdmdCc0dhdUhBY2xqZAwZDZD';
-        const apiUrl = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink,thumbnail_url&access_token=${accessToken}`;
-
-        async function fetchInstagramFeed() {
-            try {
-                const response = await fetch(apiUrl);
-                const data = await response.json();
-                
-                data.data.forEach(post => {
-                    document.getElementById('instagram-feed').innerHTML += `
-                        <div>
-                            <img src="${post.media_url}" alt="${post.caption}">
-                            <p>${post.caption}</p>
-                            <a href="${post.permalink}" target="_blank">Voir sur Instagram</a>
-                        </div>
-                    `;
-                });
-            } catch (error) {
-                console.error('Erreur lors de la récupération du feed Instagram:', error);
-            }
-        }
-
-        fetchInstagramFeed();
-    </script>
-
-</body>
-</html>
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-0be0218e-f613-479d-887a-3439ff921670" data-elfsight-app-lazy></div>
 </div>
 <div data-w-id="cb7b85fa-f8ad-cf59-13e7-d9d2f8c7c623" data-wf-id="["cb7b85fa-f8ad-cf59-13e7-d9d2f8c7c623"]" class="div-block-62"></div>
 </div>
