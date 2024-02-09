@@ -111,36 +111,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Feed Instagram</title>
     <style>
-      /* Style pour chaque élément du feed Instagram */
-#instagram-feed div {
-    margin-bottom: 20px; /* Ajoute un espace entre chaque élément */
-    border: 1px solid #ccc; /* Ajoute une bordure autour de chaque élément */
-    padding: 10px; /* Ajoute un espacement interne */
+       #instagram-feed {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
-/* Style pour les images du feed */
+#instagram-feed > div {
+  width: 30%;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
 #instagram-feed img {
-    max-width: 100%; /* Assure que les images ne dépassent pas de leur conteneur */
-    display: block; /* Assure que les images se comportent comme des blocs */
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-/* Style pour les légendes des images */
 #instagram-feed p {
-    margin-top: 10px; /* Ajoute un espacement en haut de chaque légende */
-    font-style: italic; /* Style italique pour les légendes */
+  margin-top: 10px;
 }
 
-/* Style pour les liens "Voir sur Instagram" */
 #instagram-feed a {
-    display: inline-block; /* Assure que les liens apparaissent sur une ligne */
-    margin-top: 10px; /* Ajoute un espacement en haut des liens */
-    color: #007bff; /* Couleur du lien */
-    text-decoration: none; /* Supprime la décoration de soulignement du lien */
+  display: block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
 }
 
-/* Style pour les liens "Voir sur Instagram" au survol */
 #instagram-feed a:hover {
-    text-decoration: underline; /* Souligne le lien au survol */
+  text-decoration: underline;
 }
     </style>
 </head>
