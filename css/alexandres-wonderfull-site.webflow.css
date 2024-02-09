@@ -2881,7 +2881,7 @@ position: fixed;
 	color: black;
 	margin: 0;
 	padding: 1em;
-	background: radial-gradient(ellipse 25% 50% at center, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+	background: radial-gradient(ellipse 50% 75% at center, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
 	border: none;
 	cursor: pointer;
 
