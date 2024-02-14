@@ -149,193 +149,39 @@ img {
 }
 
 .div-block-12 {
-    width: 40%;
-    height: 100vh;
-    max-height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 8%;
-    display: flex;
+  width: 35%;
+  height: 100%;
+  max-height: 100vh;
+  background-image: url('../images/2022---Logo-02-02.png');
+  background-position: 50%;
+  background-repeat: repeat;
+  background-size: contain;
+  background-attachment: scroll;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-self: flex-start;
+  align-items: center;
+  margin-left: 8%;
+  display: flex;
 }
 
-
-.container-20 {
-    width: 93%;
-    height: 100%;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    position: -webkit-sticky;
-    position : sticky;
+.div-block-61 {
+  width: 100%;
+  height: 20%;
 }
 
-.w-layout-blockcontainer {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 940px;
-
-.image-97 {
-    height: 25%;
-    margin: 1%;
-    display: block;
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    border: 0;
-    box-sizing: border-box;
-    overflow-clip-margin: content-box;
-    overflow: clip;
+.div-block-62 {
+  width: 100%;
+  height: 10%;
 }
 
-.image-90 {
-   height: 25%;
-    margin: 1%;
-    display: block;
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    border: 0;
-    box-sizing: border-box;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-
-.image-96 {
-    height: 25%;
-    margin: 1%;
-    display: block;
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    border: 0;
-    box-sizing: border-box;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-
-.image-89 {
-    height: 25%;
-    margin: 1%;
-    display: block;
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    border: 0;
-    box-sizing: border-box;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-
-.image-93 {
-     height: 25%;
-    margin: 1%;
-    display: block;
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    border: 0;
-    box-sizing: border-box;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-
-.image-100 {
-     height: 25%;
-    margin: 1%;
-    display: block;
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    border: 0;
-    box-sizing: border-box;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-
-.image-98 {
-     height: 25%;
-    margin: 1%;
-    display: block;
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    border: 0;
-    box-sizing: border-box;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-
-.image-91 {
-     height: 25%;
-    margin: 1%;
-    display: block;
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    border: 0;
-    box-sizing: border-box;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-
-.image-88 {
-    height: 25%;
-    margin: 1%;
-    display: block;
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    border: 0;
-    box-sizing: border-box;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-
-.image-90 {
-     height: 25%;
-    margin: 1%;
-    display: block;
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    border: 0;
-    box-sizing: border-box;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-
-.image-94 {
-     height: 25%;
-    margin: 1%;
-    display: block;
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    border: 0;
-    box-sizing: border-box;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-
-.image-99 {
-     height: 25%;
-    margin: 1%;
-    display: block;
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    border: 0;
-    box-sizing: border-box;
-    overflow-clip-margin: content-box;
-    overflow: clip;
+.div-block-63 {
+  width: 100%;
+  height: 20%;
 }
 
 .div-block-14 {
-  width: 50%;
+  width: 65%;
   height: 100vh;
   max-height: 100vh;
   max-width: 100%;
