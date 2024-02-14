@@ -4903,8 +4903,10 @@ img {
     margin-left: 0%;
   }
 
-.paragraph-19:medium {
-  padding-right: 12%;
+@media screen and (max-width: 767px) {
+  .paragraph-19 {
+    text-align: center;
+  }
 }
 
   .link-block-29 {
@@ -5104,10 +5106,13 @@ img {
     align-self: center;
   }
 
-.text-block-4:tiny {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media screen and (max-width: 767px) {
+  .text-block-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ajustement facultatif de la largeur pour les versions mobiles */
+  }
 }
 
   .text-block-5 {
@@ -5382,12 +5387,14 @@ img {
     padding-right: 30px;
   }
 
-.div-block-47:tiny {
-  height: 19vh;
-  background-image: @img_6564b29519d38ff099e4b07c;
-  background-position: 50% 50%;
-  background-size: contain;
-  background-repeat: repeat-y;
+@media screen and (max-width: 767px) {
+  .div-block-47 {
+    height: 19vh;
+    background-image: @img_6564b29519d38ff099e4b07c; /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin de votre image */
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: repeat-y;
+  }
 }
 
   .div-block-48 {
@@ -5577,16 +5584,20 @@ img {
     margin-bottom: 0%;
   }
 
-.paragraph-18:tiny {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+@media screen and (max-width: 767px) {
+  .paragraph-18 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Ajustement facultatif de la largeur pour les versions mobiles */
+  }
 }
 
-.paragraph-19:tiny {
-  padding-right: 0%;
-  text-align: center;
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .paragraph-19 {
+    padding-right: 12%;
+  }
 }
 	
   .heading-13 {
@@ -6143,11 +6154,14 @@ position: absolute;
   width: 95%;
 }
 
-.div-block-79:tiny {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@media screen and (max-width: 767px) {
+  .div-block-79 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Optionnel: pour forcer la largeur à 100% sur les versions mobiles */
+  }
 }
 
 .div-block-80 {
@@ -6156,9 +6170,11 @@ position: absolute;
   align-items: flex-end;
 }
 
-.div-block-80:tiny {
-  justify-content: center;
-  align-items: center;
+@media screen and (max-width: 767px) {
+  .div-block-80 {
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .div-block-81 {
