@@ -6101,5 +6101,5 @@ position: absolute;
 }
 
 .image-link {
-       display: flex;
+       display: contents;
     }
