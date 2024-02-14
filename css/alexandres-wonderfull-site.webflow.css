@@ -149,17 +149,20 @@ img {
 }
 
 .div-block-12 {
-    display: flex;
-    width: 40%;
-    height: 100vh;
-    max-height: 100vh;
-    margin-left: 8%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-* {
-    box-sizing: border-box;
+  width: 340%;
+  height: 100vh;
+  max-height: 100vh;
+  background-image: none;
+  background-position: 50%;
+  background-repeat: repeat;
+  background-size: contain;
+  background-attachment: scroll;
+  align-self: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8%;
+  display: flex;
 }
 
 .container-20 {
