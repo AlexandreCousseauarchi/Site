@@ -5988,12 +5988,14 @@ position: absolute;
     padding: 1%;
 }
 
-.image-96 {
+.image-96,
+.image-96 > img {
     height: 25%;
     margin: 1%;
 }
 
-.image-96:hover {
+.image-96:hover,
+.image-96:hover > img {
     height: 26%;
     margin: 0%;
     padding: 1%;
