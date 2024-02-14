@@ -6123,12 +6123,10 @@ position: absolute;
   align-items: center;
 }
 
-.div-block-78:small {
-  display: none;
-}
-
-.div-block-78:tiny {
-  display: none;
+@media screen and (max-width: 767px) {
+  .div-block-78 {
+    display: none;
+  }
 }
 
 .image-101 {
@@ -6173,8 +6171,10 @@ position: absolute;
   align-items: center;
 }
 
-.div-block-81:small {
-  display: none;
+@media screen and (max-width: 767px) {
+  .div-block-81 {
+    display: none;
+  }
 }
 
 .image-103 {
