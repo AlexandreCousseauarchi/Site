@@ -157,7 +157,7 @@ img {
   align-items: center;
   margin-left: 8%;
   display: flex;
-  background-image: url('../images/2022---Logo-02-02.png');
+  background-image: none;
   background-position: 50%;
   background-repeat: repeat;
   background-size: contain;
