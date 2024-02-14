@@ -6099,14 +6099,3 @@ position: absolute;
     margin: 0%;
     padding: 1%;
 }
-
-a.image-link {
-    height: 99%;
-    margin: 1%;
-}
-
-a.image-link:hover {
-    height: 100%;
-    margin: 0%;
-    padding: 1%;
-}
