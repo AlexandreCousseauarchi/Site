@@ -6101,12 +6101,12 @@ position: absolute;
 }
 
 a.image-link {
-    height: 25%;
+    height: 99%;
     margin: 1%;
 }
 
 a.image-link:hover {
-    height: 26%;
+    height: 100%;
     margin: 0%;
     padding: 1%;
 }
