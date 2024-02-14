@@ -149,27 +149,27 @@ img {
 }
 
 .div-block-12 {
-  width: 40%;
-  height: 100vh;
-  max-height: 100vh;
-  margin-left: 8%;
-  align-self: flex-start;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 8%;
-  display: flex;
+    width: 40%;
+    height: 100vh;
+    max-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8%;
+    display: flex;
 }
 
 
 .container-20 {
-    position: sticky;
-    display: flex;
     width: 93%;
     height: 100%;
-    place-content: center;
     flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
     align-items: center;
+    display: flex;
+    position: -webkit-sticky;
+    position : sticky;
 }
 
 .w-layout-blockcontainer {
