@@ -6099,3 +6099,9 @@ position: absolute;
     margin: 0%;
     padding: 1%;
 }
+
+.image-link {
+        display: inline-block;
+        height: 25%;
+        margin: 1%;
+    }
