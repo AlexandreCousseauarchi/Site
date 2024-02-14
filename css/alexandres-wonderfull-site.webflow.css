@@ -6101,7 +6101,7 @@ position: absolute;
 }
 
 .image-link {
-        display: inline-block;
         height: 25%;
         margin: 1%;
+        display: inline-block;
     }
