@@ -1134,23 +1134,29 @@ img {
   height: 100vh;
   margin-right: 8.5%;
   background-image: url('../images/348356494_1444411346308950_1216199055293534092_n.webp');
-  background-position: 100% 0%;
+  background-position: 60% 0%;
   background-size: 750px;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .div-block-12-copy {
     display: none;
     background-position: 55% 0%;
   }
 }
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   .div-block-12-copy {
     display: none;
     width: 100vw;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .div-block-12-copy {
+    display: flex;
   }
 }
 
@@ -1167,18 +1173,17 @@ img {
   align-content: flex-end;
 }
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   .div-block-14-copy {
     width: 80%;
     margin-top: 10%;
     margin-right: 10%;
     margin-left: 10%;
-    padding-right: 0%;
-    align-items: flex-end;
+    align-items: center;
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .div-block-14-copy {
     width: 90%;
   }
@@ -1800,35 +1805,34 @@ img {
   margin-right: 12%;
   align-items: center;
   align-self: flex-start;
-  background-image: @img_65cdfbb24106497f2e76ba56;
+  background-image: url('../images/348356494_1444411346308950_1216199055293534092_n.webp');
   background-position: 50% 10%;
   background-size: 90vh;
   background-repeat: repeat;
   background-attachment: scroll;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .div-block-12-phone {
     display: flex;
     width: 100vw;
-    margin-top: 0%;
-    margin-right: 0%;
+    margin: 0; /* Réinitialiser les marges */
     background-position: 55% 0%;
   }
 }
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   .div-block-12-phone {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    max-height: 100vh;
-    margin-top: 0%;
-    margin-right: 0%;
     flex-direction: row;
     justify-content: center;
     align-content: stretch;
     background-position: 50% 0%;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .div-block-12-phone {
+    display: none;
   }
 }
 
