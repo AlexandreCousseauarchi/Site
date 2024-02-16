@@ -152,70 +152,58 @@
   </div>
 </div>
  <script>
-(function() {
-  class imageReveal {
-    constructor(el) {
-      this._bindEvents = this._bindEvents.bind(this);
-      this.startReveal = this.startReveal.bind(this);
-      this.resetReveal = this.resetReveal.bind(this);
-      this.calculateSplit = this.calculateSplit.bind(this);
-      this.moveSplit = this.moveSplit.bind(this);
-      this.el = el;
-      this.overSlide = this.el.find('.js-over-slide');
-      this.overImage = this.el.find('.js-over-image');
-      this.divider = this.el.find('.js-divider');
-      // bind those thangs
-      console.log(this.el);
-      this._bindEvents();
-      this.resetReveal();
-    }
+class imageReveal
+  constructor: (@el) ->
+    @overSlide = @el.find '.js-over-slide'
+    @overImage = @el.find '.js-over-image'
+    @divider = @el.find '.js-divider'
 
-    _bindEvents() {
-      this.el.on('mouseenter', this.startReveal);
-      return this.el.on('mouseleave', this.resetReveal);
-    }
+    # bind those thangs
+    console.log @el
+    @_bindEvents()
+    @resetReveal()
 
-    startReveal() {
-      console.log('start reveal');
-      return this.el.on('mousemove', this.calculateSplit);
-    }
+    
+  _bindEvents: =>
+    @el.on 'mouseenter', @startReveal
+    @el.on 'mouseleave', @resetReveal
 
-    resetReveal() {
-      var elMiddle;
-      console.log('reset');
-      this.el.off('mousemove', this.calculateSplit);
-      elMiddle = this.el.width() / 2;
-      return this.moveSplit(elMiddle);
-    }
+    
+  startReveal: =>
+    console.log 'start reveal'
+    @el.on 'mousemove', @calculateSplit
+    
+    
+    
+  resetReveal: =>
+    console.log 'reset'
+    @el.off 'mousemove', @calculateSplit
+    elMiddle = @el.width() / 2
+    @moveSplit(elMiddle)
+    
+    
+  calculateSplit: (e) =>
+    elOffset = @el.offset().left
+    #console.log elOffset
+    #console.log e
+    @moveSplit( e.pageX - elOffset )
+    
+    
+  moveSplit: (offset) =>
+    if offset < 0 then offset = 0
+    
+    console.log offset
+    @overSlide.css 'transform', 'translateX(' + offset + 'px)'
+    @overImage.css 'transform', 'translateX(-' + offset + 'px)'
+    @divider.css 'transform', 'translateX(' + offset + 'px)'
 
-    calculateSplit(e) {
-      var elOffset;
-      elOffset = this.el.offset().left;
-      //console.log elOffset
-      //console.log e
-      return this.moveSplit(e.pageX - elOffset);
-    }
 
-    moveSplit(offset) {
-      if (offset < 0) {
-        offset = 0;
-      }
-      console.log(offset);
-      this.overSlide.css('transform', 'translateX(' + offset + 'px)');
-      this.overImage.css('transform', 'translateX(-' + offset + 'px)');
-      return this.divider.css('transform', 'translateX(' + offset + 'px)');
-    }
+#export the goods
+window.imageReveal = imageReveal
 
-  }
 
-  //export the goods
-  window.imageReveal = imageReveal;
-
-  $(function() {
-    return new imageReveal($('.js-image-reveal'));
-  });
-
-})();
+$ ->
+  new imageReveal($('.js-image-reveal'))
     </script>
    
       
