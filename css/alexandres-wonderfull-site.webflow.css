@@ -6592,3 +6592,60 @@ position: absolute;
   font-weight: 900;
   text-transform: uppercase;
 }
+
+
+.comparaison-beethoven {
+  width: 42%;
+  height: 45vh;
+  max-height: 100vh;
+  max-width: 100%;
+  margin-top: 2%;
+  margin-right: 6%;
+  margin-left: 1%;
+}
+
+.image-reveal {
+  position: relative;
+}
+
+.under-slide {
+  position: relative;
+  overflow: hidden;
+  padding-top: 41%;
+  top: 0;
+  left: 0;
+  background: url('https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/main/images/415257966_748962100063253_7248728643991861218_n1.webp') no-repeat;
+  background-size: cover;
+}
+
+.over-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: translateX(0px);
+  overflow: hidden;
+  //@include transition(all 20ms);
+}
+
+.over-image {
+  height: 100%;
+  width: 100%;
+  background: url('https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/main/images/01a.webp') no-repeat;
+  background-size: cover;
+  -webkit-transform: translateX(0px);
+  //@include transition(all 20ms);
+}
+
+.divider {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  margin-left: -2px;
+  background-color: rgba(255, 255, 255, 0.8);
+  //@include transition(all 20ms);
+}
