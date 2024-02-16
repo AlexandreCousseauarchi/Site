@@ -6600,13 +6600,6 @@ position: absolute;
 
 
 
-@import "compass/css3";
-
-body {
-  background: #efefef;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
 .comparaison-beethoven {
   width: 42%;
   height: 45vh;
@@ -6680,6 +6673,6 @@ body {
   width: 5px;
   height: 100%;
   margin-left: -2px;
-  background-color: rgba(255, 255, 255, 0,8);
+  background-color: rgba(255, 255, 255, 0.8);
   //@include transition(all 20ms);
 }
