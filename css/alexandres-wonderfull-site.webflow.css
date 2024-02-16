@@ -6228,6 +6228,7 @@ position: absolute;
   .div-block-80 {
     justify-content: center;
     align-items: center;
+    width: 100%; /* Optionnel: pour forcer la largeur à 100% sur les versions mobiles */
   }
 }
 
