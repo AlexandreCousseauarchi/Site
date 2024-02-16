@@ -6180,7 +6180,7 @@ position: absolute;
 }
 
 .div-block-78 {
-  display: flex;
+  display: none;
   width: 5%;
   margin-right: 5px;
   flex-direction: column;
@@ -6232,7 +6232,7 @@ position: absolute;
 }
 
 .div-block-81 {
-  display: flex;
+  display: none;
   width: 5%;
   height: 100%;
   margin-right: 5px;
