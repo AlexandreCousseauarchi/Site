@@ -6599,7 +6599,6 @@ position: absolute;
 
 
 
-
 .comparaison-beethoven {
   width: 42%;
   height: 45vh;
@@ -6608,27 +6607,6 @@ position: absolute;
   margin-top: 2%;
   margin-right: 6%;
   margin-left: 1%;
-}
-
-@media (min-width: 768px) {
-  .comparaison-beethoven {
-    width: 86%;
-    margin-top: 3%;
-    margin-left: 6%;
-  }
-}
-
-@media (max-width: 768px) {
-  .comparaison-beethoven {
-    height: 30vh;
-    margin-top: 3%;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .comparaison-beethoven {
-    height: 35vh;
-  }
 }
 
 .image-reveal {
