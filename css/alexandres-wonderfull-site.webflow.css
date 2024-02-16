@@ -6583,7 +6583,7 @@ position: absolute;
 }
 
 .div-block-95 {
-  width: 100%;
+  width: 90%;
   height: 1px;
   margin-bottom: 7px;
   margin-left: 10px;
@@ -6599,4 +6599,5 @@ position: absolute;
   font-size: 160%;
   font-weight: 900;
   text-transform: uppercase;
+  white-space: nowrap;
 }
