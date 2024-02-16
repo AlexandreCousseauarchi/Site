@@ -5000,6 +5000,12 @@ img {
     margin-left: 0%;
   }
 
+@media screen and (max-width: 991px) {
+  .paragraph-19 {
+    text-align: left;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .paragraph-19 {
     text-align: center;
