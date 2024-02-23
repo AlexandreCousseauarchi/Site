@@ -762,7 +762,7 @@ img {
 .instagram {
   width: 24px;
   height: 24px;
-  background-image: url('../images/Logos-RS-08.svg');
+  background-image: url('https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/1b488a34da5d2b4c57ea0de314f8ac02ed98784a/images/Plan-de-travail-48.svg');
   background-position: 50%;
   background-size: cover;
   margin-right: 10px;
@@ -770,7 +770,7 @@ img {
 }
 
 .instagram:hover {
-  background-image: url('../images/Plan-de-travail-48.svg');
+  background-image: url('https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/1b488a34da5d2b4c57ea0de314f8ac02ed98784a/images/Logos-RS-08.svg');
   background-position: 50%;
   background-size: cover;
 }
@@ -778,14 +778,14 @@ img {
 .link-block-15 {
   width: 24px;
   height: 24px;
-  background-image: url('../images/Logos-RS-09.svg');
+  background-image: url('https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/1b488a34da5d2b4c57ea0de314f8ac02ed98784a/images/Plan-de-travail-49.svg');
   background-position: 50%;
   background-size: cover;
   margin-right: 10px;
 }
 
 .link-block-15:hover {
-  background-image: url('../images/Plan-de-travail-49.svg');
+  background-image: url('https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/1b488a34da5d2b4c57ea0de314f8ac02ed98784a/images/Logos-RS-09.svg');
   background-position: 50%;
   background-size: cover;
 }
@@ -793,14 +793,14 @@ img {
 .link-block-16 {
   width: 15px;
   height: 24px;
-  background-image: url('../images/Logos-RS-07.svg');
+  background-image: url('https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/1b488a34da5d2b4c57ea0de314f8ac02ed98784a/images/Plan-de-travail-43.svg');
   background-position: 50%;
   background-size: cover;
   margin-bottom: 3px;
 }
 
 .link-block-16:hover {
-  background-image: url('../images/Plan-de-travail-43.svg');
+  background-image: url('https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/1b488a34da5d2b4c57ea0de314f8ac02ed98784a/images/Logos-RS-07.svg');
   background-position: 50%;
   background-size: cover;
 }
