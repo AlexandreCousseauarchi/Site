@@ -6647,3 +6647,13 @@ position: absolute;
 	left: auto;
 	right: 1%;
 }
+
+.heading-64 {
+z-index: 30;
+color: rgba(0, 0, 0, 0);
+texte-align: center;
+font-family: Roboto, sans-serif;
+font-size:100%;
+font-weight: 500;
+position: absolute;
+}
