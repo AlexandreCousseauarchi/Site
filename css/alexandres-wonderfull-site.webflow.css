@@ -6315,6 +6315,9 @@ position: absolute;
   font-family: Roboto;
   font-size: 130%;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.2;
 }
 
 .paragraph-projetez-vous {
@@ -6351,6 +6354,9 @@ position: absolute;
   font-family: Roboto;
   font-size: 130%;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.2;
 }
 
 .paragraph-soyons-creatif {
@@ -6389,6 +6395,9 @@ position: absolute;
   font-family: Roboto;
   font-size: 130%;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.2;
 }
 
 .paragraph-meilleur-choix {
@@ -6425,6 +6434,15 @@ position: absolute;
   width: 35%;
 }
 
+.heading-gagner-du-temps {
+  font-family: Roboto;
+  font-size: 130%;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
 .paragraph-gagner-du-temps {
   font-family: Roboto;
   font-size: 100%;
@@ -6459,6 +6477,9 @@ position: absolute;
   font-family: Roboto;
   font-size: 130%;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.2;
 }
 
 .paragraph-soyez-accompagne {
@@ -6495,6 +6516,9 @@ position: absolute;
   font-family: Roboto;
   font-size: 130%;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.2;
 }
 
 .paragraph-differenciez-vous {
@@ -6531,6 +6555,9 @@ position: absolute;
   font-family: Roboto;
   font-size: 130%;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.2;
 }
 
 .paragraph-chiffre-affaires {
@@ -6567,6 +6594,9 @@ position: absolute;
   font-family: Roboto;
   font-size: 130%;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.2;
 }
 
 .paragraph-booster-frequentation {
