@@ -6602,3 +6602,18 @@ position: absolute;
   text-transform: uppercase;
   white-space: nowrap;
 }
+
+.heading-63 {
+	z-index: 7;
+	color: rgba(255, 255, 255, 0);
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: Roboto, sans-serif;
+	font-size: 100%;
+	font-weight: 500;
+	position: absolute;
+	top: auto;
+	bottom: 1%;
+	left: auto;
+	right: 1%;
+}
