@@ -6684,10 +6684,11 @@ position: absolute;
 }
 
 #customers-teams .item {
-    height: 550px !important;
+    height: 470px !important;
     width: 100%;
     text-align: center;
     padding: 10px;
+	    margin-top: 20px;
     margin-bottom: 0px;
     opacity: .2;
     transform: scale3d(0.8, 0.8, 1);
@@ -6746,12 +6747,12 @@ position: absolute;
 }
 
 #customers-teams.owl-carousel .owl-dots .owl-dot {
-    display: block;
+    display: none;
 }
 
 #customers-teams.owl-carousel .owl-dots .owl-dot span {
     background: rgba(215,67,77,0.8);
-    display: inline-block;
+    display: none;
     height: 20px;
     margin: 0 2px 5px;
     margin-top: 10px;
