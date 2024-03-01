@@ -6669,7 +6669,6 @@ position: absolute;
 
 
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700');
 .teams{
 	  font-family: 'Roboto', sans-serif;
 }
@@ -6684,9 +6683,10 @@ position: absolute;
 		
 		#customers-teams .item {
 			 height:470px !important;
+			 width: 100%;
 		    text-align: center;
-		    padding: 50px;
-				margin-bottom:80px;
+		    padding: 10px;
+				margin-bottom:0px;
 		    opacity: .2;
 		    -webkit-transform: scale3d(0.8, 0.8, 1);
 		    transform: scale3d(0.8, 0.8, 1);
@@ -6698,7 +6698,7 @@ position: absolute;
 	font-size:15px;
 }
 #customers-teams .item h2{
-	font-size:20px !important;
+	font-size:22px !important;
 	font-weight:500 !important;
 }
 #customers-teams .item .title{
@@ -6718,7 +6718,7 @@ position: absolute;
 		}
 		.teams .owl-carousel .owl-item .img-circle {
 		    transform-style: preserve-3d;
-		    max-width: 100px;
+		    max-width: 70px;
     		margin: 0 auto 17px;
 			  transition: transform .5s;
 		}
