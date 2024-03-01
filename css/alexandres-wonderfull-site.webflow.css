@@ -6740,18 +6740,17 @@ position: absolute;
 }
 
 #customers-teams.owl-carousel .owl-dots {
-    display: hidden;
+    display: none;
     width: 100%;
     text-align: center;
 }
 
 #customers-teams.owl-carousel .owl-dots .owl-dot {
-    display: inline-block;
+    display: block;
 }
 
 #customers-teams.owl-carousel .owl-dots .owl-dot span {
     background: rgba(215,67,77,0.8);
-    display: inline-block;
     height: 20px;
     margin: 0 2px 5px;
     margin-top: 10px;
