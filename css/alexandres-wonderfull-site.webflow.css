@@ -6688,7 +6688,7 @@ position: absolute;
     width: 100%;
     text-align: center;
     padding: 10px;
-    margin-bottom: -100px;
+    margin-bottom: 0px;
     opacity: .2;
     transform: scale3d(0.8, 0.8, 1);
     transition: all 0.3s ease-in-out;
