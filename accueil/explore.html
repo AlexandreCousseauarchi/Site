@@ -286,8 +286,42 @@ Merci” </p>
    
   </div>
 </div>
- <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script><script  src="https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/main/js/script.js"></script>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
+          <script>
+  (function () {
+    "use strict";
+
+    var carousels = function () {
+      $(".owl-carousel1").owlCarousel({
+        loop: true,
+        center: true,
+        margin: 0,
+        responsiveClass: true,
+        nav: false,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false
+          },
+          680: {
+            items: 2,
+            nav: false,
+            loop: false
+          },
+          1000: {
+            items: 3,
+            nav: true
+          }
+        }
+      });
+    };
+
+    (function ($) {
+      carousels();
+    })(jQuery);
+  })();
+</script>
        
           
 </div>
