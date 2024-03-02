@@ -6657,16 +6657,6 @@ font-weight: 500;
 position: absolute;
 }
 
-.div-block-avis-explore {
-    display: flex;
- flex-direction: column; /* Assure que les éléments sont alignés verticalement */
-width: 80%;
-height: 100%;
-justify-content: center;
-align-self: center;
-align-items: center;
-padding-top: 1%;
-}
 
 
 
@@ -6705,6 +6695,7 @@ h2 {
   vertical-align: top; /* Alignement vertical au sommet */
   margin-right: 10px; /* Marge à droite entre les cartes */
   margin-left: 10px; /* Marge à gauche entre les cartes */
+   margin-bottom: 20px; /* Ajout de marge en dessous */
 }
 
 /* Styles pour les images des témoins */
@@ -6746,9 +6737,10 @@ p {
   }
 
   .card {
-    width: 50%; /* En mode mobile, chaque carte prendra toute la largeur */
-     margin: 0px auto; /* Centre les cartes avec une marge de 10px */
+    width: 50%; /* En mode mobile, chaque carte prendra % de la largeur */
+     margin: 0 auto; /* Centre les cartes avec une marge auto */
     margin-bottom: 20px; /* Ajout d'une marge en bas de chaque carte en mode mobile */
+     box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur */
   }
 }
 
@@ -6789,4 +6781,15 @@ p {
   min-width: 100%; /* Définir la largeur minimale de chaque élément */
   padding: 0 10px; /* Ajout de padding pour séparer les éléments */
   box-sizing: border-box; /* Inclure le padding dans la largeur */
+}
+
+.div-block-avis-explore {
+    display: flex;
+ flex-direction: column; /* Assure que les éléments sont alignés verticalement */
+width: 80%;
+height: 100%;
+justify-content: center;
+align-self: center;
+align-items: center;
+padding-top: 1%;
 }
