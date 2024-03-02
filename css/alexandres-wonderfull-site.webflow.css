@@ -6673,7 +6673,6 @@ position: absolute;
 
 
 
-
 /* Styles pour la section des témoignages */
 .gtco-testimonials {
   position: relative; /* Position relative pour des positionnements absolus à l'intérieur */
@@ -6725,8 +6724,9 @@ h5 {
 
 /* Styles pour les spans */
 span {
-  font-size: 18px; /* Taille de police */
+  font-size: 15px; /* Taille de police */
   color: #666666; /* Couleur du texte */
+    font-family: Roboto light, sans-serif;
 }
 
 /* Styles pour les paragraphes */
@@ -6743,16 +6743,16 @@ p {
     font-family: roboto; /* Utilisation de la police Roboto */
   }
 
- .card {
-    width: 50%; /* Largeur réduite pour chaque carte */
-    margin: 10px auto; /* Centre les cartes avec une marge de 10px */
+  .card {
+    width: 50%; /* En mode mobile, chaque carte prendra toute la largeur */
+     margin: 10px auto; /* Centre les cartes avec une marge de 10px */
     margin-bottom: 20px; /* Ajout d'une marge en bas de chaque carte en mode mobile */
   }
 }
 
 /* Styles pour la liste d'étoiles de notation */
 .ra-rating-star {
-  margin: 0 0 10px; /* Marge en bas */
+  margin: 10px 0; /* Ajout de marges en haut et en bas */
   padding: 0; /* Aucun espacement interne */
   list-style-type: none; /* Pas de style de liste */
 }
