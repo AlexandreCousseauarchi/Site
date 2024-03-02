@@ -6785,5 +6785,6 @@ p {
 .carousel-item {
   flex: 1; /* Les éléments peuvent s'étendre en largeur */
   min-width: 100%; /* Définir la largeur minimale de chaque élément */
-  padding-bottom: 10px; /* Espacement en bas */
+  padding: 0 10px; /* Ajout de padding pour séparer les éléments */
+  box-sizing: border-box; /* Inclure le padding dans la largeur */
 }
