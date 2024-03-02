@@ -6754,4 +6754,17 @@ p {
   width: 20px; /* Ajustez la taille de l'image selon vos besoins */
   height: 20px;
 }
+.carousel {
+  width: 100%; /* Ajuster la largeur selon vos besoins */
+  overflow: hidden; /* Cacher les éléments en dehors de la zone du carousel */
+}
 
+.carousel-container {
+  display: flex; /* Utiliser Flexbox pour aligner les éléments en ligne */
+  transition: transform 0.5s ease; /* Animation de transition pour le défilement fluide */
+}
+
+.carousel-item {
+  flex: 0 0 auto; /* Ne pas agrandir ou rétrécir les éléments */
+  min-width: 100%; /* Définir la largeur minimale de chaque élément */
+}
