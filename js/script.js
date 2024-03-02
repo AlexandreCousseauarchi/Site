@@ -1,37 +1,34 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const carouselContainer = document.querySelector(".owl-carousel1");
-  const carouselItems = document.querySelectorAll(".card");
-  const numItems = carouselItems.length;
-  let currentIndex = 0;
-  let intervalId;
+// Sélectionner les éléments nécessaires
+const carouselContainer = document.querySelector('.carousel-container');
+const carouselItems = document.querySelectorAll('.carousel-item');
+const totalItems = carouselItems.length;
 
-  function startCarousel() {
-    intervalId = setInterval(function() {
-      showNextSlide();
-    }, 4000); // Défilement automatique toutes les 4 secondes
-  }
+// Définir l'index actuel du carousel
+let currentIndex = 0;
 
-  function stopCarousel() {
-    clearInterval(intervalId);
-  }
+// Fonction pour passer à l'élément suivant
+const nextItem = () => {
+    currentIndex = (currentIndex + 1) % totalItems;
+    updateCarousel();
+};
 
-  function showNextSlide() {
-    currentIndex++;
-    if (currentIndex >= numItems) {
-      currentIndex = 0;
-    }
-    carouselItems.forEach(item => {
-      item.style.display = "none";
-    });
-    carouselItems[currentIndex].style.display = "block";
-  }
+// Fonction pour mettre à jour le carousel
+const updateCarousel = () => {
+    const offset = -currentIndex * 100; // Décalage en pourcentage
+    carouselContainer.style.transform = `translateX(${offset}%)`;
+};
 
-  // Démarrer le carrousel
-  startCarousel();
+// Définir l'intervalle de temps pour le défilement automatique
+let autoScroll = setInterval(nextItem, 3000); // Changer selon vos besoins
 
-  // Arrêter le carrousel lorsque le curseur est sur le carrousel
-  carouselContainer.addEventListener("mouseenter", stopCarousel);
-
-  // Redémarrer le carrousel lorsque le curseur quitte le carrousel
-  carouselContainer.addEventListener("mouseleave", startCarousel);
+// Arrêter le défilement automatique lorsqu'un utilisateur interagit avec le carousel
+carouselContainer.addEventListener('mouseenter', () => {
+    clearInterval(autoScroll);
 });
+
+carouselContainer.addEventListener('mouseleave', () => {
+    autoScroll = setInterval(nextItem, 3000); // Changer selon vos besoins
+});
+
+// Mettre à jour le carousel initialement
+updateCarousel();
