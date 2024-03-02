@@ -6659,7 +6659,9 @@ position: absolute;
 
 .div-block-avis-explore {
     display: flex;
-    width: 100%;
+ flex-direction: column; /* Assure que les éléments sont alignés verticalement */
+    width: 80%;
+    width: 80%;
     height: 100%;
     padding-top: 1%;
     justify-content: center;
