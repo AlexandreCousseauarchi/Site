@@ -6745,7 +6745,7 @@ p {
 
   .card {
     width: 50%; /* En mode mobile, chaque carte prendra toute la largeur */
-     margin: 10px auto; /* Centre les cartes avec une marge de 10px */
+     margin: 0px auto; /* Centre les cartes avec une marge de 10px */
     margin-bottom: 20px; /* Ajout d'une marge en bas de chaque carte en mode mobile */
   }
 }
