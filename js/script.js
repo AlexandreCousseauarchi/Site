@@ -1,59 +1,37 @@
-(function ($) {
-  "use strict";
+document.addEventListener("DOMContentLoaded", function() {
+  const carouselContainer = document.querySelector(".owl-carousel1");
+  const carouselItems = document.querySelectorAll(".card");
+  const numItems = carouselItems.length;
+  let currentIndex = 0;
+  let intervalId;
 
-  var carousels = function () {
-    var owl = $(".owl-carousel1").owlCarousel({
-      loop: true,
-      center: true,
-      margin: 0,
-      responsiveClass: true,
-      autoplay: true,
-      autoplayTimeout: 3500,
-      nav: false,
-      responsive: {
-        0: {
-          items: 1,
-          nav: false
-        },
-        680: {
-          items: 2,
-          nav: false,
-          loop: false
-        },
-        1000: {
-          items: 3,
-          nav: true
-        }
-      }
+  function startCarousel() {
+    intervalId = setInterval(function() {
+      showNextSlide();
+    }, 4000); // Défilement automatique toutes les 4 secondes
+  }
+
+  function stopCarousel() {
+    clearInterval(intervalId);
+  }
+
+  function showNextSlide() {
+    currentIndex++;
+    if (currentIndex >= numItems) {
+      currentIndex = 0;
+    }
+    carouselItems.forEach(item => {
+      item.style.display = "none";
     });
+    carouselItems[currentIndex].style.display = "block";
+  }
 
-    var totalItems = owl.find('.owl-item').length;
+  // Démarrer le carrousel
+  startCarousel();
 
-    owl.on('changed.owl.carousel', function(event) {
-      if (event.item.index + 1 === totalItems) {
-        setTimeout(function(){
-          owl.trigger('to.owl.carousel', 0);
-        }, 3500); // Delayed restart
-      }
-    });
-  };
+  // Arrêter le carrousel lorsque le curseur est sur le carrousel
+  carouselContainer.addEventListener("mouseenter", stopCarousel);
 
-  // Appel de la fonction carousels lorsque le DOM est prêt
-  $(document).ready(function() {
-    // Charger Owl Carousel depuis CDN
-    var owlScript = document.createElement('script');
-    owlScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js';
-    owlScript.onload = function() {
-      // Charger les styles Owl Carousel depuis CDN
-      var owlStylesheet = document.createElement('link');
-      owlStylesheet.rel = 'stylesheet';
-      owlStylesheet.href = 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css';
-      
-      // Appeler la fonction carousels après le chargement d'Owl Carousel
-      $('head').append(owlStylesheet);
-      carousels();
-    };
-
-    $('head').append(owlScript);
-  });
-})(jQuery);
+  // Redémarrer le carrousel lorsque le curseur quitte le carrousel
+  carouselContainer.addEventListener("mouseleave", startCarousel);
+});
