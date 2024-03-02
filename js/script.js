@@ -1,4 +1,4 @@
-(function () {
+(function ($) {
   "use strict";
 
   var carousels = function () {
@@ -39,28 +39,21 @@
   };
 
   // Appel de la fonction carousels lorsque le DOM est prêt
-  document.addEventListener('DOMContentLoaded', function() {
-    // Charger jQuery depuis CDN
-    var jqueryScript = document.createElement('script');
-    jqueryScript.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
-    jqueryScript.onload = function() {
-      // Charger Owl Carousel depuis CDN
-      var owlScript = document.createElement('script');
-      owlScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js';
-      owlScript.onload = function() {
-        // Charger les styles Owl Carousel depuis CDN
-        var owlStylesheet = document.createElement('link');
-        owlStylesheet.rel = 'stylesheet';
-        owlStylesheet.href = 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css';
-        
-        // Appeler la fonction carousels après le chargement d'Owl Carousel
-        document.head.appendChild(owlStylesheet);
-        carousels();
-      };
-
-      document.head.appendChild(owlScript);
+  $(document).ready(function() {
+    // Charger Owl Carousel depuis CDN
+    var owlScript = document.createElement('script');
+    owlScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js';
+    owlScript.onload = function() {
+      // Charger les styles Owl Carousel depuis CDN
+      var owlStylesheet = document.createElement('link');
+      owlStylesheet.rel = 'stylesheet';
+      owlStylesheet.href = 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css';
+      
+      // Appeler la fonction carousels après le chargement d'Owl Carousel
+      $('head').append(owlStylesheet);
+      carousels();
     };
 
-    document.head.appendChild(jqueryScript);
+    $('head').append(owlScript);
   });
-})();
+})(jQuery);
