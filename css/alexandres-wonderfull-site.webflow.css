@@ -6606,11 +6606,17 @@ position: absolute;
 }
 
 .div-block-97 {
-  display: flex;
-  width: 100%;
-  margin-top: 10px;
-  justify-content: space-between;
-  align-items: flex-end;
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+@media screen and (max-width: 768px) { /* Modifiez la valeur de 768px en fonction de vos besoins pour cibler les téléphones */
+    .div-block-97 {
+        flex-direction: column;
+    }
 }
 
 .div-block-95 {
