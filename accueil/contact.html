@@ -162,7 +162,47 @@ src="https://www.facebook.com/tr?id=3861387584138323&ev=PageView&noscript=1"
 
   
 <div class="div-block-avis-contact">
+<div class="carousel-container">
+  <div class="carousel">
+    <img src="https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/main/images/Post%20Avis%20Aline%20Betton.jpg" alt="" class="carousel-item">
+    <img src="https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/main/images/Post%20Avis%20Vesta.jpg" alt="" class="carousel-item">
+    <img src="https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/main/images/Post%20Avis%20St%C3%A9phanie%20Chobert.jpg" alt="" class="carousel-item">
+  </div>
+</div>
+<script>
+  const carousel = document.querySelector('.carousel');
+const carouselItems = document.querySelectorAll('.carousel-item');
+const totalItems = carouselItems.length;
 
+let currentIndex = 0;
+
+// Fonction pour passer à l'élément suivant
+const nextItem = () => {
+  currentIndex = (currentIndex + 1) % totalItems;
+  updateCarousel();
+};
+
+// Fonction pour mettre à jour le carousel
+const updateCarousel = () => {
+  const offset = -currentIndex * 100; // Décalage en pourcentage
+  carousel.style.transform = `translateX(${offset}%)`;
+};
+
+// Définir l'intervalle de temps pour le défilement automatique
+let autoScroll = setInterval(nextItem, 4000); // Changer selon vos besoins
+
+// Arrêter le défilement automatique lorsqu'un utilisateur interagit avec le carousel
+carousel.addEventListener('mouseenter', () => {
+  clearInterval(autoScroll);
+});
+
+carousel.addEventListener('mouseleave', () => {
+  autoScroll = setInterval(nextItem, 4000); // Changer selon vos besoins
+});
+
+// Mettre à jour le carousel initialement
+updateCarousel();
+</script>
   </div>
 
 
