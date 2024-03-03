@@ -6663,7 +6663,14 @@ font-weight: 500;
 position: absolute;
 }
 
-
+@media screen and (max-width: 768px) { /* Modifiez la valeur de 768px en fonction de vos besoins pour cibler les téléphones */
+    .heading-64 {
+        position: absolute; /* Position absolue pour sortir du flux de la page */
+        top: 50px; /* Définir une position verticale en haut de la fenêtre */
+        left: 0px; /* Définir une position horizontale à gauche de la fenêtre */
+        margin: 0; /* Supprimer toutes les marges */
+    }
+}
 
 
 
