@@ -6829,6 +6829,8 @@ padding-top: 1%;
 .carousel-item-contact {
   display: block;
   flex: 0 0 auto; /* Ajout de cette ligne */
+    width: 100%; /* Fixez la largeur de chaque image à 100% */
+  margin-right: 10px; /* Ajout d'un espacement entre les images */
 }
 
 .carousel-item-contact img {
