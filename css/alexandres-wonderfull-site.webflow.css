@@ -6815,18 +6815,20 @@ padding-top: 1%;
 
 
 
-/* Styles pour la section des témoignages */
-.gtco-testimonials-contact {
-  position: relative; /* Position relative pour des positionnements absolus à l'intérieur */
-  margin-top: 30px; /* Marge en haut de la section */
-  font-family: roboto; /* Utilisation de la police Roboto */
-  text-align: center; /* Alignement du texte au centre */
+
+
+.div-block-avis-contact {
+  height: 25px; /* Hauteur fixe pour chaque image */
+display: contents;
+  overflow: hidden;
 }
 
 /* Styles pour le carousel */
 .carousel-contact {
   width: 100%; /* Largeur du carousel */
   overflow: hidden; /* Cacher les éléments débordants */
+  align-items: center;
+  justify-content: center;
 }
 
 /* Styles pour le conteneur du carousel */
@@ -6843,8 +6845,14 @@ padding-top: 1%;
   box-sizing: border-box; /* Inclure le padding dans la largeur */
 }
 
-.div-block-avis-contact {
-  height: 25px; /* Hauteur fixe pour chaque image */
-display: contents;
-  overflow: hidden;
+.carousel-item-contact1 {
+  display: block;
+  flex: 1
+    width: 100%; /* Fixez la largeur de chaque image à 100% */
+  margin-right: 10px; /* Ajout d'un espacement entre les images */
+}
+
+.carousel-item-contact1 img {
+  height: 25px;
+  width: auto;
 }
