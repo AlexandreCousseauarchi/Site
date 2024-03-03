@@ -156,6 +156,45 @@ src="https://www.facebook.com/tr?id=3861387584138323&ev=PageView&noscript=1"
 <img src="https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/main/images/Post%20Facebook%2003.jpg" loading="lazy" data-wf-id='["9e28f058-ffca-805f-fa9d-9fb3abaded26"]' data-w-id="9e28f058-ffca-805f-fa9d-9fb3abaded26" alt="" class="image-98">
 </a>
 
+<div class="page-contact-carousel">
+  <div class="page-contact-carousel-inner">
+    <div class="page-contact-carousel-item">
+      <a href="https://www.instagram.com/alexandrecousseau.architecte/" class="page-contact-image-link">
+        <img src="https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/main/images/Post%20Abonnez%20vous.jpg" loading="lazy" data-wf-id='["1bd5e071-b6e8-c7cc-3e27-b14d060d6f65"]' data-w-id="1bd5e071-b6e8-c7cc-3e27-b14d060d6f65" alt="" class="page-contact-image-96">
+      </a>
+    </div>
+    <div class="page-contact-carousel-item">
+      <a href="https://www.instagram.com/alexandrecousseau.architecte/" class="page-contact-image-link">
+        <img src="https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/main/images/Post%20Abonnez%20vous.jpg" loading="lazy" data-wf-id='["1bd5e071-b6e8-c7cc-3e27-b14d060d6f65"]' data-w-id="1bd5e071-b6e8-c7cc-3e27-b14d060d6f65" alt="" class="page-contact-image-96">
+      </a>
+    </div>
+    <div class="page-contact-carousel-item">
+      <a href="https://www.instagram.com/alexandrecousseau.architecte/" class="page-contact-image-link">
+        <img src="https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/main/images/Post%20Abonnez%20vous.jpg" loading="lazy" data-wf-id='["1bd5e071-b6e8-c7cc-3e27-b14d060d6f65"]' data-w-id="1bd5e071-b6e8-c7cc-3e27-b14d060d6f65" alt="" class="page-contact-image-96">
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const carousel = document.querySelector('.page-contact-carousel');
+  const carouselInner = carousel.querySelector('.page-contact-carousel-inner');
+  const carouselItems = carousel.querySelectorAll('.page-contact-carousel-item');
+
+  let currentIndex = 0;
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % carouselItems.length;
+    updateCarousel();
+  }
+
+  function updateCarousel() {
+    const offset = -currentIndex * carousel.clientWidth;
+    carouselInner.style.transform = `translateX(${offset}px)`;
+  }
+
+  setInterval(nextSlide, 4000);
+</script>
 
 
   
