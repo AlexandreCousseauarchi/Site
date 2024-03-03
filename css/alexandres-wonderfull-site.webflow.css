@@ -6815,6 +6815,13 @@ padding-top: 1%;
 
 
 
+
+.div-block-avis-contact {
+  height: 25px; /* Hauteur fixe pour chaque image */
+  width: auto; /* Largeur automatique pour conserver les proportions de l'image */
+	overflow: hidden;
+}
+
 .carousel-container-contact {
   width: 100%;
   overflow: hidden;
