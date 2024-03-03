@@ -291,17 +291,24 @@ Merci </p>
   </div>
 </div>
 	<script>
-		// Sélectionner les éléments nécessaires
+// Sélectionner les éléments nécessaires
 const carouselContainer = document.querySelector('.carousel-container');
 const carouselItems = document.querySelectorAll('.carousel-item');
 const totalItems = carouselItems.length;
 
 // Définir l'index actuel du carousel
 let currentIndex = 0;
+let startX = null; // Variable pour stocker la position de départ du toucher
 
 // Fonction pour passer à l'élément suivant
 const nextItem = () => {
     currentIndex = (currentIndex + 1) % totalItems;
+    updateCarousel();
+};
+
+// Fonction pour passer à l'élément précédent
+const prevItem = () => {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
     updateCarousel();
 };
 
@@ -310,6 +317,25 @@ const updateCarousel = () => {
     const offset = -currentIndex * 100; // Décalage en pourcentage
     carouselContainer.style.transform = `translateX(${offset}%)`;
 };
+
+// Ajouter des écouteurs d'événements tactiles
+carouselContainer.addEventListener('touchstart', (event) => {
+    startX = event.touches[0].clientX; // Enregistrer la position de départ du toucher
+});
+
+carouselContainer.addEventListener('touchmove', (event) => {
+    if (!startX) return; // Sortir si la position de départ du toucher n'est pas enregistrée
+    const currentX = event.touches[0].clientX;
+    const diffX = startX - currentX;
+
+    if (diffX > 0) {
+        nextItem(); // Déplacer vers l'élément suivant si le geste est vers la gauche
+    } else if (diffX < 0) {
+        prevItem(); // Déplacer vers l'élément précédent si le geste est vers la droite
+    }
+
+    startX = null; // Réinitialiser la position de départ du toucher
+});
 
 // Définir l'intervalle de temps pour le défilement automatique
 let autoScroll = setInterval(nextItem, 3500); // Changer selon vos besoins
@@ -325,6 +351,7 @@ carouselContainer.addEventListener('mouseleave', () => {
 
 // Mettre à jour le carousel initialement
 updateCarousel();
+
 	</script>
 		
 	
