@@ -6809,3 +6809,17 @@ align-items: center;
 padding-top: 1%;
 	overflow: hidden;
 }
+
+
+.div-block-avis-contact {
+    display: flex;
+ flex-direction: column; /* Assure que les éléments sont alignés verticalement */
+width: 80%;
+height: 25%;
+  margin: 1%;
+justify-content: center;
+align-self: center;
+align-items: center;
+padding-top: 1%;
+  overflow: hidden;
+}
