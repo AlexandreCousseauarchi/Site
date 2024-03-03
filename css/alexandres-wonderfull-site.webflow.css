@@ -6815,28 +6815,27 @@ padding-top: 1%;
 
 
 
-
-.div-block-avis-contact {
-  height: 25px; /* Hauteur fixe pour chaque image */
-  width: auto; /* Largeur automatique pour conserver les proportions de l'image */
-	overflow: hidden;
-}
-
 .carousel-container-contact {
-  width: 100%;
+  max-width: 50%;
   overflow: hidden;
 }
 
 .carousel-contact {
-  display: flex;
+  display: inline-flex;
   transition: transform 0.5s ease;
 }
 
 .carousel-item-contact {
-  flex: 0 0 100%; /* Chaque image occupe toute la largeur du conteneur */
+  display: block;
 }
 
 .carousel-item-contact img {
   height: 25px; /* Hauteur fixe pour chaque image */
   width: auto; /* Largeur automatique pour conserver les proportions de l'image */
+}
+
+.div-block-avis-contact {
+  height: 25px; /* Hauteur fixe pour chaque image */
+display: contents;
+  overflow: hidden;
 }
