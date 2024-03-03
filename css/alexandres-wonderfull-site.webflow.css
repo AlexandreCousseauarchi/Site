@@ -6616,6 +6616,7 @@ position: absolute;
 @media screen and (max-width: 768px) { /* Modifiez la valeur de 768px en fonction de vos besoins pour cibler les téléphones */
     .div-block-97 {
         flex-direction: column;
+	    align-items: center;
     }
 }
 
