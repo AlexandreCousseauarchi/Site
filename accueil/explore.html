@@ -340,7 +340,7 @@ if (window.matchMedia('(max-width: 768px)').matches) {
 }
 
 // Définir l'intervalle de temps pour le défilement automatique
-let autoScroll = setInterval(nextItem, 3500); // Changer selon vos besoins
+let autoScroll = setInterval(nextItem, 4000); // Changer selon vos besoins
 
 // Arrêter le défilement automatique lorsqu'un utilisateur interagit avec le carousel
 carouselContainer.addEventListener('mouseenter', () => {
@@ -348,12 +348,11 @@ carouselContainer.addEventListener('mouseenter', () => {
 });
 
 carouselContainer.addEventListener('mouseleave', () => {
-    autoScroll = setInterval(nextItem, 3500); // Changer selon vos besoins
+    autoScroll = setInterval(nextItem, 4000); // Changer selon vos besoins
 });
 
 // Mettre à jour le carousel initialement
 updateCarousel();
-
 	</script>
 		
 	
