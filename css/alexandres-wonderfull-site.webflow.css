@@ -6816,3 +6816,32 @@ padding-top: 1%;
 
 
 
+.carousel {
+  width: 300px; /* Ajustez la largeur selon vos besoins */
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.image-link {
+  height: 100%;
+}
+
+.image-96 {
+  height: 25%;
+}
+
+.image-96:hover {
+  height: 26%;
+  margin: 0;
+  padding: 1;
+}
