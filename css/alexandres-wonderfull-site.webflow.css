@@ -6815,31 +6815,31 @@ padding-top: 1%;
 
 
 
-.carousel-container-contact {
-  max-width: 50%;
-  overflow: hidden;
+/* Styles pour la section des témoignages */
+.gtco-testimonials-contact {
+  position: relative; /* Position relative pour des positionnements absolus à l'intérieur */
+  margin-top: 30px; /* Marge en haut de la section */
+  font-family: roboto; /* Utilisation de la police Roboto */
+  text-align: center; /* Alignement du texte au centre */
 }
 
+/* Styles pour le carousel */
 .carousel-contact {
-  display: flex;
-  transition: transform 0.5s ease;
-  width: 100%; /* Ajout de cette ligne */
+  width: 100%; /* Largeur du carousel */
+  overflow: hidden; /* Cacher les éléments débordants */
 }
 
+/* Styles pour le conteneur du carousel */
+.carousel-container-contact {
+  display: flex; /* Utiliser Flexbox pour aligner les éléments en ligne */
+  transition: transform 1s ease; /* Animation de transition pour le défilement fluide */
+}
+
+/* Styles pour chaque élément du carousel */
 .carousel-item-contact {
-  display: block;
-  flex: 0 0 auto; /* Ajout de cette ligne */
-    width: 100%; /* Fixez la largeur de chaque image à 100% */
-  margin-right: 10px; /* Ajout d'un espacement entre les images */
+  flex: 1; /* Les éléments peuvent s'étendre en largeur */
+  min-width: 100%; /* Définir la largeur minimale de chaque élément */
+  padding: 0 10px; /* Ajout de padding pour séparer les éléments */
+  box-sizing: border-box; /* Inclure le padding dans la largeur */
 }
 
-.carousel-item-contact img {
-  height: 25px;
-  width: auto;
-}
-
-.div-block-avis-contact {
-  height: 25px; /* Hauteur fixe pour chaque image */
-display: contents;
-  overflow: hidden;
-}
