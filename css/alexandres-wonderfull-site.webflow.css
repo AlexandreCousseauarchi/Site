@@ -6843,3 +6843,8 @@ padding-top: 1%;
   box-sizing: border-box; /* Inclure le padding dans la largeur */
 }
 
+.div-block-avis-contact {
+  height: 25px; /* Hauteur fixe pour chaque image */
+display: contents;
+  overflow: hidden;
+}
