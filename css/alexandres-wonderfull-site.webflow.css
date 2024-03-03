@@ -6821,17 +6821,19 @@ padding-top: 1%;
 }
 
 .carousel-contact {
-  display: inline-flex;
+  display: flex;
   transition: transform 0.5s ease;
+  width: 100%; /* Ajout de cette ligne */
 }
 
 .carousel-item-contact {
   display: block;
+  flex: 0 0 auto; /* Ajout de cette ligne */
 }
 
 .carousel-item-contact img {
-  height: 25px; /* Hauteur fixe pour chaque image */
-  width: auto; /* Largeur automatique pour conserver les proportions de l'image */
+  height: 25px;
+  width: auto;
 }
 
 .div-block-avis-contact {
