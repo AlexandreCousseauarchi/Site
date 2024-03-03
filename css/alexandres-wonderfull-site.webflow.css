@@ -6617,6 +6617,7 @@ position: absolute;
     .div-block-97 {
         flex-direction: column;
 	    align-items: center;
+	           flex-direction: column-reverse; /* Inverser l'affichage des éléments en colonne sur les téléphones */
     }
 }
 
