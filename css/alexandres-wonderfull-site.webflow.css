@@ -6711,7 +6711,7 @@ position: absolute;
     opacity: 0.2;
     transform: scale3d(0.8, 0.8, 1);
     transition: all 0.3s ease-in-out;
-    width: calc((100% - 20px) / 3); /* 3 items par ligne */
+    width: calc(100% / 3); /* 3 items par ligne */
 }
 
 #customers-teams .item.active {
