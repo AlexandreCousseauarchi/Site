@@ -6752,7 +6752,7 @@ p {
   }
 
   .card {
-    width: 50%; /* En mode mobile, chaque carte prendra % de la largeur */
+    width: 40%; /* En mode mobile, chaque carte prendra % de la largeur */
      margin: 0 auto; /* Centre les cartes avec une marge auto */
     margin-bottom: 20px; /* Ajout d'une marge en bas de chaque carte en mode mobile */
      box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur */
