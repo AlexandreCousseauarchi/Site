@@ -353,7 +353,6 @@ function updateCarousel() {
     for (let i = currentIndex; i < currentIndex + itemsToShow; i++) {
         const index = i % carouselItems.length;
         carouselItems[index].classList.add('active');
-        carouselItems[index].style.opacity = 1; // Retirer l'opacité pour l'élément actif
     }
     centerCurrentItem(); // Centrer l'élément actif
 }
@@ -381,28 +380,21 @@ setInterval(() => {
 // Gestion des événements tactiles
 carousel.addEventListener('touchstart', e => {
     isTouching = true;
-    startX = e.touches[0].pageX;
+    startX = e.touches[0].pageX - carousel.offsetLeft;
     scrollLeft = carousel.scrollLeft;
 });
 
 carousel.addEventListener('touchmove', e => {
     if (!isTouching) return;
     e.preventDefault();
-    const x = e.touches[0].pageX;
-    const diff = startX - x;
-    carousel.scrollLeft = scrollLeft + diff;
+    const x = e.touches[0].pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 2;
+    carousel.scrollLeft = scrollLeft - walk;
 });
 
 carousel.addEventListener('touchend', () => {
     isTouching = false;
-    const direction = startX - e.changedTouches[0].pageX;
-    if (Math.abs(direction) > 50) {
-        if (direction > 0) {
-            nextSlide();
-        }
-    }
 });
-
 </script>
 
 		
