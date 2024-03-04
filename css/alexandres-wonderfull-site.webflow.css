@@ -6745,6 +6745,7 @@ position: absolute;
     border-radius: 50%;
     max-width: 60px;
     transition: transform .5s;
+      display: inline-block;
 }
 
 #customers-teams .item .img-circle:hover {
