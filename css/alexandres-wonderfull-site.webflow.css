@@ -6709,7 +6709,8 @@ position: absolute;
     flex: 0 0 auto;
     scroll-snap-align: start;
     opacity: 0.2;
-    transform: scale3d(0.8, 0.8, 1);
+    padding-left: 2%;
+    padding-right: 2%;
     transition: all 0.3s ease-in-out;
     width: calc(100% / 3); /* 3 items par ligne */
 }
