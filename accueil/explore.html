@@ -334,6 +334,7 @@ const totalItems = carouselItems.length;
 // Définir l'index actuel du carousel
 let currentIndex = 0;
 let startX = null; // Variable pour stocker la position de départ du toucher
+let autoScrollTimer; // Variable pour stocker le timer de redémarrage du défilement automatique
 
 // Fonction pour passer à l'élément suivant
 const nextItem = () => {
@@ -377,18 +378,47 @@ if (window.matchMedia('(max-width: 768px)').matches) {
 // Définir l'intervalle de temps pour le défilement automatique
 let autoScroll = setInterval(nextItem, 4000); // Changer selon vos besoins
 
+// Fonction pour redémarrer le défilement automatique après un certain délai
+const restartAutoScroll = () => {
+    autoScrollTimer = setTimeout(() => {
+        autoScroll = setInterval(nextItem, 4000); // Redémarrer le défilement automatique
+    }, 5000); // Définir le délai en millisecondes (par exemple, 5 secondes)
+};
+
 // Arrêter le défilement automatique lorsqu'un utilisateur interagit avec le carousel
+carouselContainer.addEventListener('mousedown', () => {
+    clearInterval(autoScroll);
+    clearTimeout(autoScrollTimer); // Annuler le timer de redémarrage si défini
+});
+
+carouselContainer.addEventListener('touchstart', () => {
+    clearInterval(autoScroll);
+    clearTimeout(autoScrollTimer); // Annuler le timer de redémarrage si défini
+});
+
+// Redémarrer le défilement automatique après un certain délai si aucun autre événement n'est déclenché
+carouselContainer.addEventListener('mouseup', () => {
+    restartAutoScroll();
+});
+
+carouselContainer.addEventListener('touchend', () => {
+    restartAutoScroll();
+});
+
+// Arrêter le défilement automatique lorsqu'un utilisateur interagit avec le carousel en survolant
 carouselContainer.addEventListener('mouseenter', () => {
     clearInterval(autoScroll);
 });
 
+// Redémarrer le défilement automatique lorsque l'utilisateur quitte le carousel
 carouselContainer.addEventListener('mouseleave', () => {
-    autoScroll = setInterval(nextItem, 4000); // Changer selon vos besoins
+    restartAutoScroll();
 });
 
 // Mettre à jour le carousel initialement
 updateCarousel();
-	</script>
+</script>
+
 		
 	
 	
