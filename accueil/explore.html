@@ -329,6 +329,7 @@ src="https://www.facebook.com/tr?id=3861387584138323&ev=PageView&noscript=1"
 	<script>
 const carousel = document.querySelector('#customers-teams');
 const carouselItems = carousel.querySelectorAll('.item');
+const itemsToShow = 1;
 let currentIndex = 0;
 let isTouching = false;
 let startX = 0;
@@ -349,7 +350,6 @@ function nextSlide() {
 
 function updateCarousel() {
     carouselItems.forEach(item => item.classList.remove('active'));
-    const itemsToShow = window.innerWidth > 768 ? 3 : 1;
     for (let i = currentIndex; i < currentIndex + itemsToShow; i++) {
         const index = i % carouselItems.length;
         carouselItems[index].classList.add('active');
