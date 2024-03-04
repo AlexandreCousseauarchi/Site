@@ -6699,7 +6699,7 @@ position: absolute;
     scroll-snap-type: x mandatory;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 100%;
     margin: auto;
     scroll-behavior: smooth;
   overflow-x: hidden; /* Masquer la barre de défilement horizontale */
@@ -6782,6 +6782,18 @@ position: absolute;
     #customers-teams .item {
         width: calc(100% - 20px); /* Chaque élément occupe toute la largeur de la vue */
     }
+}
+
+.div-block-avis-explore {
+    display: flex;
+ flex-direction: column; /* Assure que les éléments sont alignés verticalement */
+    width: 80%;
+    width: 80%;
+    height: 100%;
+    padding-top: 1%;
+    justify-content: center;
+    align-items: flex-end;
+	overflow: hidden;
 }
 
 
