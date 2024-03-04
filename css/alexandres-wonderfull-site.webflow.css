@@ -6783,6 +6783,12 @@ position: absolute;
     overflow: hidden;
 }
 
+@media (max-width: 768px) {
+    #customers-teams {
+        width: 80%; /* Modifier la largeur à 80% sur les téléphones */
+    }
+}
+
 /* Media queries */
 @media (max-width: 768px) {
     #customers-teams .item {
