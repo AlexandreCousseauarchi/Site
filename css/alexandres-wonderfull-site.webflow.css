@@ -6690,7 +6690,7 @@ position: absolute;
     border-radius: 20px;
     text-align: center;
     border: 1px solid #ECECEC;
- box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 5px 8px rgba(0,0,0,0.01);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 5px 8px rgba(0,0,0,0.01);
 }
 
 #customers-teams {
@@ -6702,7 +6702,7 @@ position: absolute;
     width: 100%;
     margin: auto;
     scroll-behavior: smooth;
-  overflow-x: hidden; /* Masquer la barre de défilement horizontale */
+    overflow-x: hidden; /* Masquer la barre de défilement horizontale */
 }
 
 #customers-teams .item {
@@ -6745,7 +6745,7 @@ position: absolute;
     border-radius: 50%;
     max-width: 60px;
     transition: transform .5s;
-      display: inline-block;
+    display: inline-block;
 }
 
 #customers-teams .item .img-circle:hover {
@@ -6776,7 +6776,7 @@ position: absolute;
 @media (max-width: 768px) {
     #customers-teams {
         width: 100%;
-      overflow-x: hidden; /* Masquer la barre de défilement horizontale */
+        overflow-x: hidden; /* Masquer la barre de défilement horizontale */
     }
 
     #customers-teams .item {
@@ -6788,13 +6788,13 @@ position: absolute;
     display: flex;
  flex-direction: column; /* Assure que les éléments sont alignés verticalement */
     width: 80%;
-    width: 80%;
     height: 100%;
     padding-top: 1%;
     justify-content: center;
     align-items: flex-end;
 	overflow: hidden;
 }
+
 
 
 
