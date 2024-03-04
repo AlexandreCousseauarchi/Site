@@ -344,17 +344,15 @@ const firstItemClone = carouselItems[0].cloneNode(true);
 carousel.appendChild(firstItemClone);
 
 function nextSlide() {
-    currentIndex = (currentIndex + 1) % carouselItems.length; // Passer à la diapositive suivante
-    updateCarousel(); // Mettre à jour le carousel
+    currentIndex = (currentIndex + 1) % carouselItems.length;
+    updateCarousel();
 }
 
 function updateCarousel() {
     carouselItems.forEach(item => item.classList.remove('active'));
-    for (let i = currentIndex; i < currentIndex + itemsToShow; i++) {
-        const index = i % carouselItems.length;
-        carouselItems[index].classList.add('active');
-    }
-    centerCurrentItem(); // Centrer l'élément actif
+    const index = currentIndex % carouselItems.length;
+    carouselItems[index].classList.add('active');
+    centerCurrentItem();
 }
 
 function centerCurrentItem() {
