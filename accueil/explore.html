@@ -353,6 +353,7 @@ function updateCarousel() {
     for (let i = currentIndex; i < currentIndex + itemsToShow; i++) {
         const index = i % carouselItems.length;
         carouselItems[index].classList.add('active');
+        carouselItems[index].style.opacity = 1; // Retirer l'opacité pour l'élément actif
     }
     centerCurrentItem(); // Centrer l'élément actif
 }
