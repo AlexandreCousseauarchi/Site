@@ -6712,7 +6712,6 @@ position: absolute;
     padding-left: 2%;
     padding-right: 2%;
     transition: all 0.3s ease-in-out;
-    width: calc(100% / 3); /* 3 items par ligne */
 }
 
 #customers-teams .item.active {
@@ -6773,29 +6772,30 @@ position: absolute;
     display: none;
 }
 
-/* Assure un affichage correct sur les appareils mobiles */
-@media (max-width: 768px) {
-    #customers-teams {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    #customers-teams .item {
-        width: 100%; /* Chaque élément occupe toute la largeur */
-    }
-}
-
-
 .div-block-avis-explore {
     display: flex;
- flex-direction: column; /* Assure que les éléments sont alignés verticalement */
+    flex-direction: column; /* Assure que les éléments sont alignés verticalement */
     width: 80%;
     height: 100%;
     padding-top: 1%;
     justify-content: center;
     align-items: center;
-	overflow: hidden;
+    overflow: hidden;
 }
+
+/* Media queries */
+@media (max-width: 768px) {
+    #customers-teams .item {
+        width: calc(100% - 20px); /* Chaque élément occupe toute la largeur de la vue */
+    }
+}
+
+@media (min-width: 769px) {
+    #customers-teams .item {
+        width: calc(100% / 3); /* 3 items par ligne */
+    }
+}
+
 
 
 
