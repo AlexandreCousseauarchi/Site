@@ -6778,13 +6778,10 @@ position: absolute;
     #customers-teams {
         width: 100%;
         overflow-x: hidden;
-        display: flex;
-        justify-content: center; /* Centrer l'ensemble des items */
     }
 
     #customers-teams .item {
         width: 100%; /* Chaque élément occupe toute la largeur */
-        flex-shrink: 0; /* Empêcher le rétrécissement des éléments */
     }
 }
 
