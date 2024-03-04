@@ -6777,13 +6777,17 @@ position: absolute;
 @media (max-width: 768px) {
     #customers-teams {
         width: 100%;
-        overflow-x: hidden; /* Masquer la barre de défilement horizontale */
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center; /* Centrer l'ensemble des items */
     }
 
     #customers-teams .item {
-        width: calc(100% - 20px); /* Chaque élément occupe toute la largeur de la vue */
+        width: 100%; /* Chaque élément occupe toute la largeur */
+        flex-shrink: 0; /* Empêcher le rétrécissement des éléments */
     }
 }
+
 
 .div-block-avis-explore {
     display: flex;
