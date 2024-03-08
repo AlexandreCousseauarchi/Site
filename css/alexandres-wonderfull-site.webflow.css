@@ -6884,3 +6884,56 @@ position: absolute;
   margin-top: 10px;
   display: flex;
  }
+
+
+.body-3 {
+  background-image: url('../images/404.webp');
+  background-position: 50%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.texte-cvg {
+  width: 100%;
+  height: 675px;
+  text-align: center;
+  flex-flow: column;
+  align-self: flex-start;
+  align-items: center;
+  margin-top: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  overflow: auto;
+}
+
+@media screen and (max-width: 991px) {
+.texte-cgv {
+  padding-left: 10%;
+  padding-right: 10%;
+ }
+}
+
+.heading-mentions-legales {
+  color: #000;
+  margin-top: 160px;
+  margin-bottom: 5px;
+  font-family: Roboto, sans-serif;
+  font-size: 200%;
+  font-weight: 700;
+}
+
+.text-block-cgv {
+  color: #000;
+  font-family: Roboto, sans-serif;
+}
+
+.titre-article {
+  color: #000;
+  margin-bottom: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 150%;
+}
+
