@@ -4470,16 +4470,18 @@ img {
     display: flex;
   }
 
-  .div-r-seaux-burger {
-    width: 20%;
-    height: 45%;
-    border-top: 1px solid #000;
-    justify-content: center;
-    align-items: flex-start;
-    margin-right: 0%;
-    padding-top: 3%;
-    display: flex;
-  }
+.div-r-seaux-burger {
+  width: 20%;
+  height: 45%;
+  border-top: 1px solid #000;
+  flex-flow: wrap;
+  align-content: space-between;
+  justify-content: center;
+  align-items: stretch;
+  margin-right: 0%;
+  padding-top: 1%;
+  display: flex;
+}
 
   .link-block-scroll-bas {
     width: 8%;
