@@ -6884,6 +6884,7 @@ position: absolute;
   margin-top: 10px;
   display: flex;
  }
+}
 
 
 .body-3 {
@@ -6907,7 +6908,6 @@ position: absolute;
   position: fixed;
   top: 0;
   overflow: auto;
- }
 }
 
 @media screen and (max-width: 991px) {
