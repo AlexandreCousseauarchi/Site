@@ -6876,7 +6876,7 @@ position: absolute;
   display: flex;
  }
 
-@media screen and (max-width: 991px)
+@media screen and (max-width: 991px) {
 .div-block-99 {
   width: 100%;
   justify-content: center;
