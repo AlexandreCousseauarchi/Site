@@ -767,6 +767,7 @@ img {
   background-size: cover;
   margin-right: 10px;
   transition: all .5s;
+	margin-bottom: 2px;
 }
 
 .instagram:hover {
@@ -782,6 +783,7 @@ img {
   background-position: 50%;
   background-size: cover;
   margin-right: 10px;
+	margin-bottom: 3px;
 }
 
 .link-block-15:hover {
