@@ -6889,28 +6889,20 @@ position: absolute;
 
 
 
+
 .body-3 {
-  height: 100%;  
-  background-image: url('https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/main/images/Mentions%20l%C3%A9gales.jpg');
-  background-position: 50%;
-  background-size: cover;
-  background-attachment: fixed;
   overflow: hidden;
 }
 
 .texte-cgv {
   width: 100%;
-  height: 80%;
   text-align: center;
   flex-flow: column;
   align-self: flex-start;
   align-items: center;
-  margin-top: 0;
   padding-left: 15%;
   padding-right: 15%;
   display: flex;
-  position: fixed;
-  top: 0;
   overflow: auto;
 }
 
@@ -6934,7 +6926,7 @@ position: absolute;
   color: #000;
   font-family: Roboto, sans-serif;
   text-align: center;
-	  font-size: 90%;
+  font-size: 90%;
 }
 
 .titre-article {
@@ -6942,4 +6934,33 @@ position: absolute;
   margin-bottom: 0;
   font-family: Roboto, sans-serif;
   font-size: 130%;
+}
+
+.div-block-parquet {
+  z-index: 1;
+  width: 100%;
+  height: 15%;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  top: auto;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.image-parquet {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: visible;
+}
+
+.image-logocgv {
+  height: 30%;
+  opacity: .1;
+  position: fixed;
+  top: 35%;
 }
