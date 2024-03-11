@@ -43,13 +43,12 @@ img {
 
 .bouton-accueil {
   color: gray;
-  text-transform: uppercase;
   white-space: normal;
   word-break: normal;
   overflow-wrap: normal;
-  font-family: Roboto, sans-serif;
+  font-family: Montserrat;
   font-size: 150%;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -577,13 +576,12 @@ img {
 
 .bouton-contact {
   color: gray;
-  text-transform: uppercase;
   white-space: normal;
   word-break: normal;
   overflow-wrap: normal;
-  font-family: Roboto, sans-serif;
+  font-family: Montserrat;
   font-size: 150%;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -703,13 +701,12 @@ img {
 
 .bouton-explore {
   color: gray;
-  text-transform: uppercase;
   white-space: normal;
   word-break: normal;
   overflow-wrap: normal;
-  font-family: Roboto, sans-serif;
+  font-family: Montserrat;
   font-size: 150%;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -723,13 +720,12 @@ img {
 
 .bouton-d-couvre {
   color: gray;
-  text-transform: uppercase;
   white-space: normal;
   word-break: normal;
   overflow-wrap: normal;
-  font-family: Roboto, sans-serif;
+  font-family: Montserrat;
   font-size: 150%;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -739,8 +735,7 @@ img {
 
 .bouton-d-couvre.w--current {
   color: gray;
-  text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .bouton-d-couvre.w--current:hover {
@@ -4152,9 +4147,9 @@ img {
   white-space: normal;
   word-break: normal;
   overflow-wrap: normal;
-  font-family: Roboto, sans-serif;
+  font-family: Montserrat;
   font-size: 150%;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -4172,9 +4167,9 @@ img {
   white-space: normal;
   word-break: normal;
   overflow-wrap: normal;
-  font-family: Roboto, sans-serif;
+  font-family: Montserrat;
   font-size: 150%;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -4191,9 +4186,9 @@ img {
   white-space: normal;
   word-break: normal;
   overflow-wrap: normal;
-  font-family: Roboto, sans-serif;
+  font-family: Montserrat;
   font-size: 150%;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -4210,9 +4205,9 @@ img {
   white-space: normal;
   word-break: normal;
   overflow-wrap: normal;
-  font-family: Roboto, sans-serif;
+  font-family: Montserrat;
   font-size: 150%;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
 }
 
