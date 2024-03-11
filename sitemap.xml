@@ -2,82 +2,140 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
 <url>
   <loc>http://alexandrecousseau.fr/index.html</loc>
-  <changefreq>always</changefreq>
+  <lastmod>2024-03-11T10:07:30-04:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
 </url>
+  
 <url>
   <loc>http://alexandrecousseau.fr/accueil/decouvre.html</loc>
-  <changefreq>always</changefreq>
+  <lastmod>2024-03-11T10:07:30-04:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+  <parent>https://alexandrecousseau.fr/index.html</parent>
 </url>
-<url>
+
+  <url>
   <loc>http://alexandrecousseau.fr/accueil/explore.html</loc>
-  <changefreq>always</changefreq>
+  <lastmod>2024-03-11T10:07:30-04:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+  <parent>https://alexandrecousseau.fr/index.html</parent>
 </url>
-<url>
+  
+  <url>
   <loc>http://alexandrecousseau.fr/accueil/contact.html</loc>
-  <changefreq>always</changefreq>
+  <lastmod>2024-03-11T10:07:30-04:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+  <parent>https://alexandrecousseau.fr/index.html</parent>
 </url>
-<url>
-  <loc>http://alexandrecousseau.fr/../index.html</loc>
-  <changefreq>always</changefreq>
+
+  <url>
+  <loc>https://alexandrecousseau.fr/accueil/cgv.html</loc>
+  <lastmod>2024-03-11T10:07:30-04:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
+  <parent>http://alexandrecousseau.fr/accueil/contact.html</parent>
 </url>
-<url>
-  <loc>http://alexandrecousseau.fr/../accueil/decouvre.html</loc>
-  <changefreq>always</changefreq>
+
+
+    <url>
+  <loc>https://alexandrecousseau.fr/explore/cap-marine.html</loc>
+  <lastmod>2024-03-11T10:07:30-04:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
+  <parent>http://alexandrecousseau.fr/accueil/explore.html</parent>
 </url>
-<url>
-  <loc>http://alexandrecousseau.fr/../accueil/explore.html</loc>
-  <changefreq>always</changefreq>
+
+      <url>
+  <loc>https://alexandrecousseau.fr/explore/persagotiere.html</loc>
+  <lastmod>2024-03-11T10:07:30-04:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
+  <parent>http://alexandrecousseau.fr/accueil/explore.html</parent>
 </url>
-<url>
-  <loc>http://alexandrecousseau.fr/../accueil/contact.html</loc>
-  <changefreq>always</changefreq>
+
+  
+      <url>
+  <loc>https://alexandrecousseau.fr/explore/epernay.html</loc>
+  <lastmod>2024-03-11T10:07:30-04:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
+  <parent>http://alexandrecousseau.fr/accueil/explore.html</parent>
 </url>
-<url>
-  <loc>http://alexandrecousseau.fr/../explore/cap-marine.html</loc>
-  <changefreq>always</changefreq>
+  
+      <url>
+  <loc>https://alexandrecousseau.fr/explore/hotel-sanguinet.html</loc>
+  <lastmod>2024-03-11T10:07:30-04:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
+  <parent>http://alexandrecousseau.fr/accueil/explore.html</parent>
 </url>
-<url>
-  <loc>http://alexandrecousseau.fr/../explore/persagotiere.html</loc>
-  <changefreq>always</changefreq>
+
+        <url>
+  <loc>https://alexandrecousseau.fr/explore/barriere.html</loc>
+  <lastmod>2024-03-11T10:07:30-04:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
+  <parent>http://alexandrecousseau.fr/accueil/explore.html</parent>
 </url>
-<url>
-  <loc>http://alexandrecousseau.fr/../explore/epernay.html</loc>
-  <changefreq>always</changefreq>
+
+        <url>
+  <loc>https://alexandrecousseau.fr/explore/betton.html</loc>
+  <lastmod>2024-03-11T10:07:30-04:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
+  <parent>http://alexandrecousseau.fr/accueil/explore.html</parent>
 </url>
-<url>
-  <loc>http://alexandrecousseau.fr/../explore/hotel-sanguinet.html</loc>
-  <changefreq>always</changefreq>
+
+          <url>
+  <loc>https://alexandrecousseau.fr/explore/coin-des-barons.html</loc>
+  <lastmod>2024-03-11T10:07:30-04:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
+  <parent>http://alexandrecousseau.fr/accueil/explore.html</parent>
 </url>
-<url>
-  <loc>http://alexandrecousseau.fr/../explore/barriere.html</loc>
-  <changefreq>always</changefreq>
+  
+          <url>
+  <loc>https://alexandrecousseau.fr/explore/papillon.html</loc>
+  <lastmod>2024-03-11T10:07:30-04:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
+  <parent>http://alexandrecousseau.fr/accueil/explore.html</parent>
 </url>
-<url>
-  <loc>http://alexandrecousseau.fr/../explore/betton.html</loc>
-  <changefreq>always</changefreq>
+    
+          <url>
+  <loc>https://alexandrecousseau.fr/explore/restaurant-ls.html</loc>
+  <lastmod>2024-03-11T10:07:30-04:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
+  <parent>http://alexandrecousseau.fr/accueil/explore.html</parent>
 </url>
-<url>
-  <loc>http://alexandrecousseau.fr/../explore/coin-des-barons.html</loc>
-  <changefreq>always</changefreq>
+    
+          <url>
+  <loc>https://alexandrecousseau.fr/explore/berma.html</loc>
+  <lastmod>2024-03-11T10:07:30-04:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
+  <parent>http://alexandrecousseau.fr/accueil/explore.html</parent>
 </url>
-<url>
-  <loc>http://alexandrecousseau.fr/../explore/papillon.html</loc>
-  <changefreq>always</changefreq>
+
+         <url>
+  <loc>https://alexandrecousseau.fr/explore/beethoven.html</loc>
+  <lastmod>2024-03-11T10:07:30-04:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
+  <parent>http://alexandrecousseau.fr/accueil/explore.html</parent>
 </url>
-<url>
-  <loc>http://alexandrecousseau.fr/../explore/restaurant-ls.html</loc>
-  <changefreq>always</changefreq>
+
+           <url>
+  <loc>https://alexandrecousseau.fr/explore/bellevue.html</loc>
+  <lastmod>2024-03-11T10:07:30-04:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
+  <parent>http://alexandrecousseau.fr/accueil/explore.html</parent>
 </url>
-<url>
-  <loc>http://alexandrecousseau.fr/../explore/berma.html</loc>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>http://alexandrecousseau.fr/../explore/beethoven.html</loc>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>http://alexandrecousseau.fr/../explore/bellevue.html</loc>
-  <changefreq>always</changefreq>
-</url>
+
+  
 </urlset>
