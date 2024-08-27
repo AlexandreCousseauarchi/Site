@@ -7945,14 +7945,18 @@ img {
 }
 
 .div-block-105-Avis {
-    display: flex;
- flex-direction: column; /* Assure que les éléments sont alignés verticalement */
-    width: 100%;
-    height: 100%;
-    padding-top: 1%;
-    justify-content: center;
-    align-items: center;
-	overflow: hidden;
+  grid-column-gap: 2%;
+  grid-row-gap: 2%;
+  background-color: #8a4343;
+  grid-template: ". . Area"
+                 ". . ."
+                 / 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  place-content: stretch;
+  place-items: center;
+  width: 100%;
+  height: 20px;
+  margin-bottom: 3%;
 }
 
 .identite {
