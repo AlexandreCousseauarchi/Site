@@ -5055,13 +5055,14 @@ img {
 }
 
 .div-block-avis-explore {
-  justify-content: center;
-  align-self: center;
-  align-items: center;
-  width: 80%;
-  height: 100%;
-  padding-top: 1%;
-  display: flex;
+    display: flex;
+ flex-direction: column; /* Assure que les éléments sont alignés verticalement */
+    width: 100%;
+    height: 100%;
+    padding-top: 1%;
+    justify-content: center;
+    align-items: center;
+	overflow: hidden;
 }
 
 .div-block-trustmary {
