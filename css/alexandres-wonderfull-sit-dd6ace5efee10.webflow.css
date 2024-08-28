@@ -8199,6 +8199,7 @@ img {
   flex-flow: column;
   align-items: center;
   display: flex;
+	overflow: hidden;
      }
 }
 
