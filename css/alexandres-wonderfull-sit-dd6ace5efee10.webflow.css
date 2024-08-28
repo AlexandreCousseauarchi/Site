@@ -8057,6 +8057,9 @@ img {
 
 
 
+
+
+
 .teams {
      font-family: Helveticanowdisplay, sans-serif;
     font-style: normal;
@@ -8107,6 +8110,16 @@ img {
     margin-left: -75px;
 }
 
+/* Media query pour les écrans en dessous de 769px */
+@media (max-width: 768px) {
+#customers-teams .item h2 {
+    font-size: 100% !important;
+    font-weight: 700 !important;
+    line-height: 8px;
+    margin-top: 20px;
+     }
+}
+
 .pastexp {
     margin-top: 10px;
   font-size: 100%;
@@ -8133,6 +8146,15 @@ img {
     margin-left: -75px;
     padding: 0;
     list-style-type: none;
+}
+
+/* Media query pour les écrans en dessous de 769px */
+@media (max-width: 768px) {
+.ra-rating-star {
+    margin: 0 0 10px;
+    padding: 0;
+    list-style-type: none;
+      }
 }
 
 .ra-rating-star li {
@@ -8186,12 +8208,12 @@ img {
         display: flex;
  flex-direction: column; /* Assure que les éléments sont alignés verticalement */
     width: 100vw;
+    height: auto;
     justify-content: flex-start;
     align-items: center;
 	overflow: hidden;
     }
 }
-
 
 /* Media query pour les écrans en dessous de 769px */
 @media (max-width: 768px) {
@@ -8199,7 +8221,7 @@ img {
   flex-flow: column;
   align-items: center;
   display: flex;
-	overflow: hidden;
+overflow: hidden;
      }
 }
 
