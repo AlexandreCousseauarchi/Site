@@ -8192,6 +8192,16 @@ img {
     }
 }
 
+
+/* Media query pour les écrans en dessous de 769px */
+@media (max-width: 768px) {
+.div-block-106-avis {
+  flex-flow: column;
+  align-items: center;
+  display: flex;
+     }
+}
+
 .identite {
         display: flex;
  height: 50px;
