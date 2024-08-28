@@ -8185,7 +8185,7 @@ img {
     .div-block-avis-explore {
         display: flex;
  flex-direction: column; /* Assure que les éléments sont alignés verticalement */
-    width: 100%;
+    width: 100vw;
     justify-content: flex-start;
     align-items: center;
 	overflow: hidden;
