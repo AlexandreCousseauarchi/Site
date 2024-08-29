@@ -8365,32 +8365,32 @@ overflow: hidden;
   display: inline-block;
 }
 
-/* Animation pour les éléments .can avec un délai de 6 secondes */
-.word.can span:nth-child(1) { animation: can 6s ease-in-out both 6s infinite; }
-.word.can span:nth-child(2) { animation: can 6s ease-in-out both 6.05s infinite; }
-.word.can span:nth-child(3) { animation: can 6s ease-in-out both 6.10s infinite; }
-.word.can span:nth-child(4) { animation: can 6s ease-in-out both 6.15s infinite; }
-.word.can span:nth-child(5) { animation: can 6s ease-in-out both 6.20s infinite; }
-.word.can span:nth-child(6) { animation: can 6s ease-in-out both 6.25s infinite; }
-.word.can span:nth-child(7) { animation: can 6s ease-in-out both 6.30s infinite; }
-.word.can span:nth-child(8) { animation: can 6s ease-in-out both 6.35s infinite; }
+/* Animation pour les éléments .can */
+.word.can span:nth-child(1) { animation: can 6s ease-in-out both 9s infinite; }
+.word.can span:nth-child(2) { animation: can 6s ease-in-out both 9s infinite; }
+.word.can span:nth-child(3) { animation: can 6s ease-in-out both 9s infinite; }
+.word.can span:nth-child(4) { animation: can 6s ease-in-out both 9s infinite; }
+.word.can span:nth-child(5) { animation: can 6s ease-in-out both 9s infinite; }
+.word.can span:nth-child(6) { animation: can 6s ease-in-out both 9s infinite; }
+.word.can span:nth-child(7) { animation: can 6s ease-in-out both 9s infinite; }
+.word.can span:nth-child(8) { animation: can 6s ease-in-out both 9s infinite; }
 
-/* Animation pour les éléments .will avec un délai de 6 secondes */
-.word.will span:nth-child(1) { animation: will 6s ease-in-out both 6s infinite; }
-.word.will span:nth-child(2) { animation: will 6s ease-in-out both 6.05s infinite; }
-.word.will span:nth-child(3) { animation: will 6s ease-in-out both 6.10s infinite; }
-.word.will span:nth-child(4) { animation: will 6s ease-in-out both 6.15s infinite; }
-.word.will span:nth-child(5) { animation: will 6s ease-in-out both 6.20s infinite; }
-.word.will span:nth-child(6) { animation: will 6s ease-in-out both 6.25s infinite; }
-.word.will span:nth-child(7) { animation: will 6s ease-in-out both 6.30s infinite; }
-.word.will span:nth-child(8) { animation: will 6s ease-in-out both 6.35s infinite; }
+/* Animation pour les éléments .will */
+.word.will span:nth-child(1) { animation: will 6s ease-in-out both 9s infinite; }
+.word.will span:nth-child(2) { animation: will 6s ease-in-out both 9s infinite; }
+.word.will span:nth-child(3) { animation: will 6s ease-in-out both 9s infinite; }
+.word.will span:nth-child(4) { animation: will 6s ease-in-out both 9s infinite; }
+.word.will span:nth-child(5) { animation: will 6s ease-in-out both 9s infinite; }
+.word.will span:nth-child(6) { animation: will 6s ease-in-out both 9s infinite; }
+.word.will span:nth-child(7) { animation: will 6s ease-in-out both 9s infinite; }
+.word.will span:nth-child(8) { animation: will 6s ease-in-out both 9s infinite; }
 
-/* Animation pour les éléments .thrive avec un délai de 6 secondes */
-.word.thrive span:nth-child(1) { animation: thrive 6s ease-in-out both 6s infinite; }
-.word.thrive span:nth-child(2) { animation: thrive 6s ease-in-out both 6.05s infinite; }
-.word.thrive span:nth-child(3) { animation: thrive 6s ease-in-out both 6.10s infinite; }
-.word.thrive span:nth-child(4) { animation: thrive 6s ease-in-out both 6.15s infinite; }
-.word.thrive span:nth-child(5) { animation: thrive 6s ease-in-out both 6.20s infinite; }
-.word.thrive span:nth-child(6) { animation: thrive 6s ease-in-out both 6.25s infinite; }
-.word.thrive span:nth-child(7) { animation: thrive 6s ease-in-out both 6.30s infinite; }
-.word.thrive span:nth-child(8) { animation: thrive 6s ease-in-out both 6.35s infinite; }
+/* Animation pour les éléments .thrive */
+.word.thrive span:nth-child(1) { animation: thrive 6s ease-in-out both 9s infinite; }
+.word.thrive span:nth-child(2) { animation: thrive 6s ease-in-out both 9s infinite; }
+.word.thrive span:nth-child(3) { animation: thrive 6s ease-in-out both 9s infinite; }
+.word.thrive span:nth-child(4) { animation: thrive 6s ease-in-out both 9s infinite; }
+.word.thrive span:nth-child(5) { animation: thrive 6s ease-in-out both 9s infinite; }
+.word.thrive span:nth-child(6) { animation: thrive 6s ease-in-out both 9s infinite; }
+.word.thrive span:nth-child(7) { animation: thrive 6s ease-in-out both 9s infinite; }
+.word.thrive span:nth-child(8) { animation: thrive 6s ease-in-out both 9s infinite; }
