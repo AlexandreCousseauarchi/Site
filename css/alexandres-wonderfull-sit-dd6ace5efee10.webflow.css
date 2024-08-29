@@ -8255,3 +8255,22 @@ overflow: hidden;
  width: 100%;
      justify-content: center;
 }
+
+
+
+
+
+
+
+
+
+
+.datatexteintro{
+  color:white;
+  font-family: 'Helveticanowdisplay', sans-serif;
+  color: black;
+  font-weight:700;
+  text-align:centre;
+  letter-spacing:.5rem;
+  font-size:300%;
+}
