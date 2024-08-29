@@ -6312,7 +6312,7 @@ img {
     padding-right: 40px;
   }
 
-  .link-block-22:hover {
+  .link-block-22:visited {
     background-image: url('../images/Logo-Burger-gris.svg');
   }
 
