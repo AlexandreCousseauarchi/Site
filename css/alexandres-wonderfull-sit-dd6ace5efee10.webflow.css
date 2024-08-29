@@ -8293,12 +8293,13 @@ overflow: hidden;
 
 
 
+
 .title {
-  color: black;
+  color: antiquewhite;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 200%;
-  line-height: 2vw;
+  line-height: 3vw;
   letter-spacing: 0.2rem;
   font-family: "Helveticanowdisplay", sans-serif;
   padding: 0 20px;
@@ -8307,7 +8308,7 @@ overflow: hidden;
   grid-template-columns: repeat(2, max-content);
   grid-template-rows: auto;
   overflow: hidden;
-  max-height: 2vw;
+  max-height: 3vw;
   justify-content: center;
 }
 
