@@ -8291,6 +8291,23 @@ overflow: hidden;
 
 
 
+
+.title {
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2vw;
+  line-height: 2vw;
+  letter-spacing: .2rem;
+  font-family: 'Helveticanowdisplay', sans-serif;
+    padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: auto;
+  overflow: hidden;
+  max-height: 2vw;
+}
+
 $step: 100% / 15;
 
 @keyframes can {
@@ -8351,22 +8368,4 @@ $step: 100% / 15;
       animation: thrive 6s ease-in-out both #{0.05 * $i}s infinite;
     }
   }
-}
-
-$font-size: 6vw;
-
-.title {
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 300%;
-  line-height: $font-size;
-  letter-spacing: .2rem;
-  font-family: 'Helveticanowdisplay', sans-serif;
-    padding: 0 20px;
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  grid-template-rows: auto;
-  overflow: hidden;
-  max-height: $font-size;
 }
