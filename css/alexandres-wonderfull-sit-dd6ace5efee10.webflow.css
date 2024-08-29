@@ -8265,12 +8265,13 @@ overflow: hidden;
 
 
 
+
 .datatexteintro{
   color:white;
   font-family: 'Helveticanowdisplay', sans-serif;
   color: black;
   font-weight:700;
-  text-align:centre;
-  letter-spacing:.5rem;
+  text-align:center;
+  letter-spacing:.2rem;
   font-size:300%;
 }
