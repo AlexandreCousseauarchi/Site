@@ -8277,6 +8277,9 @@ overflow: hidden;
   text-align: center;
   letter-spacing: .2rem;
   font-size: 300%;
+  flex-flow: column;
+  display: flex;
+  align-items: center;
 }
 
 /* Media query pour les écrans en dessous de 769px */
@@ -8296,12 +8299,14 @@ overflow: hidden;
 
 
 
+
+
 .title {
   color: antiquewhite;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 200%;
-  line-height: 4vw;
+  line-height: 3vw;
   letter-spacing: 0.2rem;
   font-family: "Helveticanowdisplay", sans-serif;
   padding: 0 20px;
@@ -8309,8 +8314,7 @@ overflow: hidden;
   display: grid;
   grid-template-columns: repeat(2, max-content);
   grid-template-rows: auto;
-  overflow: hidden;
-  max-height: 4vw;
+  max-height: 3vw;
   justify-content: center;
 }
 
@@ -8325,6 +8329,8 @@ overflow: hidden;
 @media (max-width: 768px) {
   .title {
     font-size: 122%;
+  max-height: 4vw;
+  line-height: 4vw;
   }
 }
 
