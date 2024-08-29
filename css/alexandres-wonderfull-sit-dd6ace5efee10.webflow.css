@@ -8272,20 +8272,21 @@ overflow: hidden;
   color:white;
   font-family: 'Helveticanowdisplay', sans-serif;
   color: white;
-  font-weight:700;
+  font-weight: 700;
   line-height: 40px;
   text-align: center;
-  letter-spacing:.2rem;
-  font-size:300%;
+  letter-spacing: .2rem;
+  font-size: 300%;
 }
 
 /* Media query pour les écrans en dessous de 769px */
 @media (max-width: 768px) {
 .datatexteintro{
-  line-height: 30px;
-  font-size:180%;
+  line-height: 35px;
+  font-size: 240%;
     }
 }
+
 
 
 
