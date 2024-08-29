@@ -8292,21 +8292,47 @@ overflow: hidden;
 
 
 
+
+
 .title {
   color: black;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 2vw;
+  font-size: 200%;
   line-height: 2vw;
   letter-spacing: .2rem;
   font-family: 'Helveticanowdisplay', sans-serif;
-    padding: 0 20px;
+    padding: 0px 20px;
+  margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(2, max-content);
   grid-template-rows: auto;
   overflow: hidden;
   max-height: 2vw;
+  justify-content: center;
 }
+
+/* Media query pour les écrans en dessous de 992px */
+@media (max-width: 991px) {
+.title {
+  font-size: 150%;
+  line-height: 2vw;
+  letter-spacing: .2rem;
+  max-height: 2vw;
+   }
+}
+
+/* Media query pour les écrans en dessous de 655px */
+@media (max-width: 654px) {
+.title {
+  font-size: 89%;
+  line-height: 2vw;
+  letter-spacing: .2rem;
+  max-height: 2vw;
+   }
+}
+
+
 
 $step: 100% / 15;
 
