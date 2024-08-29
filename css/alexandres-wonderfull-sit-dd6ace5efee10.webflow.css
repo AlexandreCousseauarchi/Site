@@ -5961,7 +5961,7 @@ img {
     place-content: space-between center;
     align-items: stretch;
     width: 20%;
-    height: 30%;
+    height: 35%;
     margin-right: 0%;
     padding-top: 1%;
     display: flex;
@@ -6760,7 +6760,7 @@ img {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
     display: flex;
   }
 
