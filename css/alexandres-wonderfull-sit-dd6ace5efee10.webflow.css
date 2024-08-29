@@ -8292,7 +8292,6 @@ overflow: hidden;
 
 
 
-
 .title {
   color: black;
   text-transform: uppercase;
@@ -8301,7 +8300,7 @@ overflow: hidden;
   line-height: 2vw;
   letter-spacing: 0.2rem;
   font-family: "Helveticanowdisplay", sans-serif;
-  padding: 0px 20px;
+  padding: 0 20px;
   margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(2, max-content);
@@ -8315,9 +8314,6 @@ overflow: hidden;
 @media (max-width: 991px) {
   .title {
     font-size: 150%;
-    line-height: 2vw;
-    letter-spacing: 0.2rem;
-    max-height: 2vw;
   }
 }
 
@@ -8325,97 +8321,39 @@ overflow: hidden;
 @media (max-width: 654px) {
   .title {
     font-size: 89%;
-    line-height: 2vw;
-    letter-spacing: 0.2rem;
-    max-height: 2vw;
   }
 }
 
 @keyframes can {
-  0% {
-    transform: translateY(0);
-  }
-  26.67% { /* Calcul de 100% / 15 * 4 */
-    transform: translateY(0);
-    opacity: 1;
-  }
-  33.33% { /* Calcul de 100% / 15 * 5 */
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  33.34% { /* Calcul de 100% / 15 * 5 + 0.001% */
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  33.36% { /* Calcul de 100% / 15 * 5 + 0.003% */
-    transform: translateY(100%);
-    opacity: 1;
-  }
-  93.33% { /* Calcul de 100% / 15 * 14 */
-    transform: translateY(100%);
-  }
-  100% { /* Calcul de 100% / 15 * 15 */
-    transform: translateY(0);
-  }
+  0% { transform: translateY(0); }
+  26.67% { transform: translateY(0); opacity: 1; }
+  33.33% { transform: translateY(-100%); opacity: 0; }
+  33.34% { transform: translateY(100%); opacity: 0; }
+  33.36% { transform: translateY(100%); opacity: 1; }
+  93.33% { transform: translateY(100%); }
+  100% { transform: translateY(0); }
 }
 
 @keyframes will {
-  0% {
-    transform: translateY(0);
-  }
-  26.67% { /* Calcul de 100% / 15 * 4 */
-    transform: translateY(0);
-  }
-  33.33% { /* Calcul de 100% / 15 * 5 */
-    transform: translateY(-100%);
-  }
-  60% { /* Calcul de 100% / 15 * 9 */
-    transform: translateY(-100%);
-    opacity: 1;
-  }
-  66.67% { /* Calcul de 100% / 15 * 10 */
-    transform: translateY(-200%);
-    opacity: 0;
-  }
-  66.68% { /* Calcul de 100% / 15 * 10 + 0.001% */
-    transform: translateY(0);
-  }
-  66.71% { /* Calcul de 100% / 15 * 10 + 0.003% */
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% { /* Calcul de 100% / 15 * 15 */
-    transform: translateY(0);
-  }
+  0% { transform: translateY(0); }
+  26.67% { transform: translateY(0); }
+  33.33% { transform: translateY(-100%); }
+  60% { transform: translateY(-100%); opacity: 1; }
+  66.67% { transform: translateY(-200%); opacity: 0; }
+  66.68% { transform: translateY(0); }
+  66.71% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(0); }
 }
 
 @keyframes thrive {
-  0% {
-    transform: translateY(-300%);
-  }
-  0.0001% { /* Calcul de 100% / 15 * 0.0001% */
-    transform: translateY(0);
-  }
-  26.67% { /* Calcul de 100% / 15 * 4 */
-    transform: translateY(0);
-  }
-  33.33% { /* Calcul de 100% / 15 * 5 */
-    transform: translateY(-100%);
-  }
-  60% { /* Calcul de 100% / 15 * 9 */
-    transform: translateY(-100%);
-  }
-  66.67% { /* Calcul de 100% / 15 * 10 */
-    transform: translateY(-200%);
-  }
-  93.33% { /* Calcul de 100% / 15 * 14 */
-    transform: translateY(-200%);
-    opacity: 1;
-  }
-  100% { /* Calcul de 100% / 15 * 15 */
-    transform: translateY(-300%);
-    opacity: 0;
-  }
+  0% { transform: translateY(-300%); }
+  0.0001% { transform: translateY(0); }
+  26.67% { transform: translateY(0); }
+  33.33% { transform: translateY(-100%); }
+  60% { transform: translateY(-100%); }
+  66.67% { transform: translateY(-200%); }
+  93.33% { transform: translateY(-200%); opacity: 1; }
+  100% { transform: translateY(-300%); opacity: 0; }
 }
 
 .word {
