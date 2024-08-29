@@ -8294,6 +8294,7 @@ overflow: hidden;
 
 
 
+
 .title {
   color: antiquewhite;
   text-transform: uppercase;
@@ -8320,9 +8321,9 @@ overflow: hidden;
 }
 
 /* Media query pour les écrans en dessous de 655px */
-@media (max-width: 654px) {
+@media (max-width: 768px) {
   .title {
-    font-size: 89%;
+    font-size: 122%;
   }
 }
 
