@@ -8084,3 +8084,33 @@ img {
   font-style: italic;
   font-display: swap;
 }
+
+
+
+
+
+
+
+
+
+.datatexteintro{
+  color:white;
+  font-family: 'Helveticanowdisplay', sans-serif;
+  color: white;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: .2rem;
+  font-size: 300%;
+  flex-flow: column;
+  display: flex;
+  align-items: center;
+}
+
+/* Media query pour les écrans en dessous de 769px */
+@media (max-width: 768px) {
+.datatexteintro{
+  line-height: 35px;
+  font-size: 240%;
+    }
+}
