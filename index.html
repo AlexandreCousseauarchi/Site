@@ -115,8 +115,76 @@
       <div data-w-id="5fddb1ee-3584-5a56-b2e5-5867dc78760c" class="div-gif">
         <h1 data-w-id="2789d760-4575-9d38-2979-fee579b0127e" class="h1-accueil">Architecte d&#x27;intérieur dédié à dessiner vos concepts et réaliser vos projets de rénovation</h1>
         <div data-w-id="01188646-808e-d513-855d-e2727b496475" class="div-block-111">
-          <div class="div-block-titre-archi"></div>
-          <div data-w-id="298425cb-6d95-ad79-a4ed-324e438272c6" class="div-bloc-dedie-a"></div>
+          <div class="div-block-titre-archi">
+
+
+<script>
+    // Fonction pour initialiser et exécuter le script après 4 secondes
+    function initBaffle() {
+        // Le code Baffle existant
+        !function(t,e){"object"==typeof exports&&"object"==typeof module?module.exports=e():"function"==typeof define&&define.amd?define([],e):"object"==typeof exports?exports.baffle=e():t.baffle=e()}(this,function(){return function(t){function e(r){if(n[r])return n[r].exports;var i=n[r]={exports:{},id:r,loaded:!1};return t[r].call(i.exports,i,i.exports,e),i.loaded=!0,i.exports}var n={};return e.m=t,e.c=n,e.p="",e(0)}([function(t,e,n){"use strict";function r(t){return t&&t.__esModule?t:{"default":t}}var i=n(2),o=r(i);t.exports=o["default"]},function(t,e){"use strict";function n(t,e){for(var n in e)e.hasOwnProperty(n)&&(t[n]=e[n]);return t}function r(t,e){return t.split("").map(e).join("")}function i(t){return t[Math.floor(Math.random()*t.length)]}function o(t,e){for(var n=0,r=t.length;n<r;n++)e(t[n],n)}function u(t){return t.map(function(t,e){return!!t&&e}).filter(function(t){return t!==!1})}function s(t){return"string"==typeof t?[].slice.call(document.querySelectorAll(t)):[NodeList,HTMLCollection].some(function(e){return t instanceof e})?[].slice.call(t):t.nodeType?[t]:t}Object.defineProperty(e,"__esModule",{value:!0}),e.extend=n,e.mapString=r,e.sample=i,e.each=o,e.getTruthyIndices=u,e.getElements=s},function(t,e,n){"use strict";function r(t){return t&&t.__esModule?t:{"default":t}}function i(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(e,"__esModule",{value:!0});var o=n(1),u=n(3),s=r(u),c={characters:"AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz~!@#$%^&*()-+=[]{}|;:,./<>?",exclude:[" "],speed:50},a=function(){function t(e,n){i(this,t),this.options=(0,o.extend)(Object.create(c),n),this.elements=(0,o.getElements)(e).map(s["default"]),this.running=!1}return t.prototype.once=function(){var t=this;return(0,o.each)(this.elements,function(e){return e.write(t.options.characters,t.options.exclude)}),this.running=!0,this},t.prototype.start=function(){var t=this;return clearInterval(this.interval),(0,o.each)(this.elements,function(t){return t.init()}),this.interval=setInterval(function(){return t.once()},this.options.speed),this.running=!0,this},t.prototype.stop=function(){return clearInterval(this.interval),this.running=!1,this},t.prototype.set=function(t){return(0,o.extend)(this.options,t),this.running&&this.start(),this},t.prototype.text=function(t){var e=this;return(0,o.each)(this.elements,function(n){n.text(t(n.value)),e.running||n.write()}),this},t.prototype.reveal=function(){var t=this,e=arguments.length<=0||void 0===arguments[0]?0:arguments[0],n=arguments.length<=1||void 0===arguments[1]?0:arguments[1],r=e/this.options.speed||1,i=function(){clearInterval(t.interval),t.running=!0,t.interval=setInterval(function(){var e=t.elements.filter(function(t){return!t.bitmap.every(function(t){return!t})});(0,o.each)(e,function(e){var n=Math.ceil(e.value.length/r);e.decay(n).write(t.options.characters,t.options.exclude)}),e.length||(t.stop(),(0,o.each)(t.elements,function(t){return t.init()}))},t.options.speed)};return setTimeout(i,n),this},t}();e["default"]=function(t,e){return new a(t,e)}},function(t,e,n){"use strict";function r(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}function i(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null ou une fonction, pas " + typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}function o(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(e,"__esModule",{value:!0});var u=n(1),s=function(){function t(e){o(this,t),this.value=e,this.init()}return t.prototype.init=function(){return this.bitmap=this.value.split("").map(function(){return 1}),this},t.prototype.render=function(){var t=this,e=arguments.length<=0||void 0===arguments[0]?[]:arguments[0],n=arguments.length<=1||void 0===arguments[1]?[]:arguments[1];return e.length?(0,u.mapString)(this.value,function(r,i){return n.indexOf(r)>-1?r:t.bitmap[i]?(0,u.sample)(e):r}):this.value},t.prototype.decay=function(){for(var t=arguments.length<=0||void 0===arguments[0]?1:arguments[0];t--;){var e=(0,u.getTruthyIndices)(this.bitmap);this.bitmap[(0,u.sample)(e)]=0}return this},t.prototype.text=function(){var t=arguments.length<=0||void 0===arguments[0]?this.value:arguments[0];return this.value=t,this.init(),this},t}(),c=function(t){function e(n){o(this,e);var i=r(this,t.call(this,n.textContent));return i.element=n,i}return i(e,t),e.prototype.write=function(t,e){return this.element.textContent=this.render(t,e),this},e}(s);e["default"]=function(t){return new c(t)}}])});
+
+        const text =  baffle(".datatexteintro");
+        text.set({
+            characters: '░▒░ ░██░> ████▓ >█> ░/█>█ ██░░ █<▒ ▓██░ ░/░▒',
+            speed: 120
+        });
+
+        text.start();
+        text.reveal(2000);
+    }
+
+    // Appeler la fonction initBaffle après 5 secondes
+    setTimeout(initBaffle, 5000);
+</script>
+
+<div class="datatexteintro">ARCHITECTE D'INTÉRIEUR</div>
+
+
+
+
+            
+          </div>
+          <div data-w-id="298425cb-6d95-ad79-a4ed-324e438272c6" class="div-bloc-dedie-a">
+
+
+
+  <div class="title">
+    <div>pour vos&nbsp;</div>
+    <div class="word can">
+      <span>C</span>
+      <span>O</span>
+      <span>N</span>
+      <span>C</span>
+      <span>E</span>
+      <span>P</span>
+      <span>T</span>
+      <span>S</span>
+    </div>
+    <div class="word will">
+      <span>P</span>
+      <span>R</span>
+      <span>O</span>
+      <span>J</span>
+      <span>E</span>
+      <span>T</span>
+      <span>S</span>
+    </div>
+    <div class="word thrive">
+      <span>T</span>
+      <span>R</span>
+      <span>A</span>
+      <span>V</span>
+      <span>A</span>
+      <span>U</span>
+      <span>X</span>
+    </div>
+  </div>
+
+
+
+            
+          </div>
         </div><img src="images/Page-blanche.jpg" loading="lazy" data-w-id="af0a1c68-b254-9393-e1c0-d9da1f8773a3" sizes="100vw" alt="" srcset="images/Page-blanche-p-500.jpg 500w, images/Page-blanche-p-800.jpg 800w, images/Page-blanche-p-1080.jpg 1080w, images/Page-blanche-p-1600.jpg 1600w, images/Page-blanche-p-2000.jpg 2000w, images/Page-blanche-p-2600.jpg 2600w, images/Page-blanche-p-3200.jpg 3200w, images/Page-blanche.jpg 3508w" class="page-blanche"><img src="images/00---Hotel-Sanguinet-gif.jpg" srcset="images/00---Hotel-Sanguinet-gif.jpg 500w, images/00---Hotel-Sanguinet-gif.jpg 800w, images/00---Hotel-Sanguinet-gif.jpg 1080w, images/00---Hotel-Sanguinet-gif.jpg 1600w, images/00---Hotel-Sanguinet-gif.jpg 1920w" data-w-id="0cc18fc1-e43a-c654-96e6-31517c2b698b" sizes="100vw" alt="Projet Beethoven - Habitat particulier à Mortagne sur sèvre en Vendée, proche de la Roche-sur-Yon. Rénovation d&#x27;une cuisine. Alexandre Cousseau architecte d&#x27;intérieur Pays de la Loire" class="steph"><img src="images/01a_101a.webp" srcset="images/01a_1-p-500.jpg 500w, images/01a_1-p-800.jpg 800w, images/01a_1-p-1080.jpg 1080w, images/01a_1-p-1600.jpg 1600w, images/01a_1-p-2000.jpg 2000w, images/01a_101a.webp 2133w" data-w-id="3a6cb95b-ccee-4267-af7e-94377002c241" sizes="100vw" alt="Projet Hôtel Sanguinet - Projet professionnel tertiaire à Sanguinet proche de Bordeaux en Gironde. Réhabilitation d&#x27;une grange en hôtellerie de luxe. Alexandre Cousseau architecte d&#x27;intérieur Pays de la Loire" class="sanguinet1"><img src="images/Rendu-RDC_Scène-9gif.jpg" srcset="images/Rendu-RDC_Scène-9gif.jpg 500w, images/Rendu-RDC_Scène-9gif.jpg 800w, images/Rendu-RDC_Scène-9gif.jpg 1080w, images/Rendu-RDC_Scène-9gif.jpg 1600w, images/Rendu-RDC_Scène-9gif.jpg 1920w" data-w-id="bf8321b1-f30a-baae-48cd-89a5a4bb8e30" sizes="100vw" alt="" class="persa-sam1"><img src="images/Extension-Bettongif.jpg" srcset="images/Extension-Bettongif.jpg 500w, images/Extension-Bettongif.jpg 800w, images/Extension-Bettongif.jpg 1080w, images/Extension-Bettongif.jpg 1600w, images/Extension-Bettongif.jpg 1920w" data-w-id="838bc1d4-a8d8-391e-1810-9e2b85bcb4eb" sizes="100vw" alt="" class="betton1"><img src="images/Rendu-RDC1gif.jpg" srcset="images/Rendu-RDC1gif.jpg 500w, images/Rendu-RDC1gif.jpg 800w, images/Rendu-RDC1gif.jpg 1080w, images/Rendu-RDC1gif.jpg 1600w, images/Rendu-RDC1gif.jpg 1920w" data-w-id="5c389ebd-ac49-4dfb-da54-ac8445eef0d8" sizes="100vw" alt="" class="perso-conf1"><img src="images/Rendu-01_1Rendu-01.webp" srcset="images/Rendu-01_1-p-500.jpg 500w, images/Rendu-01_1-p-800.jpg 800w, images/Rendu-01_1-p-1080.jpg 1080w, images/Rendu-01_1-p-1600.jpg 1600w, images/Rendu-01_1-p-2000.jpg 2000w, images/Rendu-01_1Rendu-01.webp 2133w" data-w-id="a22204a2-4bac-bd78-0c8c-725aa50284ed" sizes="100vw" alt="Projet Barrière - Projet habitat particulier à Mortagne sur sèvre, en Vendée, proche de la Roche sur yon et Bressuire. Architecture intérieur et décoration dans un salon salle à manger avec choix des matériaux et mobiliers Alexandre Cousseau architecte d&#x27;intérieur Pays de la Loire" class="mortagne1">
         <h1 class="heading-68">Alexandre Cousseau - Architecte d&#x27;intérieur entre Redon, Mortagne sur sèvre et Cholet</h1>
       </div>
