@@ -8345,6 +8345,7 @@ overflow: hidden;
 
 
 
+
 .title {
   color: antiquewhite;
   text-transform: uppercase;
@@ -8450,3 +8451,7 @@ overflow: hidden;
 .word.thrive span:nth-child(6) { animation: thrive 6s ease-in-out both 5.25s infinite; }
 .word.thrive span:nth-child(7) { animation: thrive 6s ease-in-out both 5.30s infinite; }
 .word.thrive span:nth-child(8) { animation: thrive 6s ease-in-out both 5.35s infinite; }
+.word.thrive span:nth-child(9) { animation: thrive 6s ease-in-out both 5.40s infinite; }
+.word.thrive span:nth-child(10) { animation: thrive 6s ease-in-out both 5.45s infinite; }
+.word.thrive span:nth-child(11) { animation: thrive 6s ease-in-out both 5.50s infinite; }
+.word.thrive span:nth-child(12) { animation: thrive 6s ease-in-out both 5.55s infinite; }
