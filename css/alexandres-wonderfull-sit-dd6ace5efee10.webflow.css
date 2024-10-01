@@ -8454,7 +8454,6 @@ overflow: hidden;
 
 
 
-
   .body-blog {
     background-size: 170%;
     background-attachment: fixed;
@@ -8495,7 +8494,7 @@ overflow: hidden;
 }
 
 .paragraph-blog {
-  text-align: center;
+  text-align: left;
   margin-bottom: 2%;
 margin-top: 3%
   font-family: Helveticanowdisplay, sans-serif;
@@ -8523,4 +8522,5 @@ margin-top: 3%
   font-weight: 500;
     justify-content: center;
     display: flex;
+align-items: flex-end;
 }
