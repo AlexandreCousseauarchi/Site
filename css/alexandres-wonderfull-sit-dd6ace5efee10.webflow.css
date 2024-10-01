@@ -8535,6 +8535,8 @@ align-items: flex-end;
 border-top-style: solid;
 border-top-width: thin;
 text-transform: uppercase;
+margin-right: 10%;
+margin-left: 10%;
 }
 
 /* Media query pour les écrans de téléphone */
@@ -8545,9 +8547,16 @@ text-transform: uppercase;
 }
 
 /* Media query pour les écrans de téléphone */
-@media (max-width: 300px) { /* Ajustez la valeur à ce qui convient à votre design */
+@media (max-width: 330px) { /* Ajustez la valeur à ce qui convient à votre design */
   .text-block-blog {
   font-size: 65%;
+  }
+}
+
+/* Media query pour les écrans de téléphone */
+@media (max-width: 280px) { /* Ajustez la valeur à ce qui convient à votre design */
+  .text-block-blog {
+  font-size: 50%;
   }
 }
 
