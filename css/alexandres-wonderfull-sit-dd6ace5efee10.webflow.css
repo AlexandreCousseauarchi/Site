@@ -8456,8 +8456,6 @@ overflow: hidden;
 
 
 
-
-
   .body-blog {
     background-size: 170%;
     background-attachment: fixed;
@@ -8517,7 +8515,7 @@ line-height: 18px;
 /* Media query pour les écrans de téléphone */
 @media (max-width: 530px) { /* Ajustez la valeur à ce qui convient à votre design */
   .div-article-blog {
-    width: 90%; /* Ajuste la largeur à 90% sur mobile */
+    width: 75%; /* Ajuste la largeur à 90% sur mobile */
     margin-left: auto; /* Centre l'élément */
     margin-right: auto; /* Centre l'élément */
   }
@@ -8538,6 +8536,21 @@ border-top-style: solid;
 border-top-width: thin;
 text-transform: uppercase;
 }
+
+/* Media query pour les écrans de téléphone */
+@media (max-width: 530px) { /* Ajustez la valeur à ce qui convient à votre design */
+  .text-block-blog {
+  font-size: 80%;
+  }
+}
+
+/* Media query pour les écrans de téléphone */
+@media (max-width: 300px) { /* Ajustez la valeur à ce qui convient à votre design */
+  .text-block-blog {
+  font-size: 65%;
+  }
+}
+
 
 .div-block-image-blog {
   max-width: 100%;
