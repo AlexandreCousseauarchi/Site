@@ -8456,6 +8456,7 @@ overflow: hidden;
 
 
 
+
   .body-blog {
     background-size: 170%;
     background-attachment: fixed;
@@ -8530,7 +8531,12 @@ text-transform: uppercase;
 }
 
 .div-block-image-blog {
-  max-width: 50%;
-display: block;
+  max-width: 100%;
+display: flex;
+place-content: center;
 height: auto;
+}
+
+.image-taille {
+  max-width: 70%;
 }
