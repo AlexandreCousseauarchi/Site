@@ -8466,10 +8466,6 @@ overflow: hidden;
   max-width: 100%;
 }
 
-.grid-blog {
-    align-items: flex-start;
-    display: none;
-  }
 
 .grid-blog {
   flex-wrap: wrap;
@@ -8498,10 +8494,11 @@ overflow: hidden;
 .paragraph-blog {
   text-align: left;
   margin-bottom: 2%;
-margin-top: 3%
+margin-top: 3%;
   font-family: Helveticanowdisplay, sans-serif;
-  font-size: 110%;
+  font-size: 80%;
   font-weight: 500;
+line-height: 15px;
 }
 
 .div-article-blog {
@@ -8530,5 +8527,3 @@ border-top-width: thin;
   text-decoration: none;
 text-transform: uppercase;
 }
-
-
