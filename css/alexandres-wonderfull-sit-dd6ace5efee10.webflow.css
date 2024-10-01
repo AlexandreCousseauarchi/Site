@@ -8450,3 +8450,59 @@ overflow: hidden;
 .word.thrive span:nth-child(5) { animation: thrive 6s ease-in-out both 5.20s infinite; }
 .word.thrive span:nth-child(6) { animation: thrive 6s ease-in-out both 5.25s infinite; }
 .word.thrive span:nth-child(7) { animation: thrive 6s ease-in-out both 5.30s infinite; }
+
+
+
+  .body-blog {
+    background-size: 170%;
+    background-attachment: fixed;
+  }
+
+.container-blog {
+  width: 100%;
+  max-width: 100%;
+}
+
+.grid-blog {
+    align-items: flex-start;
+    display: none;
+  }
+
+.grid-blog {
+  flex-wrap: wrap;
+  place-content: stretch center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+}
+
+.heading-blog {
+  color: #000;
+  text-align: left;
+  text-transform: uppercase;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  font-family: Helveticanowdisplay, sans-serif;
+  font-size: 140%;
+  font-weight: 700;
+  display: flex;
+}
+
+.paragraph-blog {
+  text-align: right;
+  margin-bottom: 0;
+  font-family: Helveticanowdisplay, sans-serif;
+  font-size: 110%;
+  font-weight: 500;
+}
+
+.div-article-blog {
+  width: 100%;
+  max-width: 100%;
+  height: 60vh;
+  max-height: 100vh;
+}
