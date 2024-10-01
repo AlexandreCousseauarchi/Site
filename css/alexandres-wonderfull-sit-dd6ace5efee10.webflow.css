@@ -8454,6 +8454,7 @@ overflow: hidden;
 
 
 
+
   .body-blog {
     background-size: 170%;
     background-attachment: fixed;
@@ -8516,11 +8517,16 @@ margin-top: 3%
 
 .text-block-blog {
   color: #000;
-  padding-top: 3px;
+  padding-top: 4%;
   font-family: Helveticanowdisplay, sans-serif;
   font-size: 120%;
   font-weight: 500;
     justify-content: center;
     display: flex;
 align-items: flex-end;
+ text-decoration: none;
+border-top-style: solid;
+border-top-width: thin;
 }
+
+
