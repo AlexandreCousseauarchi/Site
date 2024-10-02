@@ -8459,7 +8459,6 @@ overflow: hidden;
 
 
 
-
   .body-blog {
     background-size: 170%;
     background-attachment: fixed;
@@ -8487,7 +8486,21 @@ margin-top: -2%;
   margin-right: 2%;
 }
 
+
+
 .post-linkedin {
   width: 425px;
 border: 0;
 }
+
+
+@media only screen and (max-width: 560px) {
+  .post-linkedin {
+    width: 360px; /* Utilisation d'une largeur flexible pour tablettes */
+  }
+
+
+@media only screen and (max-width: 420px) {
+  .div-article-blog {
+    width: 300px; /* Utilisation d'une largeur flexible pour tablettes */
+  }
