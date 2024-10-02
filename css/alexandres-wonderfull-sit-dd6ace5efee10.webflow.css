@@ -8458,6 +8458,8 @@ overflow: hidden;
 
 
 
+
+
   .body-blog {
     background-size: 170%;
     background-attachment: fixed;
@@ -8480,22 +8482,12 @@ margin-top: -2%;
 }
 
 .div-article-blog {
-  width: 425px;
-  max-width: 100%;
   margin-top: 50px;
   margin-left: 2%;
   margin-right: 2%;
 }
 
-/* Media query pour les écrans de téléphone */
-@media (max-width: 530px) { /* Ajustez la valeur à ce qui convient à votre design */
-  .div-article-blog {
-    width: 75%; /* Ajuste la largeur à 90% sur mobile */
-    margin-left: auto; /* Centre l'élément */
-    margin-right: auto; /* Centre l'élément */
-  }
-}
-
 .post-linkedin {
   width: 425px;
+border: 0;
 }
