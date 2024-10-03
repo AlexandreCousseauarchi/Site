@@ -4,7 +4,7 @@
   --color: white;
 }
 
-.nom-1 {
+.alexandre {
   color: #bf8257;
   text-align: left;
   text-transform: uppercase;
@@ -16,7 +16,7 @@
 }
 
 @media screen and (max-width: 479px) {
-  .nom-1 {
+  .alexandre {
     width: 100%;
     display: flex; /* Ajout si tu veux utiliser justify-content */
     justify-content: flex-start; /* Cette ligne fonctionne avec Flexbox */
