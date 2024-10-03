@@ -8507,7 +8507,7 @@ border: 0;
 
 
 	
-.nom {
+.nom-1 {
   color: #bf8257;
 text-align: left;
 text-transform: uppercase;
@@ -8519,7 +8519,7 @@ font-weight: 700;
 }
 
 @media screen and (max-width: 479px) {
-  .nom {
+  .nom-1 {
     width: 100%;
 justify-content: flex-start;
   }
