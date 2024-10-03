@@ -8504,3 +8504,22 @@ border: 0;
   .div-article-blog {
     width: 300px; /* Utilisation d'une largeur flexible pour tablettes */
   }
+
+
+	
+.nom {
+  color: #bf8257;
+text-align: left;
+text-transform: uppercase;
+margin-top: 0;
+margin-bottom: -5px;
+font-family: Helveticanowdisplay, sans-serif;
+font-size: 140%
+font-weight: 700;
+}
+
+@media screen and (max-width: 479px) {
+  .nom {
+    width: 100%;
+justify-content: flex-start;
+  }
