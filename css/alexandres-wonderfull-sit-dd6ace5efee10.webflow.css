@@ -8498,12 +8498,14 @@ border: 0;
   .post-linkedin {
     width: 360px; /* Utilisation d'une largeur flexible pour tablettes */
   }
+	  }
 
 
 @media only screen and (max-width: 420px) {
   .div-article-blog {
     width: 300px; /* Utilisation d'une largeur flexible pour tablettes */
   }
+	  }
 
 
 .nom-1 {
