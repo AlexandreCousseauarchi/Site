@@ -4,6 +4,25 @@
   --color: white;
 }
 
+.nom-1 {
+  color: #bf8257;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: -5px;
+  font-family: Helveticanowdisplay, sans-serif;
+  font-size: 140%; /* Ajout du point-virgule manquant */
+  font-weight: 700;
+}
+
+@media screen and (max-width: 479px) {
+  .nom-1 {
+    width: 100%;
+    display: flex; /* Ajout si tu veux utiliser justify-content */
+    justify-content: flex-start; /* Cette ligne fonctionne avec Flexbox */
+  }
+}
+
 .w-layout-blockcontainer {
   max-width: 940px;
   margin-left: auto;
