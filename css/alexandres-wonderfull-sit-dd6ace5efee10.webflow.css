@@ -3251,10 +3251,11 @@ font-weight: 500;
 text-transform: uppercase;
 	text-align: center;
 margin-top: 0;
-margin-bottom: 1%;
+margin-bottom: 3%;
 font-family: Helveticanowdisplay, sans-serif;
 font-size: 140%;
 font-weight: 700;
+	line-height: 25px;
 }
 
 .image-27, .image-28, .image-29, .image-30, .image-31, .image-32, .image-33, .image-34, .image-35, .image-36, .image-37, .image-38 {
