@@ -402,12 +402,19 @@ img {
   color: #000;
 text-align: left;
 width: 90%;
+height: 23px;
 margin-top: 0;
 margin-bottom: 0;
  font-family: Helveticanowdisplay, sans-serif;
   font-size: 110%;
   font-style: normal;
 font-weight: 500;
+}
+
+@media screen and (max-width: 769px) {
+  .heading-71 {
+text-align: center;
+  }
 }
 
 .link-projet-01 {
