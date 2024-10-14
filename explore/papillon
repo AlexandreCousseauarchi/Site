@@ -52,16 +52,16 @@
     <div class="w-layout-blockcontainer bande-page w-container">
       <div data-w-id="0bf48dad-6639-dedb-9612-98f056c83207" class="div-burger-boutons">
         <div class="div-accueil-burger">
-          <a href="../index.html" data-w-id="0bf48dad-6639-dedb-9612-98f056c83209" class="bouton-accueil-burger">Accueil</a>
+          <a href="../index" data-w-id="0bf48dad-6639-dedb-9612-98f056c83209" class="bouton-accueil-burger">Accueil</a>
         </div>
         <div class="div-d-couvre-burger">
-          <a href="../decouvre.html" class="bouton-d-couvre-burger">Découvre</a>
+          <a href="../decouvre" class="bouton-d-couvre-burger">Découvre</a>
         </div>
         <div class="div-explore-burger">
-          <a href="../explore.html" class="bouton-explore-burger">Explore</a>
+          <a href="../explore" class="bouton-explore-burger">Explore</a>
         </div>
         <div class="div-contact-burger">
-          <a href="../contact.html" class="bouton-contact-burger">Contact</a>
+          <a href="../contact" class="bouton-contact-burger">Contact</a>
         </div>
         <div class="div-r-seaux-burger">
           <div class="div-block-99">
@@ -70,31 +70,31 @@
             <a href="https://www.facebook.com/profile.php?id=61555710989198" target="_blank" class="facebook-burger w-inline-block"></a>
           </div>
           <div class="div-block-cgv-burger">
-            <a href="../cgv.html" class="link">CGV</a>
+            <a href="../cgv" class="link">CGV</a>
           </div>
         </div>
       </div>
       <section class="div-block-15">
         <div class="div-block-22-copy">
-          <a id="Logo-Accueil-Alexandre-Cousseau" href="../index.html" class="link-block-26 w-inline-block"><img src="../images/2022---Logo-02-02.png" srcset="../images/2022---Logo-02-02-p-500.png 500w, ../images/2022---Logo-02-02-p-800.png 800w, ../images/2022---Logo-02-02-p-1080.png 1080w, ../images/2022---Logo-02-02-p-1600.png 1600w, ../images/2022---Logo-02-02-p-2000.png 2000w, ../images/2022---Logo-02-02.png 2467w" data-w-id="0bf48dad-6639-dedb-9612-98f056c831fc" sizes="(max-width: 991px) 100vw, 190.546875px" alt="Logo Alexandre Cousseau Architecte d&#x27;intérieur Pays de la Loire" class="image-23"></a>
+          <a id="Logo-Accueil-Alexandre-Cousseau" href="../index" class="link-block-26 w-inline-block"><img src="../images/2022---Logo-02-02.png" srcset="../images/2022---Logo-02-02-p-500.png 500w, ../images/2022---Logo-02-02-p-800.png 800w, ../images/2022---Logo-02-02-p-1080.png 1080w, ../images/2022---Logo-02-02-p-1600.png 1600w, ../images/2022---Logo-02-02-p-2000.png 2000w, ../images/2022---Logo-02-02.png 2467w" data-w-id="0bf48dad-6639-dedb-9612-98f056c831fc" sizes="(max-width: 991px) 100vw, 190.546875px" alt="Logo Alexandre Cousseau Architecte d&#x27;intérieur Pays de la Loire" class="image-23"></a>
         </div>
         <div class="nom-etp-cach">
           <div class="div-block-23"></div>
           <div class="div-block-58">
-            <a href="../index.html" class="link-block-25 w-inline-block"><img src="../images/2022---Logo-02-02.png" srcset="../images/2022---Logo-02-02-p-500.png 500w, ../images/2022---Logo-02-02-p-800.png 800w, ../images/2022---Logo-02-02-p-1080.png 1080w, ../images/2022---Logo-02-02-p-1600.png 1600w, ../images/2022---Logo-02-02-p-2000.png 2000w, ../images/2022---Logo-02-02.png 2467w" data-w-id="bc1acc42-913c-33a7-49d5-79df2a58c028" sizes="(max-width: 479px) 43vw, (max-width: 991px) 190.546875px, 100vw" alt="Logo Alexandre Cousseau Architecte d&#x27;intérieur Pays de la Loire" class="image-23"></a>
+            <a href="../index" class="link-block-25 w-inline-block"><img src="../images/2022---Logo-02-02.png" srcset="../images/2022---Logo-02-02-p-500.png 500w, ../images/2022---Logo-02-02-p-800.png 800w, ../images/2022---Logo-02-02-p-1080.png 1080w, ../images/2022---Logo-02-02-p-1600.png 1600w, ../images/2022---Logo-02-02-p-2000.png 2000w, ../images/2022---Logo-02-02.png 2467w" data-w-id="bc1acc42-913c-33a7-49d5-79df2a58c028" sizes="(max-width: 479px) 43vw, (max-width: 991px) 190.546875px, 100vw" alt="Logo Alexandre Cousseau Architecte d&#x27;intérieur Pays de la Loire" class="image-23"></a>
           </div>
           <div class="burger">
             <a data-w-id="0bf48dad-6639-dedb-9612-98f056c831f2" href="#" class="link-block-22 w-inline-block"></a>
           </div>
         </div>
         <div class="div-accueil">
-          <a href="../index.html" id="Accueil-Alexandre-Cousseau" data-w-id="0bf48dad-6639-dedb-9612-98f056c831f4" class="bouton-accueil">ACCUEIL</a>
-          <a href="../decouvre.html" id="D-couvre-Alexandre-Cousseau" data-w-id="0bf48dad-6639-dedb-9612-98f056c831f7" class="bouton-d-couvre">Découvre</a>
-          <a href="../explore.html" id="Explore-Alexandre-Cousseau" data-w-id="0bf48dad-6639-dedb-9612-98f056c831fe" class="bouton-explore">Explore</a>
-          <a href="../contact.html" id="Contact-Alexandre-Cousseau" data-w-id="0bf48dad-6639-dedb-9612-98f056c83201" class="bouton-contact">Contact</a>
+          <a href="../index" id="Accueil-Alexandre-Cousseau" data-w-id="0bf48dad-6639-dedb-9612-98f056c831f4" class="bouton-accueil">ACCUEIL</a>
+          <a href="../decouvre" id="D-couvre-Alexandre-Cousseau" data-w-id="0bf48dad-6639-dedb-9612-98f056c831f7" class="bouton-d-couvre">Découvre</a>
+          <a href="../explore" id="Explore-Alexandre-Cousseau" data-w-id="0bf48dad-6639-dedb-9612-98f056c831fe" class="bouton-explore">Explore</a>
+          <a href="../contact" id="Contact-Alexandre-Cousseau" data-w-id="0bf48dad-6639-dedb-9612-98f056c83201" class="bouton-contact">Contact</a>
         </div>
         <div class="div-r-seaux">
-          <a data-w-id="b06d6d00-8445-809d-4c30-c98eeb17826b" href="../cgv.html" class="bouton-cgv">cgv</a>
+          <a data-w-id="b06d6d00-8445-809d-4c30-c98eeb17826b" href="../cgv" class="bouton-cgv">cgv</a>
           <a id="Page-Instagram-Alexandre-Cousseau" data-w-id="0bf48dad-6639-dedb-9612-98f056c83204" href="https://www.instagram.com/alexandrecousseau.architecte/" target="_blank" class="instagram w-inline-block"></a>
           <a id="Id-Page-Linkedin-Alexandre-Cousseau" data-w-id="0bf48dad-6639-dedb-9612-98f056c83205" href="http://www.linkedin.com/in/alexandre-cousseau" target="_blank" class="link-block-15 w-inline-block"></a>
           <a id="Id-Page-Facebook-Alexandre-Cousseau" data-w-id="0bf48dad-6639-dedb-9612-98f056c83206" href="https://www.facebook.com/profile.php?id=61555710989198" target="_blank" class="link-block-16 w-inline-block"></a>
