@@ -417,6 +417,25 @@ text-align: center;
   }
 }
 
+.tarif {
+  color: #000;
+text-align: left;
+width: 100%;
+line-height: 23px;
+margin-top: 0;
+margin-bottom: 2%;
+ font-family: Helveticanowdisplay, sans-serif;
+  font-size: 110%;
+  font-style: normal;
+font-weight: 500;
+}
+
+@media screen and (max-width: 769px) {
+  .tarif {
+text-align: center;
+  }
+}
+
 .link-projet-01 {
   width: 19%;
   max-width: 100%;
