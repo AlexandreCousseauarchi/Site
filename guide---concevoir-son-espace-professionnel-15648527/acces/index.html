@@ -10,7 +10,8 @@
     <p>Chargement...</p>
   </div>
 
- <script>
+
+<script>
   (async function () {
     const params = new URLSearchParams(window.location.search);
     const token = params.get("token");
@@ -21,18 +22,24 @@
       return;
     }
 
-    const res = await fetch(`https://script.google.com/macros/s/AKfycbzu_kfyvi29B6FUVSLaz2sNeKX-IiQxORokR9KyugNoAsTAO0g5Z326Uo90DhLLZ-k/exec?token=${token}&email=${encodeURIComponent(email)}`);
-    const data = await res.json();
+    try {
+      const res = await fetch(`https://script.google.com/macros/s/AKfycbzu_kfyvi29B6FUVSLaz2sNeKX-IiQxORokR9KyugNoAsTAO0g5Z326Uo90DhLLZ-k/exec?token=${token}&email=${encodeURIComponent(email)}`);
+      const data = await res.json();
 
-    if (data.valid) {
-      document.body.innerHTML = "<h2>✅ Bienvenue ! Voici votre guide :</h2><p><a href='/le-guide.pdf' target='_blank'>Télécharger le guide</a></p>";
-    } else if (data.reason === "expired_or_maxclicks") {
-      document.body.innerHTML = "<h2>🕒 Lien expiré ou nombre de clics dépassé</h2>";
-    } else {
-      document.body.innerHTML = "<h2>❌ Lien invalide</h2>";
+      if (data.valid) {
+        document.body.innerHTML = "<h2>✅ Bienvenue ! Voici votre guide :</h2><p><a href='/le-guide.pdf' target='_blank'>Télécharger le guide</a></p>";
+      } else if (data.reason === "expired_or_maxclicks") {
+        document.body.innerHTML = "<h2>🕒 Lien expiré ou nombre de clics dépassé</h2>";
+      } else {
+        document.body.innerHTML = "<h2>❌ Lien invalide</h2>";
+      }
+    } catch (err) {
+      document.body.innerHTML = `<h2>⚠️ Erreur de chargement</h2><p>${err.message}</p>`;
     }
   })();
 </script>
+ 
+
 
 </body>
 </html>
