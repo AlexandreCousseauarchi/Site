@@ -492,7 +492,7 @@ img {
 
 .div-block-14 {
   flex-direction: column;
-  place-content: flex-end;
+  place-content: center;
   align-items: stretch;
   width: 50%;
   max-width: 100%;
