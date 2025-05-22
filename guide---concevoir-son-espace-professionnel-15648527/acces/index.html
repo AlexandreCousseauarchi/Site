@@ -21,7 +21,7 @@
       return;
     }
 
-    const res = await fetch(`https://script.google.com/macros/s/AKfycbyZmgJDnym7nPkuXg5-zQFyHlVPRwPqp96x2kofxyJ8CtFoOGP7z4uqF9IwhPFfpoQ/exec?token=${token}&email=${encodeURIComponent(email)}`);
+    const res = await fetch(`https://script.google.com/macros/s/AKfycbzu_kfyvi29B6FUVSLaz2sNeKX-IiQxORokR9KyugNoAsTAO0g5Z326Uo90DhLLZ-k/exec?token=${token}&email=${encodeURIComponent(email)}`);
     const data = await res.json();
 
     if (data.valid) {
