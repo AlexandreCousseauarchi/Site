@@ -1,0 +1,23 @@
+<script>
+  (async function () {
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get("token");
+    const email = params.get("email");
+
+    if (!token || !email) {
+      document.body.innerHTML = "<h2>❌ Lien invalide</h2>";
+      return;
+    }
+
+const res = await fetch(`https://script.google.com/macros/s/AKfycbyYSdh8OpX-Zfu20d2VwYmiXZ1rxsKrEqk9M97_YWcDEz2DMZX9PBWrNsvXSK5ITA/exec?token=${token}&email=${encodeURIComponent(email)}`);
+    const data = await res.json();
+
+    if (data.valid) {
+      document.body.innerHTML = "<h2>✅ Bienvenue ! Voici votre guide :</h2><p><a href='/le-guide.pdf' target='_blank'>Télécharger le guide</a></p>";
+    } else if (data.reason === "expired_or_maxclicks") {
+      document.body.innerHTML = "<h2>🕒 Lien expiré ou nombre de clics dépassé</h2>";
+    } else {
+      document.body.innerHTML = "<h2>❌ Lien invalide</h2>";
+    }
+  })();
+</script>
