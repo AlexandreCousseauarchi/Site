@@ -6483,7 +6483,7 @@ img {
 .div-block-106-avis-professionnel {
   flex-flow: row;
   justify-content: flex-start;
-  align-items: baseline;
+  align-items: center;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
