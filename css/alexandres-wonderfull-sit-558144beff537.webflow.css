@@ -12653,3 +12653,188 @@ img {
 .word.thrive span:nth-child(5) { animation: thrive 6s ease-in-out both 5.20s infinite; }
 .word.thrive span:nth-child(6) { animation: thrive 6s ease-in-out both 5.25s infinite; }
 .word.thrive span:nth-child(7) { animation: thrive 6s ease-in-out both 5.30s infinite; }
+
+
+
+
+.teams {
+     font-family: Helveticanowdisplay, sans-serif;
+    font-style: normal;
+    width: 340%;
+}
+
+.teams .shadow-effect {
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #ECECEC;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.0), 0 2px 2px rgba(0,0,0,0.01);
+    background-color: #fafafa;
+}
+
+#customers-teams {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    justify-content: space-between;
+    align-items: top;
+    margin: auto;
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Masquer la barre de défilement horizontale */
+}
+
+#customers-teams .item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    opacity: 0.2;
+    padding-left: 2%;
+    padding-right: 2%;
+    transition: all 0.3s ease-in-out;
+    width: calc(100% / 3); /* 3 items par ligne */
+}
+
+#customers-teams .item.active {
+    opacity: 1;
+    transform: scale3d(1.0, 1.0, 1);
+}
+
+
+#customers-teams .item h2 {
+    font-size: 100% !important;
+    font-weight: 700 !important;
+    line-height: 8px;
+    margin-top: 20px;
+    margin-left: -75px;
+}
+
+/* Media query pour les écrans en dessous de 769px */
+@media (max-width: 768px) {
+#customers-teams .item h2 {
+    font-size: 100% !important;
+    font-weight: 700 !important;
+    line-height: 8px;
+    margin-top: 20px;
+    margin-left: 0px;
+     }
+}
+
+.pastexp {
+    margin-top: 10px;
+  font-size: 100%;
+ font-weight: 500 !important;
+   margin-left: 10px;
+  margin-right: 10px;
+}
+
+#customers-teams .item .img-circle {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+ margin-left: 5%;
+    transition: transform .5s;
+    display: inline-block;
+}
+
+#customers-teams .item .img-circle:hover {
+    transform: scale(0.9);
+}
+
+.ra-rating-star {
+    margin: 0 0 10px;
+    margin-left: -75px;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Media query pour les écrans en dessous de 769px */
+@media (max-width: 768px) {
+.ra-rating-star {
+    margin: 0 0 10px;
+    padding: 0;
+    list-style-type: none;
+      }
+}
+
+.ra-rating-star li {
+    display: inline-block;
+    margin: 0 -1px;
+}
+
+.ra-rating-star li img {
+    width: 15px;
+    height: 15px;
+}
+
+#customers-teams.owl-carousel .owl-dots {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #customers-teams {
+        width: 80%; /* Modifier la largeur à 80% sur les téléphones */
+    }
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    #customers-teams .item {
+        width: calc((100% - 0px) / 3); /* Chaque élément occupe 1/3 de la largeur moins 0 pixels */
+	opacity: 1;
+    }
+}
+
+@media (min-width: 769px) {
+    #customers-teams .item {
+        width: calc(100% / 3); /* 3 items par ligne */
+    }
+}
+
+.div-block-avis-explore {
+    display: flex;
+ flex-direction: column; /* Assure que les éléments sont alignés verticalement */
+    width: 100%;
+    height: 250px;
+    margin: 0 0 10%;
+    justify-content: center;
+    align-items: center;
+	overflow: hidden;
+}
+
+/* Media query pour les écrans en dessous de 769px */
+@media (max-width: 768px) {
+    .div-block-avis-explore {
+        display: flex;
+ flex-direction: column; /* Assure que les éléments sont alignés verticalement */
+    width: 100vw;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+	overflow: hidden;
+    }
+}
+
+/* Media query pour les écrans en dessous de 769px */
+@media (max-width: 768px) {
+.div-block-106-avis {
+  flex-flow: column;
+  align-items: center;
+  display: flex;
+overflow: hidden;
+     }
+}
+
+.identite {
+        display: flex;
+ height: 50px;
+ flex-direction: horizontal;
+ align-items: 0;
+     justify-content: space-between;
+}
+
+
+.nomidentite {
+        display: flex;
+ flex-direction: column;
+ width: 100%;
+     justify-content: center;
+}
