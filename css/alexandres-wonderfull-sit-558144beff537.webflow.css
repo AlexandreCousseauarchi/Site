@@ -6478,7 +6478,6 @@ img {
   width: 40%;
   margin-top: 3%;
   display: flex;
-  flex-direction: column;
 }
 
 .div-block-106-avis-professionnel {
@@ -6487,6 +6486,7 @@ img {
   align-items: baseline;
   margin-bottom: 20px;
   display: flex;
+  flex-direction: column;
 }
 
 .button-part {
@@ -10599,7 +10599,6 @@ img {
   .div-block-avis-page-professionnel {
     width: 80%;
     display: flex;
-    flex-direction: column;
   }
 
   .div-block-106-avis-professionnel {
