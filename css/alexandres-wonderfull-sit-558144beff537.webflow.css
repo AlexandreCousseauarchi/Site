@@ -6378,13 +6378,12 @@ img {
   width: 40%;
   margin-top: 3%;
   display: flex;
-  flex-direction: column;
 }
 
 .div-block-106-avis-particulier {
-  flex-flow: row;
+  flex-flow: column;
   justify-content: flex-start;
-  align-items: baseline;
+  align-items: center;
   margin-bottom: 20px;
   display: flex;
 }
@@ -6473,6 +6472,7 @@ img {
 }
 
 .div-block-avis-page-professionnel {
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   width: 40%;
@@ -6483,10 +6483,9 @@ img {
 .div-block-106-avis-professionnel {
   flex-flow: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: baseline;
   margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
 }
 
 .button-part {
@@ -9777,7 +9776,7 @@ img {
   }
 
   .div-block-avis-page-professionnel {
-    width: 60%;
+    width: 80%;
   }
 
   .corps-blog {
@@ -10561,7 +10560,6 @@ img {
   .div-block-avis-page-particulier {
     width: 80%;
     display: flex;
-    flex-direction: column;
   }
 
   .div-block-106-avis-particulier {
@@ -12542,6 +12540,17 @@ img {
   font-style: normal;
   font-display: swap;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
