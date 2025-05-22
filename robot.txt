@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /guide---concevoir-son-espace-professionnel.html
+Disallow: /cgi-bin/
+Sitemap: https://alexandrecousseau.fr/sitemap.xml
