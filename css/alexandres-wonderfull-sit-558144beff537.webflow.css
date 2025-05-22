@@ -6378,6 +6378,7 @@ img {
   width: 40%;
   margin-top: 3%;
   display: flex;
+  flex-direction: column;
 }
 
 .div-block-106-avis-particulier {
@@ -6477,6 +6478,7 @@ img {
   width: 40%;
   margin-top: 3%;
   display: flex;
+  flex-direction: column;
 }
 
 .div-block-106-avis-professionnel {
@@ -10559,6 +10561,7 @@ img {
   .div-block-avis-page-particulier {
     width: 80%;
     display: flex;
+    flex-direction: column;
   }
 
   .div-block-106-avis-particulier {
@@ -10596,6 +10599,7 @@ img {
   .div-block-avis-page-professionnel {
     width: 80%;
     display: flex;
+    flex-direction: column;
   }
 
   .div-block-106-avis-professionnel {
