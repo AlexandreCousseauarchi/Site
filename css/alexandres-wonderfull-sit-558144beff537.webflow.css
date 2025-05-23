@@ -7684,9 +7684,10 @@ img {
   align-items: center;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 100px;
+  padding-top: 0px;
   font-family: Helveticanowdisplay, sans-serif;
-  font-size: 100%;
+  font-size: 9vw;
+	line-height: 100%;
   font-weight: 700;
   position: absolute;
 }
@@ -8409,9 +8410,10 @@ img {
   align-items: center;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 100px;
+  padding-top: 0px;
   font-family: Helveticanowdisplay, sans-serif;
-  font-size: 100%;
+  font-size: 9vw;
+	line-height: 100%;
   font-weight: 700;
   display: none;
   position: absolute;
