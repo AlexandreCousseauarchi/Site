@@ -12932,8 +12932,10 @@ border: 0;
   }
 
 
+
 @media only screen and (max-width: 420px) {
-  .div-article-blog {
-    width: 300px; /* Utilisation d'une largeur flexible pour tablettes */
+  .grid-blog {
+  place-content: center;
+	    align-items: flex-start;
   }
-  }
+
