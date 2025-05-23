@@ -7686,7 +7686,7 @@ img {
   margin-bottom: 0;
   padding-top: 100px;
   font-family: Helveticanowdisplay, sans-serif;
-  font-size: 11vw;
+  font-size: 100%;
   font-weight: 700;
   position: absolute;
 }
@@ -8411,7 +8411,7 @@ img {
   margin-bottom: 0;
   padding-top: 100px;
   font-family: Helveticanowdisplay, sans-serif;
-  font-size: 11vw;
+  font-size: 100%;
   font-weight: 700;
   display: none;
   position: absolute;
