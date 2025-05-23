@@ -12936,6 +12936,6 @@ border: 0;
 @media only screen and (max-width: 420px) {
   .grid-blog {
   place-content: center;
-	    align-items: flex-start;
+	    align-items: center;
   }
 
