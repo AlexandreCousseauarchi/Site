@@ -2077,7 +2077,6 @@ img {
 .div-block-48 {
   flex-direction: column;
   justify-content: flex-end;
-  height: 45%;
   max-height: 100%;
   display: flex;
 }
@@ -5731,7 +5730,7 @@ img {
 }
 
 .div-block-106-avis {
-  flex-flow: row;
+  flex-flow: column;
   justify-content: flex-start;
   align-items: baseline;
   display: flex;
