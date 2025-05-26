@@ -7547,7 +7547,7 @@ img {
   width: 90%;
   max-width: 100%;
   height: 520px;
-  margin-top: 50px;
+  margin-top: 200px;
   margin-left: 5%;
   margin-right: 5%;
   display: flex;
@@ -7557,7 +7557,7 @@ img {
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 50%;
+  width: 60%;
   display: flex;
 }
 
