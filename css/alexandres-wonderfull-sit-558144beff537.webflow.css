@@ -12779,7 +12779,7 @@ img {
     border-radius: 50%;
     width: 50px;
     height: 50px;
- margin-left: 5%;
+ margin-right: 60px;
     transition: transform .5s;
     display: inline-block;
 }
@@ -12874,16 +12874,16 @@ overflow: hidden;
 .identite {
         display: flex;
  height: 50px;
-     justify-content: space-evenly;
+     justify-content: center;
 }
 
 
 .nomidentite {
         display: flex;
  flex-direction: column;
+width: 10%;
      justify-content: center;
 }
-
 
 
 
