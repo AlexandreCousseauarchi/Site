@@ -5403,15 +5403,6 @@ img {
   position: absolute;
 }
 
-.div-block-avis-explore {
-  justify-content: center;
-  align-self: center;
-  align-items: center;
-  width: 80%;
-  height: 100%;
-  padding-top: 1%;
-  display: flex;
-}
 
 .div-block-trustmary {
   background-color: #973f3f;
