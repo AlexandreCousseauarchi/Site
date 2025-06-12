@@ -195,59 +195,42 @@ Vous pouvez lui faire confiance les yeux fermés. Merci Alexandre !</p>
 	    </div>
 
   <script>
-  const slides = document.querySelectorAll('.carousel-avis-slide');
-  const nextBtn = document.querySelector('.next');
-  const prevBtn = document.querySelector('.prev');
-  let current = 0;
-  let interval;
+    const slides = document.querySelectorAll('.carousel-avis-slide');
+    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelector('.prev');
+    let current = 0;
+    let interval = setInterval(nextSlide, 7500); // Défilement auto toutes les 7.5s
 
-  // Détection de mode desktop (>= 769px)
-  function isDesktop() {
-    return window.innerWidth >= 769;
-  }
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
-    });
-  }
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
 
-  function nextSlide() {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  }
+    function prevSlide() {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    }
 
-  function prevSlide() {
-    current = (current - 1 + slides.length) % slides.length;
-    showSlide(current);
-  }
-
-  function resetInterval() {
-    clearInterval(interval);
-    interval = setInterval(nextSlide, 5000);
-  }
-
-  function initDesktopCarousel() {
-    showSlide(current);
-    interval = setInterval(nextSlide, 5000);
-
-    nextBtn?.addEventListener('click', () => {
+    nextBtn.addEventListener('click', () => {
       nextSlide();
       resetInterval();
     });
 
-    prevBtn?.addEventListener('click', () => {
+    prevBtn.addEventListener('click', () => {
       prevSlide();
       resetInterval();
     });
-  }
 
-  // Init selon la taille d’écran
-  window.addEventListener('load', () => {
-    if (isDesktop()) {
-      initDesktopCarousel();
+    function resetInterval() {
+      clearInterval(interval);
+      interval = setInterval(nextSlide, 5000);
     }
-  });
 </script>
 
   
@@ -266,7 +249,7 @@ Vous pouvez lui faire confiance les yeux fermés. Merci Alexandre !</p>
   position: relative;
   width: 100%;
   background: #f1f1f1;
-  border-radius: 40px;
+  border-radius: 20px;
   overflow: hidden;
   padding: 1rem;
 }
@@ -295,7 +278,7 @@ Vous pouvez lui faire confiance les yeux fermés. Merci Alexandre !</p>
  font-weight: 500 !important;
    margin-left: 10px;
   margin-right: 10px;
-		margin-bottom: 30px;
+		margin-bottom: 50px;
 }
 
 .author {
@@ -308,8 +291,8 @@ Vous pouvez lui faire confiance les yeux fermés. Merci Alexandre !</p>
 .carousel-avis-controls {
   position: absolute;
   bottom: 8%;
-  left: 2%;
-  right: 2%;
+  left: 4%;
+  right: 4%;
   display: flex;
   justify-content: space-between;
   padding: 0 1rem;
@@ -341,61 +324,6 @@ Vous pouvez lui faire confiance les yeux fermés. Merci Alexandre !</p>
   object-fit: cover;
   margin: 0 auto 1rem auto;
   display: block;
-}
-
-
-@media (max-width: 768px) {
-  .carousel-avis-controls {
-    display: none; /* Cacher les boutons sur mobile */
-  }
-
-  .carousel-avis-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-  }
-
-  .carousel-avis-slide {
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-    position: relative !important;
-    opacity: 1 !important;
-  }
-}
-
-@media (min-width: 769px) {
-  .carousel-avis-container {
-    overflow: hidden; /* Pas de scroll sur desktop */
-  }
-
-  .carousel-avis-slide {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.6s ease;
-    text-align: center;
-    left: 0;
-    right: 0;
-  }
-
-  .carousel-avis-slide.active {
-    opacity: 1;
-    position: relative;
-  }
-
-  .carousel-avis-controls button {
-    width: 20px;
-    height: 20px;
-    background-color: #ccc;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .carousel-avis-controls button:hover {
-    background-color: #888;
-  }
 }
 </style>
           </div>
