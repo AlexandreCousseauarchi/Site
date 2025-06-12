@@ -344,16 +344,57 @@ Vous pouvez lui faire confiance les yeux fermés. Merci Alexandre !</p>
 }
 
 
-
 @media (max-width: 768px) {
   .carousel-avis-controls {
     display: none; /* Cacher les boutons sur mobile */
+  }
+
+  .carousel-avis-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .carousel-avis-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    position: relative !important;
+    opacity: 1 !important;
   }
 }
 
 @media (min-width: 769px) {
   .carousel-avis-container {
     overflow: hidden; /* Pas de scroll sur desktop */
+  }
+
+  .carousel-avis-slide {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    text-align: center;
+    left: 0;
+    right: 0;
+  }
+
+  .carousel-avis-slide.active {
+    opacity: 1;
+    position: relative;
+  }
+
+  .carousel-avis-controls button {
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .carousel-avis-controls button:hover {
+    background-color: #888;
   }
 }
 </style>
