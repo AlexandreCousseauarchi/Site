@@ -5732,6 +5732,17 @@ img {
   text-decoration: none;
 }
 
+.heading-66-copy {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: Helveticanowdisplay, sans-serif;
+  font-size: 110%;
+  font-style: normal;
+  font-weight: 500;
+  text-decoration: none;
+}
+
 .div-block-106 {
   flex-flow: column;
   justify-content: flex-end;
