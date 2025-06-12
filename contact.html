@@ -161,91 +161,120 @@
         <h4 class="heading-66-copy">Merci</h4>
         <div class="div-block-105-avis">
           <div class="code-embed-5 w-embed w-script">
-            <div class="div-block-avis-explore">
-              <section class="carousel-avis">
-                <div class="carousel-avis-container">
-                  <div class="carousel-avis-slide active">
-                    <img src="https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/refs/heads/main/images/Avis%20Elsa%20Michard.jpg" class="avatar">
-                    <p class="author">E M</p>
-                    <div class="stars">★★★★★</div>
-                    <p class="quote">Nous avons fait appel à Alexandre pour le projet d’aménagement et de rénovation de notre maison, située sur la commune de Plescop. Il a tout de suite compris le style que nous souhaitions et nous a proposé des plans et des visuels magnifiques, avec de très bonnes idées et conseils.<br>
-                      Bien que sa prestation soit terminée, il reste malgré tout à notre écoute en cas de besoin, et nous accompagne jusqu’au bout du projet.<br>
-                      Maintenant, nous avons hâte que notre projet voie le jour.<br>
-                      Vous pouvez lui faire confiance les yeux fermés. Merci Alexandre !</p>
-                  </div>
-                  <div class="carousel-avis-slide">
-                    <img src="https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/main/images/Avis%20Oceane.jpg" class="avatar">
-                    <p class="author">Océane Elias</p>
-                    <div class="stars">★★★★★</div>
-                    <p class="quote">Nous avons consulté Alexandre pour notre projet de rénovation de notre appartement de 3 pièces.<br> Il a su écouté nos envies et les rendre harmonieuses sur les plans 3D.<br> Un très beau travail qui nous inspire et qui nous fait vibrer.<br> Il ne reste plus qu’à passer à l’action ! Merci beaucoup pour ce beau projet 😊<br> Je recommande Alexandre pour son professionnalisme et sa vision d’architecte !
-                    </p>
-                  </div>
-                  <div class="carousel-avis-slide">
-                    <img src="https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/main/images/Avis%20Therese.jpg" class="avatar">
-                    <p class="author">Therese Devanne</p>
-                    <div class="stars">★★★★★</div>
-                    <p class="quote">Personne très sympa, à l'écoute des clients, très professionnel</p>
-                  </div>
-                </div>
-                <div class="carousel-avis-controls">
-                  <button class="prev">&#10094;</button>
-                  <button class="next">&#10095;</button>
-                </div>
-              </section>
-            </div>
-            <script>
-    const slides = document.querySelectorAll('.carousel-avis-slide');
-    const nextBtn = document.querySelector('.next');
-    const prevBtn = document.querySelector('.prev');
-    let current = 0;
-    let interval = setInterval(nextSlide, 5000); // Défilement auto toutes les 5s
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-      });
-    }
-    function nextSlide() {
-      current = (current + 1) % slides.length;
-      showSlide(current);
-    }
-    function prevSlide() {
-      current = (current - 1 + slides.length) % slides.length;
-      showSlide(current);
-    }
-    nextBtn.addEventListener('click', () => {
+            <div class="div-block-avis-explore"> 
+  <section class="carousel-avis">
+    <div class="carousel-avis-container">
+      <div class="carousel-avis-slide active">
+    <img src="https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/refs/heads/main/images/Avis%20Elsa%20Michard.jpg" class="avatar">
+				<p class="author">E M</p>
+				<div class="stars">★★★★★</div>
+        <p class="quote">Nous avons fait appel à Alexandre pour le projet d’aménagement et de rénovation de notre maison, située sur la commune de Plescop. Il a tout de suite compris le style que nous souhaitions et nous a proposé des plans et des visuels magnifiques, avec de très bonnes idées et conseils.<br>
+Bien que sa prestation soit terminée, il reste malgré tout à notre écoute en cas de besoin, et nous accompagne jusqu’au bout du projet.<br>
+Maintenant, nous avons hâte que notre projet voie le jour.<br>
+Vous pouvez lui faire confiance les yeux fermés. Merci Alexandre !</p>
+      </div>
+      <div class="carousel-avis-slide">
+    <img src="https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/main/images/Avis%20Oceane.jpg" class="avatar">
+			 <p class="author">Océane Elias</p>
+								<div class="stars">★★★★★</div>
+        <p class="quote">Nous avons consulté Alexandre pour notre projet de rénovation de notre appartement de 3 pièces.<br> Il a su écouté nos envies et les rendre harmonieuses sur les plans 3D.<br> Un très beau travail qui nous inspire et qui nous fait vibrer.<br> Il ne reste plus qu’à passer à l’action ! Merci beaucoup pour ce beau projet 😊<br> Je recommande Alexandre pour son professionnalisme et sa vision d’architecte !
+</p>
+      </div>
+      <div class="carousel-avis-slide">
+				    <img src="https://raw.githubusercontent.com/AlexandreCousseauarchi/Site/main/images/Avis%20Therese.jpg" class="avatar">
+				<p class="author">Therese Devanne</p>
+								<div class="stars">★★★★★</div>
+        <p class="quote">Personne très sympa, à l'écoute des clients, très professionnel</p>
+      </div>
+    </div>
+    <div class="carousel-avis-controls">
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </section>
+	    </div>
+
+  <script>
+  const slides = document.querySelectorAll('.carousel-avis-slide');
+  const nextBtn = document.querySelector('.next');
+  const prevBtn = document.querySelector('.prev');
+  let current = 0;
+  let interval;
+
+  // Détection de mode desktop (>= 769px)
+  function isDesktop() {
+    return window.innerWidth >= 769;
+  }
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
+
+  function prevSlide() {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  }
+
+  function resetInterval() {
+    clearInterval(interval);
+    interval = setInterval(nextSlide, 5000);
+  }
+
+  function initDesktopCarousel() {
+    showSlide(current);
+    interval = setInterval(nextSlide, 5000);
+
+    nextBtn?.addEventListener('click', () => {
       nextSlide();
       resetInterval();
     });
-    prevBtn.addEventListener('click', () => {
+
+    prevBtn?.addEventListener('click', () => {
       prevSlide();
       resetInterval();
     });
-    function resetInterval() {
-      clearInterval(interval);
-      interval = setInterval(nextSlide, 5000);
+  }
+
+  // Init selon la taille d’écran
+  window.addEventListener('load', () => {
+    if (isDesktop()) {
+      initDesktopCarousel();
     }
-  </script>
-            <style>
+  });
+</script>
+
+  
+  <style>
 .div-block-avis-explore {
-  margin: 0;
   font-family: 'Helveticanowdisplay', sans-serif;
 	font-style : normal;
   display: flex;
   justify-content: center;
   align-items: baseline;
 	width: 100%;
+	padding-top: 0;
 }
+
 .carousel-avis {
   position: relative;
   width: 100%;
   background: #f1f1f1;
-  border-radius: 20px;
+  border-radius: 40px;
   overflow: hidden;
   padding: 1rem;
 }
+
 .carousel-avis-container {
   position: relative;
 }
+
 .carousel-avis-slide {
   position: absolute;
   opacity: 0;
@@ -254,10 +283,12 @@
   left: 0;
   right: 0;
 }
+
 .carousel-avis-slide.active {
   opacity: 1;
   position: relative;
 }
+
 .quote {
     margin-top: 30px;
   font-size: 100%;
@@ -266,37 +297,43 @@
   margin-right: 10px;
 		margin-bottom: 30px;
 }
+
 .author {
     font-size: 100% !important;
     font-weight: 700 !important;
     line-height: 8px;
     margin-top: 20px;
 }
+
 .carousel-avis-controls {
   position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
+  bottom: 8%;
+  left: 2%;
+  right: 2%;
   display: flex;
   justify-content: space-between;
   padding: 0 1rem;
 }
+
 .carousel-avis-controls button {
   background: none;
   border: none;
-  font-size: 2rem;
+  font-size: 20px;
   color: #999;
   cursor: pointer;
   transition: color 0.3s ease;
 }
+
 .carousel-avis-controls button:hover {
   color: #333;
 }
+
 .stars {
   color: #f5c518; /* jaune style IMDb */
   font-size: 140%;
   line-height: 0.2;
 }
+
 .avatar {
   width: 50px;
   height: 50px;
@@ -304,6 +341,20 @@
   object-fit: cover;
   margin: 0 auto 1rem auto;
   display: block;
+}
+
+
+
+@media (max-width: 768px) {
+  .carousel-avis-controls {
+    display: none; /* Cacher les boutons sur mobile */
+  }
+}
+
+@media (min-width: 769px) {
+  .carousel-avis-container {
+    overflow: hidden; /* Pas de scroll sur desktop */
+  }
 }
 </style>
           </div>
