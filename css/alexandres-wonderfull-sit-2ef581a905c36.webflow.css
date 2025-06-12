@@ -5733,10 +5733,10 @@ img {
 }
 
 .heading-66-copy {
-  color: #fff;
   margin-top: 0;
   margin-bottom: 10px;
   font-family: Helveticanowdisplay, sans-serif;
+  color: rgba(0, 0, 0, 0);
   font-size: 110%;
   font-style: normal;
   font-weight: 500;
