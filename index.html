@@ -36,63 +36,64 @@
   ]
 }
 </script>
+<!-- Chargement du script Tarteaucitron -->
 <script src="/tarteaucitron/tarteaucitron.min.js"></script>
 
-<script>
-  // On attend que la page soit complètement chargée
-  window.addEventListener('DOMContentLoaded', function () {
-    // Et on ajoute un délai de 5 secondes
+<!-- Initialisation avec délai de 5 secondes -->
+<script type="text/javascript">
+  window.addEventListener('load', function () {
     setTimeout(function () {
-      if (typeof tarteaucitron !== 'undefined') {
-        tarteaucitron.init({
-          "privacyUrl": "",
+      tarteaucitron.init({
+        "privacyUrl": "",
 
-          "bodyPosition": "top",
-          "hashtag": "#tarteaucitron",
-          "cookieName": "tarteaucitron",
+        "bodyPosition": "top",
+        "hashtag": "#tarteaucitron",
+        "cookieName": "tarteaucitron",
 
-          "orientation": "middle",
-          "groupServices": true,
-          "showDetailsOnClick": true,
-          "serviceDefaultState": "wait",
+        "orientation": "middle",
+        "groupServices": true,
+        "showDetailsOnClick": true,
+        "serviceDefaultState": "wait",
 
-          "showAlertSmall": false,
-          "cookieslist": false,
-          "closePopup": true,
+        "showAlertSmall": false,
+        "cookieslist": false,
+        "closePopup": true,
 
-          "showIcon": true,
-          "iconPosition": "BottomRight",
+        "showIcon": true,
+        //"iconSrc": "",
+        "iconPosition": "BottomRight",
 
-          "adblocker": false,
-          "DenyAllCta": true,
-          "AcceptAllCta": true,
-          "highPrivacy": true,
-          "alwaysNeedConsent": false,
+        "adblocker": false,
+        "DenyAllCta": true,
+        "AcceptAllCta": true,
+        "highPrivacy": true,
+        "alwaysNeedConsent": false,
 
-          "handleBrowserDNTRequest": false,
-          "removeCredit": false,
-          "moreInfoLink": true,
+        "handleBrowserDNTRequest": false,
+        "removeCredit": false,
+        "moreInfoLink": true,
 
-          "useExternalCss": false,
-          "useExternalJs": false,
+        "useExternalCss": false,
+        "useExternalJs": false,
 
-          "mandatory": true,
-          "mandatoryCta": false,
+        //"cookieDomain": ".my-multisite-domaine.fr",
+        "readmoreLink": "",
+        "mandatory": true,
+        "mandatoryCta": false,
 
-          "googleConsentMode": true,
-          "bingConsentMode": true,
-          "softConsentMode": false,
+        //"customCloserId": "",
+        "googleConsentMode": true,
+        "bingConsentMode": true,
+        "softConsentMode": false,
 
-          "dataLayer": false,
-          "serverSide": false,
-          "partnersList": true
-        });
-      } else {
-        console.warn("Tarteaucitron n’est pas défini.");
-      }
-    }, 5000);
+        "dataLayer": false,
+        "serverSide": false,
+        "partnersList": true
+      });
+    }, 5000); // 5000 ms = 5 secondes
   });
 </script>
+
   <!--  Google Analytics GA4  -->
   <script>
   tarteaucitron.user.gtagUa = 'G-NQ8D2BMJDV';
