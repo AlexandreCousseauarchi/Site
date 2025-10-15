@@ -100,7 +100,64 @@ tarteaucitron.user.googletagmanagerId = 'GTM-5MLT8CMF';
   <script id="pixel-script-poptin" src="https://cdn.popt.in/pixel.js?id=734a79a696db8" async="true"></script>
   <link rel="canonical" href="https://alexandrecousseau.fr/guide-special-professionnel">
 
-  <!-- Script -> transmission des UTM --> <script> (function() { const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid']; const expiryMinutes = 30; const now = Date.now(); function getQueryParam(param) { return new URLSearchParams(window.location.search).get(param); } function hasUtmInUrl() { return utmParams.some(param => getQueryParam(param)); } function storeUtm() { if (hasUtmInUrl()) { utmParams.forEach(param => { const value = getQueryParam(param); if (value) localStorage.setItem(param, value); }); localStorage.setItem('utm_time', now); } else if (!document.referrer.includes(window.location.hostname)) { // Si l'utilisateur revient en organique, supprimer les UTM clearUtm(); } } function clearUtm() { utmParams.forEach(param => localStorage.removeItem(param)); localStorage.removeItem('utm_time'); } function updateLinks() { if (!localStorage.getItem('utm_source')) return; // Ne rien ajouter si aucun UTM stocké let utmString = utmParams.map(p => localStorage.getItem(p) ? `${p}=${localStorage.getItem(p)}` : '') .filter(Boolean).join("&"); if (!utmString) return; document.querySelectorAll("a[href^='/'], a[href^='https://alexandrecousseau.fr']").forEach(link => { if (!link.href.includes("utm_source")) { link.href += link.href.includes("?") ? "&" + utmString : "?" + utmString; } }); } function checkUtmExpiry() { const storedTime = localStorage.getItem('utm_time'); if (storedTime && (now - storedTime) / 60000 > expiryMinutes) { clearUtm(); } } checkUtmExpiry(); storeUtm(); document.addEventListener("DOMContentLoaded", updateLinks); })(); </script>
+  <script>
+// --- Configuration des paramètres à suivre ---
+const trackingParams = [
+  'gclid',
+  'utm_source',
+  'utm_medium',
+  'utm_campaign',
+  'utm_term',
+  'utm_matchtype'
+];
+
+// --- 1. Sauvegarde des paramètres à l'arrivée ---
+(function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  let found = false;
+  trackingParams.forEach(p => {
+    const val = urlParams.get(p);
+    if (val) {
+      sessionStorage.setItem(p, val);
+      found = true;
+    }
+  });
+  // Si on trouve un paramètre, on garde aussi une trace pour réinjection
+  if (found) console.log('UTM/GCLID sauvegardés');
+})();
+
+// --- 2. Réinjection automatique sur tous les liens internes ---
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('a[href^="/"], a[href^="https://alexandrecousseau.fr"]');
+  links.forEach(link => {
+    try {
+      const url = new URL(link.href);
+      const params = new URLSearchParams(url.search);
+      trackingParams.forEach(p => {
+        const val = sessionStorage.getItem(p);
+        if (val && !params.get(p)) params.set(p, val);
+      });
+      url.search = params.toString();
+      link.href = url.toString();
+    } catch(e){}
+  });
+
+  // --- 3. Injection dans le formulaire Tally intégré (iframe) ---
+  const tallyIframe = document.querySelector('iframe[src*="tally.so"]');
+  if (tallyIframe) {
+    let src = tallyIframe.src;
+    const srcParams = new URLSearchParams(new URL(src, window.location.origin).search);
+    trackingParams.forEach(p => {
+      const val = sessionStorage.getItem(p);
+      if (val && !srcParams.get(p)) srcParams.set(p, val);
+    });
+    const sep = src.includes('?') ? '&' : '?';
+    const query = srcParams.toString();
+    if (query) tallyIframe.src = src.split('?')[0] + '?' + query;
+  }
+});
+</script>
+
   
 </head>
 <body class="body-explication-ebook">
