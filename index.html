@@ -101,7 +101,9 @@ tarteaucitron.user.googletagmanagerId = 'GTM-5MLT8CMF';
   <link rel="canonical" href="https://alexandrecousseau.fr">
   <script id="pixel-script-poptin" src="https://cdn.popt.in/pixel.js?id=734a79a696db8" async="true"></script>
 
- <script>
+
+  <script>
+// --- Configuration des paramètres à suivre ---
 const trackingParams = [
   'gclid',
   'utm_source',
@@ -111,29 +113,66 @@ const trackingParams = [
   'utm_matchtype'
 ];
 
-// --- 1. Sauvegarde des paramètres à l'arrivée ---
+// --- 1. Sauvegarde des paramètres UTM à l'arrivée ---
 (function() {
   const urlParams = new URLSearchParams(window.location.search);
+  let found = false;
   trackingParams.forEach(p => {
     const val = urlParams.get(p);
-    if (val) sessionStorage.setItem(p, val);
+    if (val) {
+      sessionStorage.setItem(p, val);
+      found = true;
+    }
   });
+  if (found) console.log('✅ UTM/GCLID sauvegardés');
 })();
 
-// --- 2. À l’ouverture de la page ---
+// --- 2. Réinjection automatique sur tous les liens internes ---
 document.addEventListener('DOMContentLoaded', () => {
-  // On cible l’iframe Tally avant son initialisation
-  const tallyIframe = document.querySelector('iframe[data-tally-src]');
-  if (tallyIframe) {
-    let baseSrc = tallyIframe.dataset.tallySrc;
-    const srcParams = new URLSearchParams(new URL(baseSrc, window.location.origin).search);
-    trackingParams.forEach(p => {
-      const val = sessionStorage.getItem(p);
-      if (val && !srcParams.get(p)) srcParams.set(p, val);
-    });
-    tallyIframe.dataset.tallySrc = baseSrc.split('?')[0] + '?' + srcParams.toString();
-  }
+  const links = document.querySelectorAll('a[href^="/"], a[href^="https://alexandrecousseau.fr"]');
+  links.forEach(link => {
+    try {
+      const url = new URL(link.href);
+      const params = new URLSearchParams(url.search);
+      trackingParams.forEach(p => {
+        const val = sessionStorage.getItem(p);
+        if (val && !params.get(p)) params.set(p, val);
+      });
+      url.search = params.toString();
+      link.href = url.toString();
+    } catch(e){}
+  });
 });
+
+// --- 3. Fonction utilitaire pour injecter les UTM dans Tally ---
+function injectUTMtoTally() {
+  const tallyIframe = document.querySelector('iframe[src*="tally.so"]');
+  if (!tallyIframe) return;
+
+  let src = tallyIframe.src || tallyIframe.dataset.tallySrc;
+  if (!src) return;
+
+  const srcParams = new URLSearchParams(new URL(src, window.location.origin).search);
+  trackingParams.forEach(p => {
+    const val = sessionStorage.getItem(p);
+    if (val && !srcParams.get(p)) srcParams.set(p, val);
+  });
+  const query = srcParams.toString();
+  if (query) {
+    const newSrc = src.split('?')[0] + '?' + query;
+    if (newSrc !== tallyIframe.src) {
+      tallyIframe.src = newSrc;
+      console.log('🔁 UTM réinjectés dans Tally :', newSrc);
+    }
+  }
+}
+
+// --- 4. Surveillance du DOM pour détecter les changements (Tally recharge) ---
+const observer = new MutationObserver(() => injectUTMtoTally());
+observer.observe(document.body, { childList: true, subtree: true });
+
+// Injection initiale après un petit délai pour laisser Tally se charger
+window.addEventListener('load', () => setTimeout(injectUTMtoTally, 800));
 </script>
 
 
