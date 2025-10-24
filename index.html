@@ -101,8 +101,7 @@ tarteaucitron.user.googletagmanagerId = 'GTM-5MLT8CMF';
   <link rel="canonical" href="https://alexandrecousseau.fr">
   <script id="pixel-script-poptin" src="https://cdn.popt.in/pixel.js?id=734a79a696db8" async="true"></script>
 
-  <script>
-// --- Configuration des paramètres à suivre ---
+ <script>
 const trackingParams = [
   'gclid',
   'utm_source',
@@ -115,49 +114,28 @@ const trackingParams = [
 // --- 1. Sauvegarde des paramètres à l'arrivée ---
 (function() {
   const urlParams = new URLSearchParams(window.location.search);
-  let found = false;
   trackingParams.forEach(p => {
     const val = urlParams.get(p);
-    if (val) {
-      sessionStorage.setItem(p, val);
-      found = true;
-    }
+    if (val) sessionStorage.setItem(p, val);
   });
-  // Si on trouve un paramètre, on garde aussi une trace pour réinjection
-  if (found) console.log('UTM/GCLID sauvegardés');
 })();
 
-// --- 2. Réinjection automatique sur tous les liens internes ---
+// --- 2. À l’ouverture de la page ---
 document.addEventListener('DOMContentLoaded', () => {
-  const links = document.querySelectorAll('a[href^="/"], a[href^="https://alexandrecousseau.fr"]');
-  links.forEach(link => {
-    try {
-      const url = new URL(link.href);
-      const params = new URLSearchParams(url.search);
-      trackingParams.forEach(p => {
-        const val = sessionStorage.getItem(p);
-        if (val && !params.get(p)) params.set(p, val);
-      });
-      url.search = params.toString();
-      link.href = url.toString();
-    } catch(e){}
-  });
-
-  // --- 3. Injection dans le formulaire Tally intégré (iframe) ---
-  const tallyIframe = document.querySelector('iframe[src*="tally.so"]');
+  // On cible l’iframe Tally avant son initialisation
+  const tallyIframe = document.querySelector('iframe[data-tally-src]');
   if (tallyIframe) {
-    let src = tallyIframe.src;
-    const srcParams = new URLSearchParams(new URL(src, window.location.origin).search);
+    let baseSrc = tallyIframe.dataset.tallySrc;
+    const srcParams = new URLSearchParams(new URL(baseSrc, window.location.origin).search);
     trackingParams.forEach(p => {
       const val = sessionStorage.getItem(p);
       if (val && !srcParams.get(p)) srcParams.set(p, val);
     });
-    const sep = src.includes('?') ? '&' : '?';
-    const query = srcParams.toString();
-    if (query) tallyIframe.src = src.split('?')[0] + '?' + query;
+    tallyIframe.dataset.tallySrc = baseSrc.split('?')[0] + '?' + srcParams.toString();
   }
 });
 </script>
+
 
  
 </head>
