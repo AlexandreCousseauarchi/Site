@@ -14881,6 +14881,14 @@ img {
     position: static;
   }
 
+  @media screen and (max-width: 767px) {
+  .article-photo {
+    position: static;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
   .image-116 {
     height: 100%;
   }
