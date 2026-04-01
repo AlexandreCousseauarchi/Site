@@ -80,27 +80,29 @@
           "partnersList": false /* Afficher le détail du nombre de partenaires sur la bandeau */
         });
         </script>
-  <style>
+ <style>
+/* BOUTONS PRINCIPAUX */
+#tarteaucitronRoot #tarteaucitronAlertBig button,
+#tarteaucitronRoot #tarteaucitronAlertBig .tarteaucitronCTAButton,
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronPersonalize,
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronPersonalize2,
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronCloseAlert,
 #tarteaucitronRoot .tarteaucitronAllow,
-#tarteaucitronRoot .tarteaucitronDeny,
-#tarteaucitronRoot .tarteaucitronCloseAlert,
-#tarteaucitronAlertBig #tarteaucitronPersonalize,
-#tarteaucitronAlertBig #tarteaucitronPersonalize2,
-#tarteaucitronAlertBig .tarteaucitronCTAButton {
+#tarteaucitronRoot .tarteaucitronDeny {
 
-    background: unset !important;
-    color: white !important;
-    border: 1px solid white !important;
+    background: transparent !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
     border-radius: 0 !important;
     font-size: 14px !important;
 }
 
-/* on neutralise les couleurs "état actif" */
+/* ETATS (sinon vert/rouge reviennent) */
 #tarteaucitronRoot .tarteaucitronIsAllowed .tarteaucitronAllow,
 #tarteaucitronRoot .tarteaucitronIsDenied .tarteaucitronDeny {
-    background: unset !important;
-    color: white !important;
-    border: 1px solid white !important;
+    background: transparent !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
 }
 </style>
   <!--  Google Analytics GA4  -->
