@@ -80,6 +80,28 @@
           "partnersList": false /* Afficher le détail du nombre de partenaires sur la bandeau */
         });
         </script>
+  <style>
+#tarteaucitronRoot .tarteaucitronAllow,
+#tarteaucitronRoot .tarteaucitronDeny,
+#tarteaucitronAlertBig #tarteaucitronPersonalize,
+#tarteaucitronAlertBig #tarteaucitronPersonalize2,
+#tarteaucitronAlertBig .tarteaucitronCTAButton {
+
+    background: unset !important;
+    color: white !important;
+    border: 1px solid white !important;
+    border-radius: 0 !important;
+    text-transform: uppercase !important;
+}
+
+/* on neutralise les couleurs "état actif" */
+#tarteaucitronRoot .tarteaucitronIsAllowed .tarteaucitronAllow,
+#tarteaucitronRoot .tarteaucitronIsDenied .tarteaucitronDeny {
+    background: unset !important;
+    color: white !important;
+    border: 1px solid white !important;
+}
+</style>
   <!--  Google Analytics GA4  -->
   <script>
   tarteaucitron.user.gtagUa = 'G-NQ8D2BMJDV';
