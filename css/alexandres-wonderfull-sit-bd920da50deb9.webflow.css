@@ -4149,6 +4149,7 @@ img {
   font-size: 120%;
   font-weight: 800;
   display: flex;
+  line-height: 25px;
 }
 
 .heading-72-particulier {
@@ -4177,6 +4178,7 @@ img {
   font-family: Helveticanowdisplay, sans-serif;
   font-size: 90%;
   font-weight: 500;
+  line-height: 15px;
 }
 
 .container-28 {
