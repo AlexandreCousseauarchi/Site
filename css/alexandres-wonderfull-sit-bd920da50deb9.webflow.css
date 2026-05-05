@@ -2147,6 +2147,7 @@ img {
   font-weight: 700;
   position: relative;
   inset: auto 0%;
+  line-height: 40px;
 }
 
 .sticky-small-image {
