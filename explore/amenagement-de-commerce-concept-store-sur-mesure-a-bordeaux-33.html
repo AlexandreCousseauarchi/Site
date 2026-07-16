@@ -327,12 +327,14 @@ document.addEventListener('DOMContentLoaded', reinjectTracking);
 
 
 
-  <style>
+<style>
   /* Téléphones uniquement */
   @media screen and (max-width: 767px) {
     .compare-component {
-      /* Autorise le scroll vertical de la page,
-         mais réserve le geste horizontal au comparateur */
+      /*
+       * Le scroll vertical de la page reste possible.
+       * Le geste horizontal est utilisé par le comparateur.
+       */
       touch-action: pan-y;
       user-select: none;
       -webkit-user-select: none;
@@ -340,9 +342,16 @@ document.addEventListener('DOMContentLoaded', reinjectTracking);
     }
 
     .compare-before-wrapper,
-    .compare-before-media,
-    .compare-divider-wrapper {
+    .compare-before-media {
       will-change: transform;
+    }
+
+    .compare-divider-wrapper {
+      position: absolute;
+      right: auto !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      will-change: left;
     }
   }
 </style>
@@ -365,9 +374,9 @@ document.addEventListener("DOMContentLoaded", function () {
       ".compare-divider-wrapper"
     );
 
-    if (!beforeWrapper || !beforeMedia) {
+    if (!beforeWrapper || !beforeMedia || !dividerWrapper) {
       console.warn(
-        "Comparateur avant/après : éléments nécessaires introuvables.",
+        "Comparateur avant/après : un ou plusieurs éléments sont introuvables.",
         comparison
       );
       return;
@@ -383,16 +392,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (bounds.width <= 0) return;
 
-      let percentage =
-        ((clientX - bounds.left) / bounds.width) * 100;
+      /*
+       * Position exacte du doigt à l’intérieur du comparateur.
+       */
+      let positionX = clientX - bounds.left;
 
-      percentage = Math.max(0, Math.min(100, percentage));
+      positionX = Math.max(
+        0,
+        Math.min(bounds.width, positionX)
+      );
+
+      const percentage =
+        (positionX / bounds.width) * 100;
+
       currentPercentage = percentage;
 
       /*
-       * Reproduit ta configuration Webflow :
-       * - wrapper : de 0 % à 100 %
-       * - média : de 0 % à -100 %
+       * Reproduit ton animation Webflow :
+       * compare-before-wrapper : de 0 % à 100 %
+       * compare-before-media : de 0 % à -100 %
        */
       beforeWrapper.style.transform =
         "translate3d(" + percentage + "%, 0, 0)";
@@ -401,24 +419,45 @@ document.addEventListener("DOMContentLoaded", function () {
         "translate3d(" + -percentage + "%, 0, 0)";
 
       /*
-       * Positionne également la barre de séparation.
-       * Cette partie fonctionne si le divider-wrapper
-       * est positionné en absolute dans compare-component.
+       * La barre est placée exactement à la position du doigt.
        */
-      if (dividerWrapper) {
-        dividerWrapper.style.left = percentage + "%";
-        dividerWrapper.style.transform = "translate3d(-50%, 0, 0)";
-      }
+      dividerWrapper.style.left = positionX + "px";
+      dividerWrapper.style.right = "auto";
+      dividerWrapper.style.transform =
+        "translate3d(-50%, 0, 0)";
+    }
+
+    function setInitialPosition() {
+      if (!mobileQuery.matches) return;
+
+      const bounds = comparison.getBoundingClientRect();
+
+      if (bounds.width <= 0) return;
+
+      const initialX =
+        bounds.left +
+        bounds.width * (currentPercentage / 100);
+
+      updateComparison(initialX);
     }
 
     function startDrag(event) {
       if (!mobileQuery.matches) return;
+
+      /*
+       * On laisse l’animation Webflow gérer la souris
+       * sur ordinateur.
+       */
       if (event.pointerType === "mouse") return;
 
       isDragging = true;
 
       if (comparison.setPointerCapture) {
-        comparison.setPointerCapture(event.pointerId);
+        try {
+          comparison.setPointerCapture(event.pointerId);
+        } catch (error) {
+          /* Certains navigateurs peuvent refuser la capture. */
+        }
       }
 
       updateComparison(event.clientX);
@@ -439,33 +478,54 @@ document.addEventListener("DOMContentLoaded", function () {
         comparison.hasPointerCapture &&
         comparison.hasPointerCapture(event.pointerId)
       ) {
-        comparison.releasePointerCapture(event.pointerId);
+        try {
+          comparison.releasePointerCapture(event.pointerId);
+        } catch (error) {
+          /* Pas grave si la capture est déjà libérée. */
+        }
       }
     }
 
-    comparison.addEventListener("pointerdown", startDrag);
-    comparison.addEventListener("pointermove", moveDrag);
-    comparison.addEventListener("pointerup", stopDrag);
-    comparison.addEventListener("pointercancel", stopDrag);
+    comparison.addEventListener(
+      "pointerdown",
+      startDrag
+    );
+
+    comparison.addEventListener(
+      "pointermove",
+      moveDrag
+    );
+
+    comparison.addEventListener(
+      "pointerup",
+      stopDrag
+    );
+
+    comparison.addEventListener(
+      "pointercancel",
+      stopDrag
+    );
 
     /*
-     * Position initiale sur mobile.
-     * Passe 50 à une autre valeur si nécessaire.
+     * Repositionnement après chargement complet,
+     * notamment lorsque les images modifient la largeur
+     * ou la hauteur du comparateur.
      */
-    if (mobileQuery.matches) {
-      const bounds = comparison.getBoundingClientRect();
-      updateComparison(
-        bounds.left + bounds.width * (currentPercentage / 100)
-      );
-    }
+    window.addEventListener("load", setInitialPosition);
+
+    /*
+     * Repositionnement lors d’un changement
+     * d’orientation du téléphone.
+     */
+    window.addEventListener("resize", function () {
+      if (mobileQuery.matches) {
+        setInitialPosition();
+      }
+    });
 
     mobileQuery.addEventListener("change", function (event) {
       if (event.matches) {
-        const bounds = comparison.getBoundingClientRect();
-
-        updateComparison(
-          bounds.left + bounds.width * (currentPercentage / 100)
-        );
+        setInitialPosition();
       } else {
         /*
          * Suppression des styles ajoutés par le script
@@ -474,12 +534,16 @@ document.addEventListener("DOMContentLoaded", function () {
         beforeWrapper.style.transform = "";
         beforeMedia.style.transform = "";
 
-        if (dividerWrapper) {
-          dividerWrapper.style.left = "";
-          dividerWrapper.style.transform = "";
-        }
+        dividerWrapper.style.left = "";
+        dividerWrapper.style.right = "";
+        dividerWrapper.style.transform = "";
       }
     });
+
+    /*
+     * Position initiale à 50 %.
+     */
+    setInitialPosition();
   });
 });
 </script>
