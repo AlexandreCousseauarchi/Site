@@ -323,5 +323,169 @@ window.TallyConfig = {
 };
 document.addEventListener('DOMContentLoaded', reinjectTracking);
 </script>
+
+
+
+
+  <style>
+  /* Téléphones uniquement */
+  @media screen and (max-width: 767px) {
+    .compare-component {
+      /* Autorise le scroll vertical de la page,
+         mais réserve le geste horizontal au comparateur */
+      touch-action: pan-y;
+      user-select: none;
+      -webkit-user-select: none;
+      cursor: ew-resize;
+    }
+
+    .compare-before-wrapper,
+    .compare-before-media,
+    .compare-divider-wrapper {
+      will-change: transform;
+    }
+  }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileQuery = window.matchMedia("(max-width: 767px)");
+  const comparisons = document.querySelectorAll(".compare-component");
+
+  comparisons.forEach(function (comparison) {
+    const beforeWrapper = comparison.querySelector(
+      ".compare-before-wrapper"
+    );
+
+    const beforeMedia = comparison.querySelector(
+      ".compare-before-media"
+    );
+
+    const dividerWrapper = comparison.querySelector(
+      ".compare-divider-wrapper"
+    );
+
+    if (!beforeWrapper || !beforeMedia) {
+      console.warn(
+        "Comparateur avant/après : éléments nécessaires introuvables.",
+        comparison
+      );
+      return;
+    }
+
+    let isDragging = false;
+    let currentPercentage = 50;
+
+    function updateComparison(clientX) {
+      if (!mobileQuery.matches) return;
+
+      const bounds = comparison.getBoundingClientRect();
+
+      if (bounds.width <= 0) return;
+
+      let percentage =
+        ((clientX - bounds.left) / bounds.width) * 100;
+
+      percentage = Math.max(0, Math.min(100, percentage));
+      currentPercentage = percentage;
+
+      /*
+       * Reproduit ta configuration Webflow :
+       * - wrapper : de 0 % à 100 %
+       * - média : de 0 % à -100 %
+       */
+      beforeWrapper.style.transform =
+        "translate3d(" + percentage + "%, 0, 0)";
+
+      beforeMedia.style.transform =
+        "translate3d(" + -percentage + "%, 0, 0)";
+
+      /*
+       * Positionne également la barre de séparation.
+       * Cette partie fonctionne si le divider-wrapper
+       * est positionné en absolute dans compare-component.
+       */
+      if (dividerWrapper) {
+        dividerWrapper.style.left = percentage + "%";
+        dividerWrapper.style.transform = "translate3d(-50%, 0, 0)";
+      }
+    }
+
+    function startDrag(event) {
+      if (!mobileQuery.matches) return;
+      if (event.pointerType === "mouse") return;
+
+      isDragging = true;
+
+      if (comparison.setPointerCapture) {
+        comparison.setPointerCapture(event.pointerId);
+      }
+
+      updateComparison(event.clientX);
+    }
+
+    function moveDrag(event) {
+      if (!isDragging || !mobileQuery.matches) return;
+
+      updateComparison(event.clientX);
+    }
+
+    function stopDrag(event) {
+      if (!isDragging) return;
+
+      isDragging = false;
+
+      if (
+        comparison.hasPointerCapture &&
+        comparison.hasPointerCapture(event.pointerId)
+      ) {
+        comparison.releasePointerCapture(event.pointerId);
+      }
+    }
+
+    comparison.addEventListener("pointerdown", startDrag);
+    comparison.addEventListener("pointermove", moveDrag);
+    comparison.addEventListener("pointerup", stopDrag);
+    comparison.addEventListener("pointercancel", stopDrag);
+
+    /*
+     * Position initiale sur mobile.
+     * Passe 50 à une autre valeur si nécessaire.
+     */
+    if (mobileQuery.matches) {
+      const bounds = comparison.getBoundingClientRect();
+      updateComparison(
+        bounds.left + bounds.width * (currentPercentage / 100)
+      );
+    }
+
+    mobileQuery.addEventListener("change", function (event) {
+      if (event.matches) {
+        const bounds = comparison.getBoundingClientRect();
+
+        updateComparison(
+          bounds.left + bounds.width * (currentPercentage / 100)
+        );
+      } else {
+        /*
+         * Suppression des styles ajoutés par le script
+         * quand on revient sur ordinateur.
+         */
+        beforeWrapper.style.transform = "";
+        beforeMedia.style.transform = "";
+
+        if (dividerWrapper) {
+          dividerWrapper.style.left = "";
+          dividerWrapper.style.transform = "";
+        }
+      }
+    });
+  });
+});
+</script>
+  
+
+
+  
 </body>
 </html>
