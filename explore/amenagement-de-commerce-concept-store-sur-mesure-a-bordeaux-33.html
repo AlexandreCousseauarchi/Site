@@ -327,39 +327,39 @@ document.addEventListener('DOMContentLoaded', reinjectTracking);
 
 
 
+
 <style>
-  /* Téléphones uniquement */
-  @media screen and (max-width: 767px) {
-    .compare-component {
-      /*
-       * Le scroll vertical de la page reste possible.
-       * Le geste horizontal est utilisé par le comparateur.
-       */
-      touch-action: pan-y;
-      user-select: none;
-      -webkit-user-select: none;
-      cursor: ew-resize;
-    }
+  /*
+   * On ne change pas la position de compare-component.
+   * Il peut donc rester en position absolute dans Webflow.
+   */
+  .compare-component {
+    /*
+     * Le glissement horizontal contrôle le comparateur,
+     * tandis que le scroll vertical de la page reste possible.
+     */
+    touch-action: pan-y;
 
-    .compare-before-wrapper,
-    .compare-before-media {
-      will-change: transform;
-    }
-
-    .compare-divider-wrapper {
-      position: absolute;
-      right: auto !important;
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-      will-change: left;
-    }
+    user-select: none;
+    -webkit-user-select: none;
   }
+
+  .compare-before-wrapper,
+  .compare-before-media {
+    will-change: transform;
+  }
+
+  /*
+   * Aucun style n’est appliqué à compare-divider-wrapper.
+   * Il reste entièrement géré par ta structure Webflow.
+   */
 </style>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const mobileQuery = window.matchMedia("(max-width: 767px)");
-  const comparisons = document.querySelectorAll(".compare-component");
+  const comparisons = document.querySelectorAll(
+    ".compare-component"
+  );
 
   comparisons.forEach(function (comparison) {
     const beforeWrapper = comparison.querySelector(
@@ -370,33 +370,55 @@ document.addEventListener("DOMContentLoaded", function () {
       ".compare-before-media"
     );
 
-    const dividerWrapper = comparison.querySelector(
-      ".compare-divider-wrapper"
-    );
-
-    if (!beforeWrapper || !beforeMedia || !dividerWrapper) {
+    /*
+     * On vérifie uniquement les deux éléments animés.
+     * Le divider n’est volontairement pas manipulé.
+     */
+    if (!beforeWrapper || !beforeMedia) {
       console.warn(
-        "Comparateur avant/après : un ou plusieurs éléments sont introuvables.",
+        "Comparateur avant/après : compare-before-wrapper ou compare-before-media est introuvable.",
         comparison
       );
+
       return;
     }
 
     let isDragging = false;
+    let activePointerId = null;
     let currentPercentage = 50;
 
-    function updateComparison(clientX) {
-      if (!mobileQuery.matches) return;
+    /*
+     * Le script intervient uniquement avec :
+     * - un doigt ;
+     * - un stylet.
+     *
+     * La souris et le trackpad restent gérés
+     * par l’interaction Webflow.
+     */
+    function isTouchOrPen(event) {
+      return (
+        event.pointerType === "touch" ||
+        event.pointerType === "pen"
+      );
+    }
 
+    /*
+     * Met à jour la comparaison selon la position
+     * horizontale du doigt dans compare-component.
+     */
+    function updateComparison(clientX) {
       const bounds = comparison.getBoundingClientRect();
 
       if (bounds.width <= 0) return;
 
       /*
-       * Position exacte du doigt à l’intérieur du comparateur.
+       * Position du doigt à l’intérieur du comparateur.
        */
       let positionX = clientX - bounds.left;
 
+      /*
+       * Limitation entre le bord gauche et le bord droit.
+       */
       positionX = Math.max(
         0,
         Math.min(bounds.width, positionX)
@@ -408,55 +430,48 @@ document.addEventListener("DOMContentLoaded", function () {
       currentPercentage = percentage;
 
       /*
-       * Reproduit ton animation Webflow :
-       * compare-before-wrapper : de 0 % à 100 %
-       * compare-before-media : de 0 % à -100 %
+       * Reproduction exacte de ton animation Webflow :
+       *
+       * compare-before-wrapper
+       * X : 0 % vers 100 %
+       *
+       * compare-before-media
+       * X : 0 % vers -100 %
        */
       beforeWrapper.style.transform =
-        "translate3d(" + percentage + "%, 0, 0)";
+        "translate3d(" + percentage + "%, 0px, 0px)";
 
       beforeMedia.style.transform =
-        "translate3d(" + -percentage + "%, 0, 0)";
+        "translate3d(" + -percentage + "%, 0px, 0px)";
 
       /*
-       * La barre est placée exactement à la position du doigt.
+       * On ne déplace pas compare-divider-wrapper.
+       * Il suit déjà le bord du wrapper dans Webflow.
        */
-      dividerWrapper.style.left = positionX + "px";
-      dividerWrapper.style.right = "auto";
-      dividerWrapper.style.transform =
-        "translate3d(-50%, 0, 0)";
-    }
-
-    function setInitialPosition() {
-      if (!mobileQuery.matches) return;
-
-      const bounds = comparison.getBoundingClientRect();
-
-      if (bounds.width <= 0) return;
-
-      const initialX =
-        bounds.left +
-        bounds.width * (currentPercentage / 100);
-
-      updateComparison(initialX);
     }
 
     function startDrag(event) {
-      if (!mobileQuery.matches) return;
-
-      /*
-       * On laisse l’animation Webflow gérer la souris
-       * sur ordinateur.
-       */
-      if (event.pointerType === "mouse") return;
+      if (!isTouchOrPen(event)) return;
 
       isDragging = true;
+      activePointerId = event.pointerId;
+
+      /*
+       * Évite qu’une interaction tactile Webflow
+       * traite le même événement en parallèle.
+       */
+      event.stopPropagation();
 
       if (comparison.setPointerCapture) {
         try {
-          comparison.setPointerCapture(event.pointerId);
+          comparison.setPointerCapture(
+            event.pointerId
+          );
         } catch (error) {
-          /* Certains navigateurs peuvent refuser la capture. */
+          /*
+           * La capture peut ne pas être disponible
+           * sur certains anciens navigateurs.
+           */
         }
       }
 
@@ -464,7 +479,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function moveDrag(event) {
-      if (!isDragging || !mobileQuery.matches) return;
+      if (!isDragging) return;
+
+      if (event.pointerId !== activePointerId) {
+        return;
+      }
+
+      if (!isTouchOrPen(event)) return;
+
+      event.stopPropagation();
 
       updateComparison(event.clientX);
     }
@@ -472,78 +495,111 @@ document.addEventListener("DOMContentLoaded", function () {
     function stopDrag(event) {
       if (!isDragging) return;
 
+      if (event.pointerId !== activePointerId) {
+        return;
+      }
+
       isDragging = false;
+      activePointerId = null;
+
+      event.stopPropagation();
 
       if (
         comparison.hasPointerCapture &&
-        comparison.hasPointerCapture(event.pointerId)
+        comparison.hasPointerCapture(
+          event.pointerId
+        )
       ) {
         try {
-          comparison.releasePointerCapture(event.pointerId);
+          comparison.releasePointerCapture(
+            event.pointerId
+          );
         } catch (error) {
-          /* Pas grave si la capture est déjà libérée. */
+          /*
+           * Rien de grave si la capture
+           * est déjà libérée.
+           */
         }
       }
     }
 
+    /*
+     * Conserve la dernière position après :
+     * - une rotation du téléphone ;
+     * - un redimensionnement ;
+     * - un changement d’orientation de tablette.
+     */
+    function refreshPosition() {
+      const bounds = comparison.getBoundingClientRect();
+
+      if (bounds.width <= 0) return;
+
+      const clientX =
+        bounds.left +
+        bounds.width *
+        (currentPercentage / 100);
+
+      updateComparison(clientX);
+    }
+
+    /*
+     * La phase de capture permet au script tactile
+     * d’intervenir avant l’interaction Webflow.
+     */
     comparison.addEventListener(
       "pointerdown",
-      startDrag
+      startDrag,
+      true
     );
 
     comparison.addEventListener(
       "pointermove",
-      moveDrag
+      moveDrag,
+      true
     );
 
     comparison.addEventListener(
       "pointerup",
-      stopDrag
+      stopDrag,
+      true
     );
 
     comparison.addEventListener(
       "pointercancel",
-      stopDrag
+      stopDrag,
+      true
+    );
+
+    comparison.addEventListener(
+      "lostpointercapture",
+      function () {
+        isDragging = false;
+        activePointerId = null;
+      }
     );
 
     /*
-     * Repositionnement après chargement complet,
-     * notamment lorsque les images modifient la largeur
-     * ou la hauteur du comparateur.
+     * Recalcule la position après chargement
+     * complet des images.
      */
-    window.addEventListener("load", setInitialPosition);
+    window.addEventListener(
+      "load",
+      refreshPosition
+    );
 
-    /*
-     * Repositionnement lors d’un changement
-     * d’orientation du téléphone.
-     */
-    window.addEventListener("resize", function () {
-      if (mobileQuery.matches) {
-        setInitialPosition();
+    let resizeTimer;
+
+    window.addEventListener(
+      "resize",
+      function () {
+        clearTimeout(resizeTimer);
+
+        resizeTimer = setTimeout(
+          refreshPosition,
+          100
+        );
       }
-    });
-
-    mobileQuery.addEventListener("change", function (event) {
-      if (event.matches) {
-        setInitialPosition();
-      } else {
-        /*
-         * Suppression des styles ajoutés par le script
-         * quand on revient sur ordinateur.
-         */
-        beforeWrapper.style.transform = "";
-        beforeMedia.style.transform = "";
-
-        dividerWrapper.style.left = "";
-        dividerWrapper.style.right = "";
-        dividerWrapper.style.transform = "";
-      }
-    });
-
-    /*
-     * Position initiale à 50 %.
-     */
-    setInitialPosition();
+    );
   });
 });
 </script>
